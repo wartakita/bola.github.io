@@ -1,19 +1,12 @@
-{
-  "matches": [
-    {
-      "team1": "Manchester United",
-      "team2": "Chelsea",
-      "date": "2023-10-15 20:00"
-    },
-    {
-      "team1": "Liverpool",
-      "team2": "Manchester City",
-      "date": "2023-10-16 18:30"
-    },
-    {
-      "team1": "Arsenal",
-      "team2": "Tottenham Hotspur",
-      "date": "2023-10-17 19:00"
-    }
-  ]
-}
+[
+  {
+    "league": "Premier League",
+    "teams": "Manchester United vs Liverpool",
+    "videoUrl": "https://i.kitescdnz.net/live/v1/YBxjZ3RBAceKqqtP9TGRa12cXMmw3bU-e2LAVLoqloGSDOZ41Gom0SVejsu12GS1/index.m3u8"
+  },
+  {
+    "league": "La Liga",
+    "teams": "Barcelona vs Real Madrid",
+    "videoUrl": "https://example.com/video2.mp4"
+  }
+]
