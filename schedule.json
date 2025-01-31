@@ -1,30 +1,26 @@
 [
   {
-    "team1": "Persija",
-    "team2": "Persib",
-    "time": "2025-01-01T09:55:00+07:00",
+    "date": "2025-02-01",
+    "league": "Ligue 1",
+    "teams": "Montpellier vs Lens",
+    "time": "02:45",
     "streamUrl": "https://example.com/persija_vs_persib.m3u8",
     "posterUrl": "https://example.com/persija_vs_persib_poster.jpg"
   },
   {
-    "team1": "Persebaya",
-    "team2": "Arema FC",
-    "time": "2025-02-01T21:00:00+07:00",
-    "streamUrl": "https://example.com/persebaya_vs_arema.m3u8",
-    "posterUrl": "https://example.com/persebaya_vs_arema_poster.jpg"
+    "date": "2025-02-02",
+    "league": "Premier League",
+    "teams": "Manchester United vs Liverpool",
+    "time": "20:00",
+    "streamUrl": "https://example.com/manchester_united_vs_liverpool.m3u8",
+    "posterUrl": "https://example.com/manchester_united_vs_liverpool_poster.jpg"
   },
   {
-    "team1": "Bali United",
-    "team2": "PSIS Semarang",
-    "time": "2025-02-02T17:00:00+08:00",
-    "streamUrl": "https://example.com/bali_united_vs_psis.m3u8",
-    "posterUrl": "https://example.com/bali_united_vs_psis_poster.jpg"
-  },
-  {
-    "team1": "PSM Makassar",
-    "team2": "Borneo FC",
-    "time": "2025-02-02T20:30:00+09:00",
-    "streamUrl": "https://example.com/psm_vs_borneo.m3u8",
-    "posterUrl": "https://example.com/psm_vs_borneo_poster.jpg"
+    "date": "2025-02-03",
+    "league": "Serie A",
+    "teams": "Inter Milan vs Juventus",
+    "time": "21:00",
+    "streamUrl": "https://example.com/inter_milan_vs_juventus.m3u8",
+    "posterUrl": "https://example.com/inter_milan_vs_juventus_poster.jpg"
   }
 ]
