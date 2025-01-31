@@ -1,26 +1,34 @@
 [
   {
-    "date": "2025-02-01",
-    "league": "Ligue 1",
-    "teams": "Montpellier vs Lens",
-    "time": "02:45",
-    "streamUrl": "https://example.com/persija_vs_persib.m3u8",
+    "team1": "Persija",
+    "team2": "Persib",
+    "time": "19:30 WIB",
+    "league": "Liga 1 Indonesia",
+    "videoId": "12345",
     "posterUrl": "https://example.com/persija_vs_persib_poster.jpg"
   },
   {
-    "date": "2025-02-02",
-    "league": "Premier League",
-    "teams": "Manchester United vs Liverpool",
-    "time": "20:00",
-    "streamUrl": "https://example.com/manchester_united_vs_liverpool.m3u8",
-    "posterUrl": "https://example.com/manchester_united_vs_liverpool_poster.jpg"
+    "team1": "Persebaya",
+    "team2": "Arema FC",
+    "time": "21:00 WIB",
+    "league": "Liga 1 Indonesia",
+    "videoId": "67890",
+    "posterUrl": "https://example.com/persebaya_vs_arema_poster.jpg"
   },
   {
-    "date": "2025-02-03",
-    "league": "Serie A",
-    "teams": "Inter Milan vs Juventus",
-    "time": "21:00",
-    "streamUrl": "https://example.com/inter_milan_vs_juventus.m3u8",
-    "posterUrl": "https://example.com/inter_milan_vs_juventus_poster.jpg"
+    "team1": "Bali United",
+    "team2": "PSIS Semarang",
+    "time": "17:00 WITA",
+    "league": "Liga 1 Indonesia",
+    "videoId": "54321",
+    "posterUrl": "https://example.com/bali_united_vs_psis_poster.jpg"
+  },
+  {
+    "team1": "PSM Makassar",
+    "team2": "Borneo FC",
+    "time": "20:30 WIT",
+    "league": "Liga 1 Indonesia",
+    "videoId": "09876",
+    "posterUrl": "https://example.com/psm_vs_borneo_poster.jpg"
   }
 ]
