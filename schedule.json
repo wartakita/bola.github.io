@@ -5,7 +5,7 @@
     "time": "19:00",
     "teams": "Team A vs Team B",
     "league": "La Liga",
-    "m3u8Url": "https://example.com/stream.m3u8",
+    "m3u8Url": "https://live.bokulsports.com/DaddyHD/stream.php?id=123&srv=1&format=.m3u8&vtoken=5bd183866132e44437832c08997ef59db5cb829fffccabdab1f17e717dd653ae-1739991137",
     "embedUrl": "https://cdn.plrjs.com/player/bsa9hkrkynde7/qqvmenqpoeve.html?file=https://vibetv.github.io/offline/streamoffline.mp4"
   }
 ]
