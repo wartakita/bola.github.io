@@ -1,0 +1,59 @@
+[
+  {
+    "videoId": "12345",
+    "date": "2024-02-20",
+    "time": "19:00",
+    "teams": "Real Madrid vs Barcelona",
+    "league": "La Liga",
+    "m3u8Url": "https://example.com/stream/12345.m3u8",
+    "embedUrl": "https://example.com/embed/12345",
+    "channels": [
+      {
+        "name": "Channel 1",
+        "streaming_url": "https://example.com/stream/12345_channel1.m3u8"
+      },
+      {
+        "name": "Channel 2",
+        "streaming_url": "https://example.com/stream/12345_channel2.m3u8"
+      }
+    ]
+  },
+  {
+    "videoId": "67890",
+    "date": "2024-02-21",
+    "time": "20:00",
+    "teams": "Manchester United vs Liverpool",
+    "league": "Premier League",
+    "m3u8Url": "https://example.com/stream/67890.m3u8",
+    "embedUrl": "https://example.com/embed/67890",
+    "channels": [
+      {
+        "name": "Channel 1",
+        "streaming_url": "https://example.com/stream/67890_channel1.m3u8"
+      },
+      {
+        "name": "Channel 2",
+        "streaming_url": "https://example.com/stream/67890_channel2.m3u8"
+      }
+    ]
+  },
+  {
+    "videoId": "54321",
+    "date": "2024-02-22",
+    "time": "18:30",
+    "teams": "Bayern Munich vs Borussia Dortmund",
+    "league": "Bundesliga",
+    "m3u8Url": "https://example.com/stream/54321.m3u8",
+    "embedUrl": "https://example.com/embed/54321",
+    "channels": [
+      {
+        "name": "Channel 1",
+        "streaming_url": "https://example.com/stream/54321_channel1.m3u8"
+      },
+      {
+        "name": "Channel 2",
+        "streaming_url": "https://example.com/stream/54321_channel2.m3u8"
+      }
+    ]
+  }
+]
