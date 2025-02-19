@@ -1,9 +1,11 @@
 [
   {
-    "date": "2025-02-18",
-    "league": "PERCOBAAN",
-    "teams": "COBA vs COBA",
-    "time": "21:00",
-    "videoId": "20250219BADUK1"
+    "videoId": "4wyrn4hxpxj8q86",
+    "date": "2024-02-20",
+    "time": "19:00",
+    "teams": "Team A vs Team B",
+    "league": "La Liga",
+    "m3u8Url": "https://example.com/stream.m3u8",
+    "embedUrl": "https://cdn.plrjs.com/player/bsa9hkrkynde7/qqvmenqpoeve.html?file=https://vibetv.github.io/offline/streamoffline.mp4"
   }
 ]
