@@ -1,37 +1,5 @@
 [
   {
-    "videoId": "l5ergphw6xlpr8k",
-    "date": "2025-02-20",
-    "time": "14:00",
-    "teams": "Japan U20 vs South Korea U20",
-    "league": "AFC Asian Cup U20",
-    "m3u8Url": "https://example.com/stream1.m3u8"
-  },
-  {
-    "videoId": "y0or5jhnkyzdqwz",
-    "date": "2025-02-20",
-    "time": "14:00",
-    "teams": "Syria U20 vs Thailand U20",
-    "league": "AFC Asian Cup U20",
-    "m3u8Url": "https://example.com/stream2.m3u8"
-  },
-  {
-    "videoId": "4wyrn4hxool8q86",
-    "date": "2025-02-20",
-    "time": "02:30",
-    "teams": "Aston Villa vs Liverpool",
-    "league": "Premier League",
-    "m3u8Url": "https://example.com/stream3.m3u8"
-  },
-  {
-    "videoId": "ednm9wh7y73yryo",
-    "date": "2025-02-20",
-    "time": "01:00",
-    "teams": "Al Taawon vs Al Wakra",
-    "league": "AFC Champions League 2 - Play Offs",
-    "m3u8Url": "https://example.com/stream4.m3u8"
-  },
-  {
     "videoId": "vjxm8ghldln5r6o",
     "date": "2025-02-20",
     "time": "17:00",
@@ -72,115 +40,11 @@
     "m3u8Url": "https://example.com/stream9.m3u8"
   },
   {
-    "videoId": "y0or5jhnpwl5qwz",
-    "date": "2025-02-20",
-    "time": "05:00",
-    "teams": "Boston River (Uru) vs Nublense (Chi)",
-    "league": "Copa Libertadores - Qualification",
-    "m3u8Url": "https://example.com/stream10.m3u8"
-  },
-  {
-    "videoId": "k82rekhw5y09rep",
-    "date": "2025-02-20",
-    "time": "07:30",
-    "teams": "EL Nacional (Ecu) vs Barcelona SC (Ecu)",
-    "league": "Copa Libertadores - Qualification",
-    "m3u8Url": "https://example.com/stream11.m3u8"
-  },
-  {
-    "videoId": "n54qllh70w2oqvy",
-    "date": "2025-02-20",
-    "time": "07:30",
-    "teams": "Universidad Central (Ven) vs Corinthians (Bra)",
-    "league": "Copa Libertadores - Qualification",
-    "m3u8Url": "https://example.com/stream12.m3u8"
-  },
-  {
-    "videoId": "318q66hw9v6vqo9",
-    "date": "2025-02-21",
-    "time": "05:00",
-    "teams": "Monagas (Ven) vs Cerro Porteno (Par)",
-    "league": "Copa Libertadores - Qualification",
-    "m3u8Url": "https://example.com/stream13.m3u8"
-  },
-  {
-    "videoId": "zp5rzgh5kdj8q82",
-    "date": "2025-02-21",
-    "time": "07:30",
-    "teams": "Deportes Tolima (Col) vs FBC Melgar (Per)",
-    "league": "Copa Libertadores - Qualification",
-    "m3u8Url": "https://example.com/stream14.m3u8"
-  },
-  {
-    "videoId": "y39mp1hzg061moj",
-    "date": "2025-02-20",
-    "time": "06:30",
-    "teams": "Herediano vs Real Salt Lake",
-    "league": "CONCACAF Champions Cup",
-    "m3u8Url": "https://example.com/stream15.m3u8"
-  },
-  {
-    "videoId": "4jwq2gheyznkm0v",
-    "date": "2025-02-20",
-    "time": "08:00",
-    "teams": "Antigua vs Seattle Sounders",
-    "league": "CONCACAF Champions Cup",
-    "m3u8Url": "https://example.com/stream16.m3u8"
-  },
-  {
-    "videoId": "x7lm7phzy3z6m2w",
-    "date": "2025-02-20",
-    "time": "08:00",
-    "teams": "Sporting Kansas City vs Inter Miami",
-    "league": "CONCACAF Champions Cup",
-    "m3u8Url": "https://example.com/stream17.m3u8"
-  },
-  {
-    "videoId": "965mkyhyd2ker1g",
-    "date": "2025-02-20",
-    "time": "10:00",
-    "teams": "Motagua vs FC Cincinnati",
-    "league": "CONCACAF Champions Cup",
-    "m3u8Url": "https://example.com/stream18.m3u8"
-  },
-  {
     "videoId": "n54qllh7gp7lqvy",
     "date": "2025-02-21",
     "time": "08:00",
     "teams": "Saprissa vs Vancouver Whitecaps",
     "league": "CONCACAF Champions Cup",
     "m3u8Url": "https://example.com/stream19.m3u8"
-  },
-  {
-    "videoId": "4jwq2ghe3dyzm0v",
-    "date": "2025-02-20",
-    "time": "00:45",
-    "teams": "Dortmund vs Sporting CP",
-    "league": "Champions League - Play Offs",
-    "m3u8Url": "https://example.com/stream20.m3u8"
-  },
-  {
-    "videoId": "23xmvkh8nz1wqg8",
-    "date": "2025-02-20",
-    "time": "03:00",
-    "teams": "PSG vs Brest",
-    "league": "Champions League - Play Offs",
-    "m3u8Url": "https://example.com/stream21.m3u8"
-  },
-  {
-    "videoId": "1l4rjnh4wpolm7v",
-    "date": "2025-02-20",
-    "time": "03:00",
-    "teams": "PSV vs Juventus",
-    "league": "Champions League - Play Offs",
-    "m3u8Url": "https://example.com/stream22.m3u8"
-  },
-  {
-    "videoId": "zp5rzgh5lev4q82",
-    "date": "2025-02-20",
-    "time": "03:00",
-    "teams": "Real Madrid vs Manchester City",
-    "league": "Champions League - Play Offs",
-    "m3u8Url": "https://example.com/stream23.m3u8"
   }
 ]
