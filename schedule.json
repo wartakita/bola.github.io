@@ -1,29 +1,20 @@
 [
   {
-    "videoId": "l5ergphwk7zer8k",
-    "date": "2025-02-21",
-    "time": "15:30",
-    "teams": "Persis Solo vs Semen Padang",
-    "league": "INDONESIA: Liga 1",
-    "m3u8Url": "https://example.com/stream17.m3u8",
-    "iframeUrl": "https://mhdtv.site/DaddyHD/?play=124"
-  },
-  {
-    "videoId": "4wyrn4hxy5jdq86",
-    "date": "2025-02-21",
-    "time": "15:30",
-    "teams": "PSBS Biak Numfor vs Persik Kediri",
-    "league": "INDONESIA: Liga 1",
-    "m3u8Url": "https://example.com/stream18.m3u8",
-    "iframeUrl": "https://example.com/embed/67890"
-  },
-  {
-    "videoId": "jw2r09h25gewrz8",
+    "videoId": "12345",
+    "m3u8Url": "https://example.com/stream.m3u8",
+    "iframeUrl": "https://mhdtv.site/DaddyHD/?play=124",
     "date": "2025-02-21",
     "time": "19:00",
-    "teams": "Dewa United vs Persebaya",
-    "league": "INDONESIA: Liga 1",
-    "m3u8Url": "https://example.com/stream19.m3u8",
-    "iframeUrl": "https://example.com/embed/67890"
+    "teams": "Team A vs Team B",
+    "league": "Premier League"
+  },
+  {
+    "videoId": "67890",
+    "m3u8Url": "https://example.com/stream2.m3u8",
+    "iframeUrl": "https://example.com/iframe2.html",
+    "date": "2025-02-22",
+    "time": "20:00",
+    "teams": "Team C vs Team D",
+    "league": "La Liga"
   }
 ]
