@@ -5,7 +5,7 @@
     "teams": "Team A vs Team B",
     "league": "Premier League",
     "videoId": "12345",
-    "m3u8Url": "https://example.com/stream.m3u8",
+    "m3u8Url": "https://livecloud-slit.akamaized.net/sports/kr2/entry/djEuMCYmRU5UUlkmJmQwNDQ4NzhlLTFkNGItNGFmMi1iOWViLTliY2Y2ODQwYzk0MyYmOTE3NzQwNyYmMTA2NzIwNTUmJjkxNzc0MDcxMDY3MjA1NUwwJiZm/playlist.m3u8?hdnts=st=1740118614~exp=1740151024~acl=*/entry/*~hmac=230a0777a1a4928f897a5b1174fc4c0e086def60b832b14e46fc0c576088d755",
     "embedUrl": "https://mhdtv.site/DaddyHD/?play=124"
   }
 ]
