@@ -357,7 +357,7 @@
     "time": "17:00",
     "teams": "KAL Jumbos vs. Ansan OK",
     "league": "South Korea: Volleyball League (Men)",
-    "m3u8Url": "https://example.com/stream.m3u8"
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0004/1p1wrzgsmnlbdhsglvcqvhsgm88b1le61y/playlist.m3u8?hdnts=st=1740131279~exp=1740163689~acl=*/1p1wrzgsmnlbdhsglvcqvhsgm88b1le61y/*~hmac=18d0339c615915a8d63581ea01f55098e3b1b01fc4365f49e53bc843c2c9f1ea"
   },
   {
     "videoId": "43",
@@ -373,7 +373,7 @@
     "time": "17:00",
     "teams": "Hyundai E&C Hillstate W vs. Hungkuk W",
     "league": "South Korea: Volleyball League Women",
-    "m3u8Url": "https://example.com/stream.m3u8"
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0002/swubeievoxt6murfpumxs7ci31yci7t4jl/playlist.m3u8?hdnts=st=1740131242~exp=1740163652~acl=*/swubeievoxt6murfpumxs7ci31yci7t4jl/*~hmac=daf94a5145e5c1b7f7d6322a1cdf67fac35abff3bbbd28a16383c1e4d843e6b9"
   },
   {
     "videoId": "45",
