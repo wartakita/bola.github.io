@@ -21,6 +21,6 @@
     "time": "19:00",
     "teams": "Dewa United vs Persebaya",
     "league": "INDONESIA: Liga 1",
-    "m3u8Url": "https://example.com/stream19.m3u8"
+    "m3u8Url": "https://etslive-v3-vidio-com-tokenized.akamaized.net/live/18234/master.m3u8?hdnts=exp=1740141265~acl=/live/18234/master.m3u8!/hls-p/ingest_18234*/*!/hls-b/ingest_18234*/*~id=175769870~hmac=75353cce2bf39f17f2c9dbbcab6c5e8eb066bb4262f5eb41144564c3e909d8ed"
   }
 ]
