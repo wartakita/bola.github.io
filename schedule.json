@@ -5,7 +5,8 @@
     "time": "15:30",
     "teams": "Persis Solo vs Semen Padang",
     "league": "INDONESIA: Liga 1",
-    "m3u8Url": "https://example.com/stream17.m3u8"
+    "m3u8Url": "https://example.com/stream17.m3u8",
+    "embedUrl": "https://mhdtv.site/DaddyHD/?play=124"
   },
   {
     "videoId": "4wyrn4hxy5jdq86",
@@ -13,7 +14,8 @@
     "time": "15:30",
     "teams": "PSBS Biak Numfor vs Persik Kediri",
     "league": "INDONESIA: Liga 1",
-    "m3u8Url": "https://example.com/stream18.m3u8"
+    "m3u8Url": "https://example.com/stream18.m3u8",
+    "embedUrl": "https://example.com/embed/67890"
   },
   {
     "videoId": "jw2r09h25gewrz8",
@@ -21,6 +23,7 @@
     "time": "19:00",
     "teams": "Dewa United vs Persebaya",
     "league": "INDONESIA: Liga 1",
-    "m3u8Url": "https://example.com/stream19.m3u8"
+    "m3u8Url": "https://example.com/stream19.m3u8",
+    "embedUrl": "https://example.com/embed/67890"
   }
 ]
