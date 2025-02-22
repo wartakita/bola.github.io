@@ -1,19 +1,11 @@
 [
   {
-    "videoId": "3glrw7h7xojxqdy",
-    "date": "2025-02-22",
-    "time": "15:15",
-    "teams": "Saudi Arabia U20 vs China U20",
-    "league": "AFC Asian Cup U20",
-    "m3u8Url": "https://example.com/stream1.m3u8"
-  },
-  {
     "videoId": "vjxm8ghlnxjyr6o",
     "date": "2025-02-22",
     "time": "18:30",
     "teams": "Australia U20 vs Iraq U20",
     "league": "AFC Asian Cup U20",
-    "m3u8Url": "https://example.com/stream2.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "dj2ryoh1ee2vq1z",
@@ -21,7 +13,7 @@
     "time": "19:30",
     "teams": "Everton vs Manchester Utd",
     "league": "Premier League",
-    "m3u8Url": "https://example.com/stream3.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/0f3e32321aaceb212595e6e648129219_ballbar_9360.m3u8?txSecret=441223b235e7a7b8d616ff7129584787&txTime=67b9bbdd"
   },
   {
     "videoId": "k82rekhw003drep",
@@ -29,7 +21,7 @@
     "time": "22:00",
     "teams": "Arsenal vs West Ham",
     "league": "Premier League",
-    "m3u8Url": "https://example.com/stream4.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/2663486d8e21565a680ffcf4c0a348c2_ballbar_40610.m3u8?txSecret=33e5171b6313dd76b956756df570844a&txTime=67b9bbc1"
   },
   {
     "videoId": "965mkyhy22nwr1g",
@@ -37,7 +29,7 @@
     "time": "22:00",
     "teams": "Bournemouth vs Wolves",
     "league": "Premier League",
-    "m3u8Url": "https://example.com/stream5.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/61dd1bc3178ed6295366c35b0ddbef08_ballbar_38330.m3u8?txSecret=e5fa317eaf7ef158e3baf11a428bf74b&txTime=67b9bba8"
   },
   {
     "videoId": "2y8m4zh6ww13ql0",
@@ -45,7 +37,7 @@
     "time": "22:00",
     "teams": "Fulham vs Crystal Palace",
     "league": "Premier League",
-    "m3u8Url": "https://example.com/stream6.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/7372d6b2c71ddd3e5f668e64ba04242d_ballbar_39990.m3u8?txSecret=67c61ac439bb1747472197475356316c&txTime=67b9bb90"
   },
   {
     "videoId": "pxwrxlh5xxvjryk",
@@ -53,7 +45,7 @@
     "time": "22:00",
     "teams": "Ipswich vs Tottenham",
     "league": "Premier League",
-    "m3u8Url": "https://example.com/stream7.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/29c3d54d8ccfe289b67cbdfbd73b426a_ballbar_39510.m3u8?txSecret=d0763fa45eb299e9d1a3f3023b22105e&txTime=67b9bb66"
   },
   {
     "videoId": "zp5rzgh56616q82",
@@ -61,7 +53,7 @@
     "time": "22:00",
     "teams": "Southampton vs Brighton",
     "league": "Premier League",
-    "m3u8Url": "https://example.com/stream8.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/34baf132a8ca0f6e9f7f0e5c4ab2a462_ballbar_39350.m3u8?txSecret=b5a92eb04f988df7a387bceeff1fee83&txTime=67b9bb2c"
   },
   {
     "videoId": "jw2r09h266werz8",
@@ -69,7 +61,7 @@
     "time": "00:30",
     "teams": "Aston Villa vs Chelsea",
     "league": "Premier League",
-    "m3u8Url": "https://example.com/stream9.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/ce372e35f4cf52bae27f36e3476b8403_ballbar_36450.m3u8?txSecret=82dd5ded5358785a58a41fbe129867a9&txTime=67b9bae7"
   },
   {
     "videoId": "k82rekhw04x1rep",
@@ -77,7 +69,7 @@
     "time": "23:00",
     "teams": "Lille vs Monaco",
     "league": "Ligue 1",
-    "m3u8Url": "https://example.com/stream10.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "8yomo4h3go48q0j",
@@ -85,7 +77,7 @@
     "time": "01:00",
     "teams": "St Etienne vs Angers",
     "league": "Ligue 1",
-    "m3u8Url": "https://example.com/stream11.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "4jwq2ghezj9km0v",
@@ -93,7 +85,7 @@
     "time": "03:05",
     "teams": "Auxerre vs Marseille",
     "league": "Ligue 1",
-    "m3u8Url": "https://example.com/stream12.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "k82rekhwwyd8rep",
@@ -101,7 +93,7 @@
     "time": "21:30",
     "teams": "B. Monchengladbach vs Augsburg",
     "league": "Bundesliga",
-    "m3u8Url": "https://example.com/stream13.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "l5ergphwwvjlr8k",
@@ -109,7 +101,7 @@
     "time": "21:30",
     "teams": "Holstein Kiel vs Bayer Leverkusen",
     "league": "Bundesliga",
-    "m3u8Url": "https://example.com/stream14.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "jw2r09h22xd2rz8",
@@ -117,7 +109,7 @@
     "time": "21:30",
     "teams": "Mainz vs St. Pauli",
     "league": "Bundesliga",
-    "m3u8Url": "https://example.com/stream15.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "dj2ryoh11j37q1z",
@@ -125,7 +117,7 @@
     "time": "21:30",
     "teams": "Wolfsburg vs Bochum",
     "league": "Bundesliga",
-    "m3u8Url": "https://example.com/stream16.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "318q66hwwvdnqo9",
@@ -133,15 +125,7 @@
     "time": "00:30",
     "teams": "Dortmund vs Union Berlin",
     "league": "Bundesliga",
-    "m3u8Url": "https://example.com/stream17.m3u8"
-  },
-  {
-    "videoId": "l7oqdehoj9v1r51",
-    "date": "2025-02-22",
-    "time": "15:30",
-    "teams": "Persita vs Borneo",
-    "league": "Liga 1",
-    "m3u8Url": "https://example.com/stream18.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "dj2ryoh179wdq1z",
@@ -149,7 +133,7 @@
     "time": "19:00",
     "teams": "Persib Bandung vs Madura United",
     "league": "Liga 1",
-    "m3u8Url": "https://example.com/stream19.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/a29d237e4f99b9ac9ccd1c3cde0b2714_ballbar_22750.m3u8?txSecret=493d7876cc1b6179b32fce044de5b59a&txTime=67b9bd0b"
   },
   {
     "videoId": "dn1m1gh22378moe",
@@ -157,7 +141,7 @@
     "time": "21:00",
     "teams": "Parma vs Bologna",
     "league": "Serie A",
-    "m3u8Url": "https://example.com/stream20.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "l5ergphwwey5r8k",
@@ -165,7 +149,7 @@
     "time": "21:00",
     "teams": "Venezia vs Lazio",
     "league": "Serie A",
-    "m3u8Url": "https://example.com/stream21.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "4wyrn4hxx429q86",
@@ -173,7 +157,7 @@
     "time": "00:00",
     "teams": "Torino vs AC Milan",
     "league": "Serie A",
-    "m3u8Url": "https://example.com/stream22.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "k82rekhwwo6yrep",
@@ -181,79 +165,7 @@
     "time": "02:45",
     "teams": "Inter vs Genoa",
     "league": "Serie A",
-    "m3u8Url": "https://example.com/stream23.m3u8"
-  },
-  {
-    "videoId": "jw2r09h2yo37rz8",
-    "date": "2025-02-22",
-    "time": "12:00",
-    "teams": "Kashiwa Reysol vs Kawasaki Frontale",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream24.m3u8"
-  },
-  {
-    "videoId": "pxwrxlh58kllryk",
-    "date": "2025-02-22",
-    "time": "12:00",
-    "teams": "Kyoto vs Urawa Reds",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream25.m3u8"
-  },
-  {
-    "videoId": "318q66hwy5p2qo9",
-    "date": "2025-02-22",
-    "time": "12:00",
-    "teams": "Nagoya Grampus vs Vissel Kobe",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream26.m3u8"
-  },
-  {
-    "videoId": "4jwq2ghey3glm0v",
-    "date": "2025-02-22",
-    "time": "12:00",
-    "teams": "Shimizu S-Pulse vs Albirex Niigata",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream27.m3u8"
-  },
-  {
-    "videoId": "4jwq2ghey35xm0v",
-    "date": "2025-02-22",
-    "time": "12:00",
-    "teams": "Yokohama FC vs Okayama",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream28.m3u8"
-  },
-  {
-    "videoId": "y39mp1hzg2d5moj",
-    "date": "2025-02-22",
-    "time": "13:00",
-    "teams": "Cerezo Osaka vs Shonan Bellmare",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream29.m3u8"
-  },
-  {
-    "videoId": "dj2ryoh16z7xq1z",
-    "date": "2025-02-22",
-    "time": "13:00",
-    "teams": "FC Tokyo vs Machida",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream30.m3u8"
-  },
-  {
-    "videoId": "23xmvkh81nz3qg8",
-    "date": "2025-02-22",
-    "time": "13:00",
-    "teams": "Gamba Osaka vs Avispa Fukuoka",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream31.m3u8"
-  },
-  {
-    "videoId": "1l4rjnh4owpzm7v",
-    "date": "2025-02-22",
-    "time": "13:00",
-    "teams": "Kashima Antlers vs Verdy",
-    "league": "J1 League",
-    "m3u8Url": "https://example.com/stream32.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "x7lm7phzjeljm2w",
@@ -261,7 +173,7 @@
     "time": "20:00",
     "teams": "Al Kholood vs Al Wehda",
     "league": "Saudi Professional League",
-    "m3u8Url": "https://example.com/stream33.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/9e9eea6ae174b099011d13edf3664ab0_ballbar_38300.m3u8?txSecret=3abdb4ea98b273e22efaa5db979e2142&txTime=67b9bcc7"
   },
   {
     "videoId": "jw2r09h2kvz8rz8",
@@ -269,7 +181,7 @@
     "time": "21:05",
     "teams": "Al Taawon vs Al Shabab",
     "league": "Saudi Professional League",
-    "m3u8Url": "https://example.com/stream34.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/2b2fc46a89bc6529bf7b4a55dd5057a7_ballbar_38600.m3u8?txSecret=30729868d2439fa90b92a42e0644ea3b&txTime=67b9bca0"
   },
   {
     "videoId": "965mkyhykx66r1g",
@@ -277,31 +189,7 @@
     "time": "01:15",
     "teams": "Al Ittihad vs Al Hilal",
     "league": "Saudi Professional League",
-    "m3u8Url": "https://example.com/stream35.m3u8"
-  },
-  {
-    "videoId": "k82rekhwknk0rep",
-    "date": "2025-02-22",
-    "time": "12:00",
-    "teams": "Jeju SK vs Gimcheon Sangmu",
-    "league": "K League 1",
-    "m3u8Url": "https://example.com/stream36.m3u8"
-  },
-  {
-    "videoId": "4jwq2ghe263em0v",
-    "date": "2025-02-22",
-    "time": "14:30",
-    "teams": "Daegu vs Suwon FC",
-    "league": "K League 1",
-    "m3u8Url": "https://example.com/stream37.m3u8"
-  },
-  {
-    "videoId": "965mkyhyv1x5r1g",
-    "date": "2025-02-22",
-    "time": "14:30",
-    "teams": "Seoul vs Anyang",
-    "league": "K League 1",
-    "m3u8Url": "https://example.com/stream38.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/5ce47e11a72191029b5cf4e1272e29c5_ballbar_7840.m3u8?txSecret=50fc67236e4d077b9d1d402fd2c450ab&txTime=67b9bce8"
   },
   {
     "videoId": "y0or5jhnz23gqwz",
@@ -309,7 +197,7 @@
     "time": "20:00",
     "teams": "Alaves vs Espanyol",
     "league": "La Liga",
-    "m3u8Url": "https://example.com/stream39.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/e4504ad7bf16b25c1378587ef14a5eda_ballbar_40770.m3u8?txSecret=a970dee89fa6036cb950a8990c82872d&txTime=67b9bc63"
   },
   {
     "videoId": "y0or5jhnzn39qwz",
@@ -317,7 +205,7 @@
     "time": "22:15",
     "teams": "Rayo Vallecano vs Villarreal",
     "league": "La Liga",
-    "m3u8Url": "https://example.com/stream40.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/59a6143105f52c4f7f51a51ed67e62b2_ballbar_37540.m3u8?txSecret=06e699ed02892b82638d517458c660d5&txTime=67b9bc49"
   },
   {
     "videoId": "l5ergphwlwnvr8k",
@@ -325,7 +213,7 @@
     "time": "00:30",
     "teams": "Valencia vs Atl. Madrid",
     "league": "La Liga",
-    "m3u8Url": "https://example.com/stream41.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/b53325695397baa270d15081cd1c229d_ballbar_36880.m3u8?txSecret=97ca091f47f107ba0d6ba21ca3f5ad18&txTime=67b9bc31"
   },
   {
     "videoId": "6ypq3nh373nkmd7",
@@ -333,30 +221,6 @@
     "time": "03:00",
     "teams": "Las Palmas vs Barcelona",
     "league": "La Liga",
-    "m3u8Url": "https://example.com/stream42.m3u8"
-  },
-  {
-    "videoId": "43",
-    "date": "2025-02-22",
-    "time": "12:00",
-    "teams": "Woori vs Hyundai Skywalkers",
-    "league": "Volleyball League",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr/cnmssgpu0001/rzkih33q9yfvl5kcitweacs6uq48m4lepg/playlist.m3u8?hdnts=st=1740200610~exp=1740233020~acl=*/rzkih33q9yfvl5kcitweacs6uq48m4lepg/*~hmac=f707fbc32844b4e994a9edc61afc7cdbc18ceedef814385f1fe6e4ca596369da"
-  },
-  {
-    "videoId": "44",
-    "date": "2025-02-22",
-    "time": "14:00",
-    "teams": "Daejeon JKJ W vs GS Caltex W",
-    "league": "Volleyball League Women",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr/cnmssgpu0001/gc9uy05kxph1a9pbmcdw0yign1ip7fnzmg/playlist.m3u8?hdnts=st=1740214599~exp=1740247009~acl=*/gc9uy05kxph1a9pbmcdw0yign1ip7fnzmg/*~hmac=8207d3f94cefccae42b74f997bc07793c358e40c8f83c8c0f41df092bf173dfa"
-  },
-  {
-    "videoId": "45",
-    "date": "2025-02-22",
-    "time": "10:30",
-    "teams": "Australian Round 2025",
-    "league": "worldsbk",
-    "m3u8Url": "https://mhdtv.site/DaddyHD/stream.php?id=32&srv=1&format=.m3u8&vtoken=1d2807cc68265186e31f9a116b3fbec872ab590845125fcc4ceecb31bbb299a9-1740214594"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/play1nm.hnyongshun.cn/live/f960c1acffa49586767d733a9d3c33e4_ballbar_36410.m3u8?txSecret=9469fe04137ea8c57f7bccf0c1b39bb9&txTime=67b9bc16"
   }
 ]
