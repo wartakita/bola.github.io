@@ -341,7 +341,7 @@
     "time": "12:00",
     "teams": "Woori vs Hyundai Skywalkers",
     "league": "Volleyball League",
-    "m3u8Url": "https://example.com/stream43.m3u8"
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr/cnmssgpu0001/rzkih33q9yfvl5kcitweacs6uq48m4lepg/playlist.m3u8?hdnts=st=1740200610~exp=1740233020~acl=*/rzkih33q9yfvl5kcitweacs6uq48m4lepg/*~hmac=f707fbc32844b4e994a9edc61afc7cdbc18ceedef814385f1fe6e4ca596369da"
   },
   {
     "videoId": "44",
