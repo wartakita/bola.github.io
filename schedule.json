@@ -1,11 +1,11 @@
 [
   {
-    "videoId": "jw2r09h2ye1jrz8",
+    "videoId": "00001",
     "date": "2025-02-23",
     "time": "18:30",
     "teams": "South Korea U20 vs Uzbekistan U20",
     "league": "AFC Asian Cup U20 - Play Offs",
-    "m3u8Url": "https://bcovlive-a.akamaihd.net/r2d2c4ca5bf57456fb1d16255c1a535c8/eu-west-1/6058004203001/playlist.m3u8"
+    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
     "videoId": "00002",
@@ -144,7 +144,7 @@
     "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
-    "videoId": "00019",
+    "videoId": "zp5rzgh5vl97q82",
     "date": "2025-02-23",
     "time": "12:00",
     "teams": "Sanfrecce Hiroshima vs Yokohama F. Marinos",
@@ -176,7 +176,7 @@
     "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
   },
   {
-    "videoId": "00023",
+    "videoId": "dj2ryoh1op6yq1z",
     "date": "2025-02-23",
     "time": "12:00",
     "teams": "Daejeon vs Ulsan HD",
@@ -277,7 +277,7 @@
     "time": "12:00",
     "teams": "Samsung Blue Fangs vs KB Stars",
     "league": "Volleyball League",
-    "m3u8Url": "https://12a001a90a8c45927f7710a6ee02e8e6.v.smtcdns.net/"
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr/cnmssgpu0001/co8d1avao3ms5t1kp31ouglkcr9k7veco3/playlist.m3u8?hdnts=st=1740287448~exp=1740319858~acl=*/co8d1avao3ms5t1kp31ouglkcr9k7veco3/*~hmac=6b91838969d7a2fdfd301c80e92fc114c9f5dba38da7b6d3f23db1aedba66fc0"
   },
   {
     "videoId": "00036",
