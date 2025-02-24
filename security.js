@@ -17,6 +17,13 @@ function preventEmbed() {
     }
 }
 
+// Fungsi untuk memeriksa apakah halaman sedang di-iframe dan redirect jika ya
+function checkIfIframed() {
+    if (window.self !== window.top) {
+        window.location.href = 'https://google.com/';
+    }
+}
+
 // Panggil fungsi checkDomain dan preventEmbed saat dokumen selesai dimuat
 document.addEventListener('DOMContentLoaded', () => {
     checkDomain();
