@@ -1,6 +1,13 @@
+// Fungsi untuk memeriksa apakah halaman di-iframe dan redirect jika ya
+function checkIframe() {
+    if (window.self !== window.top) {
+        window.location.href = 'https://google.com/';
+    }
+}
+
 // Fungsi untuk memeriksa domain
 function checkDomain() {
-    const allowedDomain = 'https://zonasportlive.blogspot.com/'; // Ganti dengan domain yang diizinkan
+    const allowedDomain = 'https://zonasportlive.blogspot.com'; // Ganti dengan domain yang diizinkan
     const referrer = document.referrer;
 
     if (referrer && !referrer.startsWith(allowedDomain)) {
@@ -9,23 +16,8 @@ function checkDomain() {
     }
 }
 
-// Fungsi untuk mencegah embedding dalam iframe
-function preventEmbed() {
-    if (window.top !== window.self) {
-        alert('Akses dilarang. Halaman ini tidak dapat di-embed atau di-iframe.');
-        window.top.location = window.self.location;
-    }
-}
-
-// Fungsi untuk memeriksa apakah halaman sedang di-iframe dan redirect jika ya
-function checkIfIframed() {
-    if (window.self !== window.top) {
-        window.location.href = 'https://google.com/';
-    }
-}
-
-// Panggil fungsi checkDomain dan preventEmbed saat dokumen selesai dimuat
+// Panggil fungsi checkIframe dan checkDomain saat dokumen selesai dimuat
 document.addEventListener('DOMContentLoaded', () => {
+    checkIframe();
     checkDomain();
-    preventEmbed();
 });
