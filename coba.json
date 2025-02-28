@@ -1,8 +1,8 @@
 [
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4287211.m3u8?txSecret=3a465b2649e47ec75df26d1598aae155&txTime=67C24337",
-    "iframeURL": "",
+    "m3u8Url": "",
+    "iframeURL": "https://v.567440.com/live/index.html?liveUrl=https%3A%2F%2Flive.bbapcall.com%2Flive%2Fsd-1-4287211.m3u8%3FtxSecret%3D3a465b2649e47ec75df26d1598aae155%26txTime%3D67C24337&fullscreen=true&isMobile=true",
     "date": "2025-03-01",
     "time": "19:00",
     "teams": "Team A vs Team B",
