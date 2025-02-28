@@ -7,6 +7,6 @@
     "league": "La Liga",
     "m3u8Url": "https://example.com/stream/12345.m3u8",
     "liveUrl": "https://example.com/stream/12345/live.m3u8",
-    "iframeURL": ""
+    "iframeURL": "https://cdn.plrjs.com/player/bsa9hkrkynde7/qqvmenqpoeve.html?file=https://vibetv.github.io/offline/streamoffline.mp4"
   }
 ]
