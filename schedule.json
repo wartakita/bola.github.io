@@ -1,50 +1,11 @@
 [
   {
-    "videoId": "1",
-    "date": "2025-02-27",
-    "time": "17:00",
-    "teams": "Samsung Blue Fangs vs KAL Jumbos",
-    "league": "South Korea: Volleyball League",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0004/8cblf45alzldxpvswazprk5grc23svcrke/playlist.m3u8?hdnts=st=1740651925~exp=1740684335~acl=*/8cblf45alzldxpvswazprk5grc23svcrke/*~hmac=18ca6f4bd44e12e9c6f7f93f6fac3f5366f2f655fd97dc3b0ff78d1868415b89"
-  },
-  {
-    "videoId": "jw2r09h2667xrz8",
-    "date": "2025-02-28",
-    "time": "03:00",
-    "teams": "West Ham vs Leicester",
-    "league": "England: Premier League",
-    "m3u8Url": "https://vibetv.github.io/offline/streamoffline.mp4"
-  },
-  {
-    "videoId": "3",
-    "date": "2025-02-27",
-    "time": "17:00",
-    "teams": "Expressway Co W vs Hyundai E&C Hillstate W",
-    "league": "South Korea: Volleyball League Women",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/gifmfjrdu3cvxjsgiwsnvgt1ugda8nzvkl/playlist.m3u8?hdnts=st=1740649576~exp=1740681986~acl=*/gifmfjrdu3cvxjsgiwsnvgt1ugda8nzvkl/*~hmac=68b52d8e066a56b492996c7b0862f1869e1db5667c57f67d453ab47f5cc6e904"
-  },
-  {
-    "videoId": "6ypq3nh33w0zmd7",
-    "date": "2025-02-28",
-    "time": "02:45",
-    "teams": "Bologna vs AC Milan",
-    "league": "Italy: Serie A",
-    "m3u8Url": "https://vibetv.github.io/offline/streamoffline.mp4"
-  },
-  {
-    "videoId": "1l4rjnh4olk5m7v",
-    "date": "2025-02-27",
-    "time": "20:00",
-    "teams": "Selangor vs Sabah",
-    "league": "Malaysia: Super League",
-    "m3u8Url": "https://vibetv.github.io/offline/streamoffline.mp4"
-  },
-  {
-    "videoId": "4jwq2ghey979m0v",
-    "date": "2025-02-27",
-    "time": "20:00",
-    "teams": "Sri Pahang vs Terengganu",
-    "league": "Malaysia: Super League",
-    "m3u8Url": "https://vibetv.github.io/offline/streamoffline.mp4"
+    "videoId": "00000",
+    "m3u8Url": "https://example.com/stream.m3u8",
+    "iframeURL": "https://example.com/iframe.html",
+    "date": "2025-03-01",
+    "time": "19:00",
+    "teams": "Team A vs Team B",
+    "league": "Premier League"
   }
 ]
