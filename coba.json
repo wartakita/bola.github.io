@@ -1,20 +1,12 @@
 [
   {
     "videoId": "4wyrn4hxpo62q86",
-    "date": "2025-02-27",
-    "time": "17:00",
-    "teams": "Samsung Blue Fangs vs KAL Jumbos",
-    "league": "South Korea: Volleyball League",
-    "m3u8Url": " ",
-    "iframeURL": " "
-  },
-  {
-    "videoId": "6ypq3nh32nj7md7",
-    "date": "2025-02-27",
-    "time": "14:00",
-    "teams": "ARAMCO PRE-SEASON TESTING 2025",
-    "league": "FORMULA 1",
+    "liveUrl": "https://example.com/live/stream.m3u8",
     "m3u8Url": "https://example.com/stream.m3u8",
-    "iframeURL": "https://cdn.plrjs.com/player/bsa9hkrkynde7/qqvmenqpoeve.html?file=https://vibetv.github.io/offline/streamoffline.mp4"
+    "iframeURL": "https://example.com/iframe/stream",
+    "date": "2025-03-01",
+    "time": "18:00",
+    "league": "Premier League",
+    "teams": "Manchester United vs Liverpool"
   }
 ]
