@@ -406,8 +406,8 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://mhdtv.site/DaddyHD/stream.php?id=393&srv=1&format=.m3u8&vtoken=735f6bc0195fec9a29b9473627317ccce404052142d1edb46f95639d142e8687-1740771449",
-    "iframeURL": "",
+    "m3u8Url": "",
+    "iframeURL": "https://streamtp3.com/global2.php?stream=tnt_2_gb",
     "date": "2025-03-01",
     "time": "12:00",
     "teams": "Grand Prix of Thailand 2025",
