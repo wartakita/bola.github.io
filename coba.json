@@ -1,12 +1,11 @@
 [
   {
-    "videoId": "",
-    "teams": "Real Madrid vs Barcelona",
+    "videoId": "l7oqdeho564dr51",
+    "m3u8Url": "https://example.com/stream.m3u8",
+    "iframeURL": "https://example.com/iframe.html",
     "date": "2025-03-01",
     "time": "19:00",
-    "league": "La Liga",
-    "m3u8Url": "",
-    "liveUrl": "",
-    "iframeURL": "https://mhdtv.site/DaddyHD/?play=17"
+    "teams": "Team A vs Team B",
+    "league": "Premier League"
   }
 ]
