@@ -306,8 +306,8 @@
     "league": "Netherlands Eredivisie"
   },
   {
-    "videoId": "00043",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/wxnrhkpst7rgwwida61i0c3r5kkotejh93/playlist.m3u8?hdnts=st=1740806698~exp=1740839108~acl=*/wxnrhkpst7rgwwida61i0c3r5kkotejh93/*~hmac=497805ff602550905173e1416e760948522d0a57c7a65ff68f282482d6eb807f",
     "iframeURL": "",
     "date": "2025-03-01",
     "time": "12:00",
@@ -324,8 +324,8 @@
     "league": "FORMULA 1"
   },
   {
-    "videoId": "00044",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/rxvit7zqyqhrfikhhnyrpwh7jiaibxlpwl/playlist.m3u8?hdnts=st=1740806673~exp=1740839083~acl=*/rxvit7zqyqhrfikhhnyrpwh7jiaibxlpwl/*~hmac=1fad2ca211cbf30731a163038fce0e3d89f6326661b8b721788b1efd020d117c",
     "iframeURL": "",
     "date": "2025-03-01",
     "time": "12:00",
