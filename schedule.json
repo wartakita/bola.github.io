@@ -90,8 +90,8 @@
     "league": "GERMANY: Bundesliga"
   },
   {
-    "videoId": "3glrw7h74gx7qdy",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184604.m3u8?txSecret=9ab47977c9a502e0a99f735f2832c54c&txTime=67C3595C",
     "iframeURL": "",
     "date": "2025-03-01",
     "time": "20:30",
@@ -99,8 +99,8 @@
     "league": "INDONESIA: Liga 1"
   },
   {
-    "videoId": "vjxm8ghlk7ner6o",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184605.m3u8?txSecret=f161e730f00ef60e3258c866a2dac134&txTime=67C35990",
     "iframeURL": "",
     "date": "2025-03-01",
     "time": "20:30",
@@ -144,8 +144,8 @@
     "league": "SAUDI ARABIA: Saudi Professional League"
   },
   {
-    "videoId": "dj2ryoh1e1n2q1z",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4140414.m3u8?txSecret=f775c16d358f9dfde58866f863530184&txTime=67C358F7",
     "iframeURL": "",
     "date": "2025-03-01",
     "time": "20:00",
@@ -277,24 +277,6 @@
     "time": "14:30",
     "teams": "Pohang vs Daegu",
     "league": "SOUTH KOREA: K League 1"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/rxvit7zqyqhrfikhhnyrpwh7jiaibxlpwl/playlist.m3u8?hdnts=st=1740806673~exp=1740839083~acl=*/rxvit7zqyqhrfikhhnyrpwh7jiaibxlpwl/*~hmac=1fad2ca211cbf30731a163038fce0e3d89f6326661b8b721788b1efd020d117c",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "12:00",
-    "teams": "Daejeon KJK W vs Hungkuk W",
-    "league": "SOUTH KOREA: Volleyball League Women"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/wxnrhkpst7rgwwida61i0c3r5kkotejh93/playlist.m3u8?hdnts=st=1740806698~exp=1740839108~acl=*/wxnrhkpst7rgwwida61i0c3r5kkotejh93/*~hmac=497805ff602550905173e1416e760948522d0a57c7a65ff68f282482d6eb807f",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "12:00",
-    "teams": "Woori vs Ansan OK",
-    "league": "SOUTH KOREA: Volleyball League"
   },
   {
     "videoId": "",
