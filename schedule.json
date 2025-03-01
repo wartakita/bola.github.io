@@ -180,42 +180,6 @@
     "league": "SPAIN: LaLiga"
   },
   {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256441.m3u8?txSecret=072d0b9259cca2f79fe1c9b85eebd2a4&txTime=67C2E95A",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "11:00",
-    "teams": "Yokohama F. Marinos vs Shonan Bellmare",
-    "league": "JAPAN: J1 League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256460.m3u8?txSecret=54f62e096b294ad17b0aaeb58f9c2905&txTime=67C2EE42",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "12:00",
-    "teams": "Kashima Antlers vs FC Tokyo",
-    "league": "JAPAN: J1 League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256396.m3u8?txSecret=9b3f872d9107c4ec17dec7ea827ce372&txTime=67C2EE76",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "13:00",
-    "teams": "Kawasaki Frontale vs Kyoto",
-    "league": "JAPAN: J1 League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256510.m3u8?txSecret=53e3a60842221a0b75bff013c2737401&txTime=67C2EE94",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "13:00",
-    "teams": "Vissel Kobe vs Avispa Fukuoka",
-    "league": "JAPAN: J1 League"
-  },
-  {
     "videoId": "1l4rjnh4j97gm7v",
     "m3u8Url": "",
     "iframeURL": "",
@@ -250,33 +214,6 @@
     "time": "03:00",
     "teams": "Feyenoord vs Nijmegen",
     "league": "NETHERLANDS: Eredivisie"
-  },
-  {
-    "videoId": "1l4rjnh4728jm7v",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "12:00",
-    "teams": "Ulsan HD vs Jeonbuk",
-    "league": "SOUTH KOREA: K League 1"
-  },
-  {
-    "videoId": "l7oqdehopdkzr51",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "14:30",
-    "teams": "Gwangju FC vs Anyang",
-    "league": "SOUTH KOREA: K League 1"
-  },
-  {
-    "videoId": "vjxm8ghl191vr6o",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-01",
-    "time": "14:30",
-    "teams": "Pohang vs Daegu",
-    "league": "SOUTH KOREA: K League 1"
   },
   {
     "videoId": "",
