@@ -216,24 +216,6 @@
     "league": "Serie A"
   },
   {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256430.m3u8?txSecret=2f1e6b287166f63da6b2ffaba02fd70b&txTime=67C4234B",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "12:30",
-    "teams": "Sanfrecce Hiroshima vs Yokohama FC",
-    "league": "J1 League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256442.m3u8?txSecret=74f7f082b8d24f5056c0428f907fd344&txTime=67C42322",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "13:00",
-    "teams": "Urawa Reds vs Kashiwa Reysol",
-    "league": "J1 League"
-  },
-  {
     "videoId": "2y8m4zh6w6z4ql0",
     "m3u8Url": "",
     "iframeURL": "",
@@ -270,24 +252,6 @@
     "league": "LaLiga"
   },
   {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4266893.m3u8?txSecret=ee6e91af24b82f9a4ab26e4594e256e3&txTime=67C43156",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "12:00",
-    "teams": "Daejeon vs Suwon FC",
-    "league": "K League 1"
-  },
-  {
-    "videoId": "pxwrxlh54n8vryk",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "14:30",
-    "teams": "Gangwon vs Jeju SK",
-    "league": "K League 1"
-  },
-  {
     "videoId": "vjxm8ghle6nlr6o",
     "m3u8Url": "",
     "iframeURL": "",
@@ -313,24 +277,6 @@
     "time": "02:00",
     "teams": "Al Raed vs Al Ettifaq",
     "league": "Saudi Professional League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/rkzouf8rkzgafabpbesbm9aialvwhlihji/playlist.m3u8?hdnts=st=1740898603~exp=1740931013~acl=*/rkzouf8rkzgafabpbesbm9aialvwhlihji/*~hmac=6fed9a76cabb2a609c9692b8c1eaa0f4691991cd3f3e00ca7c85eadc763d964f",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "14:00",
-    "teams": "Hyundai E&C Hillstate W vs GS Caltex W",
-    "league": "Volleyball League Women"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0004/x2ddcmpn5hp4fnospamgzhggtpgx1xfd6j/playlist.m3u8?hdnts=st=1740891738~exp=1740924148~acl=*/x2ddcmpn5hp4fnospamgzhggtpgx1xfd6j/*~hmac=4689f00808bbb10adaa3fa411a296ae0fbea703c1e46821ae50701cc8f05fb3c",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "12:00",
-    "teams": "KAL Jumbos vs Hyundai Skywalkers",
-    "league": "Volleyball League"
   },
   {
     "videoId": "",
