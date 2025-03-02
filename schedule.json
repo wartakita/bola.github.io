@@ -73,7 +73,7 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4144004.m3u8?txSecret=d60e6edf1a0cb393698cb2e610c4062c&txTime=67C48000",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4144004.m3u8?txSecret=8c096f144b3b00838ffd4d1497c2ba5f&txTime=67C4BDCA",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "21:00",
@@ -225,8 +225,8 @@
     "league": "LaLiga"
   },
   {
-    "videoId": "pxwrxlh5x53nryk",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4140543.m3u8?txSecret=1a5d7e42b6e567e5c492d87751a08dde&txTime=67C4BD63",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "22:15",
