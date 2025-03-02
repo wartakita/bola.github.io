@@ -225,8 +225,8 @@
     "league": "Serie A"
   },
   {
-    "videoId": "00026",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256427.m3u8?txSecret=aecdbb3db4b74f350a0bcbbe897e5d97&txTime=67C4221F",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "12:00",
@@ -234,8 +234,8 @@
     "league": "J1 League"
   },
   {
-    "videoId": "00027",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256451.m3u8?txSecret=be5a9c068e2fa8e464a4eea2fdc72046&txTime=67C421E9",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "12:00",
@@ -243,8 +243,8 @@
     "league": "J1 League"
   },
   {
-    "videoId": "00028",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256435.m3u8?txSecret=e560cf558f2b0222c09050ea2a951039&txTime=67C421BB",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "12:00",
@@ -252,8 +252,8 @@
     "league": "J1 League"
   },
   {
-    "videoId": "00029",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256471.m3u8?txSecret=da7d5dd3ad9e9f65a98293ab334f64c5&txTime=67C4218B",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "12:00",
@@ -391,62 +391,8 @@
     "m3u8Url": "",
     "iframeURL": "https://streamtp3.com/global2.php?stream=tnt_2_gb",
     "date": "2025-03-02",
-    "time": "10:40",
+    "time": "15:00",
     "teams": "Grand Prix of Thailand 2025",
     "league": "MotoGP"
-  },
-  {
-    "videoId": "34kgps1ej16feko",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "06:00",
-    "teams": "Charlotte Hornets vs Washington Wizards",
-    "league": "NBA"
-  },
-  {
-    "videoId": "6975lsnzmn9agk2",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "07:00",
-    "teams": "Detroit Pistons vs Brooklyn Nets",
-    "league": "NBA"
-  },
-  {
-    "videoId": "8lk2ys6426zhz73",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "08:00",
-    "teams": "Houston Rockets vs Sacramento Kings",
-    "league": "NBA"
-  },
-  {
-    "videoId": "63kvlsoryoyix7e",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "08:00",
-    "teams": "Memphis Grizzlies vs San Antonio Spurs",
-    "league": "NBA"
-  },
-  {
-    "videoId": "o07dzsmvlmjtmkn",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "08:30",
-    "teams": "Dallas Mavericks vs Milwaukee Bucks",
-    "league": "NBA"
-  },
-  {
-    "videoId": "jek3psdgzd2c9qo",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "08:30",
-    "teams": "Philadelphia 76ers vs Golden State Warriors",
-    "league": "NBA"
   }
 ]
