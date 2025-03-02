@@ -360,8 +360,8 @@
     "league": "Volleyball League Women"
   },
   {
-    "videoId": "00042",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0004/x2ddcmpn5hp4fnospamgzhggtpgx1xfd6j/playlist.m3u8?hdnts=st=1740891738~exp=1740924148~acl=*/x2ddcmpn5hp4fnospamgzhggtpgx1xfd6j/*~hmac=4689f00808bbb10adaa3fa411a296ae0fbea703c1e46821ae50701cc8f05fb3c",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "12:00",
