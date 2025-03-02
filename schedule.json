@@ -379,33 +379,6 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4144008.m3u8?txSecret=4d5ede515c3b7ea24ef26462fd605bf7&txTime=67C391BA",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "03:05",
-    "teams": "PSG vs Lille",
-    "league": "FRANCE: Ligue 1"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4140412.m3u8?txSecret=a104865890853929e8e9fd0d0ec2c348&txTime=67C3BB10",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "03:00",
-    "teams": "Atl. Madrid vs Ath Bilbao",
-    "league": "SPAIN: LaLiga"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4141347.m3u8?txSecret=0185046f1e7cd7071c162705638a2e0c&txTime=67C36147",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "03:00",
-    "teams": "Feyenoord vs Nijmegen",
-    "league": "NETHERLANDS: Eredivisie"
-  },
-  {
-    "videoId": "",
     "m3u8Url": "",
     "iframeURL": "https://streamtp3.com/global2.php?stream=skyf1",
     "date": "2025-03-14",
