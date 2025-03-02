@@ -135,15 +135,6 @@
     "league": "FA Cup"
   },
   {
-    "videoId": "00016",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "02:30",
-    "teams": "Nottingham vs Ipswich",
-    "league": "FA Cup"
-  },
-  {
     "videoId": "00017",
     "m3u8Url": "",
     "iframeURL": "",
@@ -261,8 +252,8 @@
     "league": "J1 League"
   },
   {
-    "videoId": "00030",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256430.m3u8?txSecret=2f1e6b287166f63da6b2ffaba02fd70b&txTime=67C4234B",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "12:30",
@@ -270,8 +261,8 @@
     "league": "J1 League"
   },
   {
-    "videoId": "00031",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256442.m3u8?txSecret=74f7f082b8d24f5056c0428f907fd344&txTime=67C42322",
     "iframeURL": "",
     "date": "2025-03-02",
     "time": "13:00",
