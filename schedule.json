@@ -217,42 +217,6 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256427.m3u8?txSecret=aecdbb3db4b74f350a0bcbbe897e5d97&txTime=67C4221F",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "12:00",
-    "teams": "Albirex Niigata vs Cerezo Osaka",
-    "league": "J1 League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256451.m3u8?txSecret=be5a9c068e2fa8e464a4eea2fdc72046&txTime=67C421E9",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "12:00",
-    "teams": "Nagoya Grampus vs Machida",
-    "league": "J1 League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256435.m3u8?txSecret=e560cf558f2b0222c09050ea2a951039&txTime=67C421BB",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "12:00",
-    "teams": "Okayama vs Shimizu S-Pulse",
-    "league": "J1 League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256471.m3u8?txSecret=da7d5dd3ad9e9f65a98293ab334f64c5&txTime=67C4218B",
-    "iframeURL": "",
-    "date": "2025-03-02",
-    "time": "12:00",
-    "teams": "Verdy vs Gamba Osaka",
-    "league": "J1 League"
-  },
-  {
-    "videoId": "",
     "m3u8Url": "https://live.bbapcall.com/live/sd-1-4256430.m3u8?txSecret=2f1e6b287166f63da6b2ffaba02fd70b&txTime=67C4234B",
     "iframeURL": "",
     "date": "2025-03-02",
