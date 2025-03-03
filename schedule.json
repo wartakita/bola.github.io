@@ -54,8 +54,8 @@
     "league": "La Liga"
   },
   {
-    "videoId": "007",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/gbf6hlskvoaxdbgpbk2hila5sbokjmkg56/playlist.m3u8?hdnts=st=1740985201~exp=1741017611~acl=*/gbf6hlskvoaxdbgpbk2hila5sbokjmkg56/*~hmac=ce0b58aaaa99476cf6c2c113f8c206cdf564eaa4a8a5daad0b4930aeedbab9f3",
     "iframeURL": "",
     "date": "2025-03-03",
     "time": "14:00",
