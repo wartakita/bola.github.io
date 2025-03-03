@@ -18,15 +18,6 @@
     "league": "AFC Champions League"
   },
   {
-    "videoId": "3glrw7h7892lqdy",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-03",
-    "time": "12:00",
-    "teams": "Seoul vs Gimcheon Sangmu",
-    "league": "K League 1"
-  },
-  {
     "videoId": "3glrw7h7xkxgqdy",
     "m3u8Url": "",
     "iframeURL": "",
@@ -36,8 +27,8 @@
     "league": "FA Cup"
   },
   {
-    "videoId": "zp5rzgh53dn9q82",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184610.m3u8?txSecret=f7c371aae4d6e19f0bade209849cbcea&txTime=67C5F690",
     "iframeURL": "",
     "date": "2025-03-03",
     "time": "20:30",
@@ -52,24 +43,6 @@
     "time": "03:00",
     "teams": "Villarreal vs Espanyol",
     "league": "La Liga"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/gbf6hlskvoaxdbgpbk2hila5sbokjmkg56/playlist.m3u8?hdnts=st=1740985201~exp=1741017611~acl=*/gbf6hlskvoaxdbgpbk2hila5sbokjmkg56/*~hmac=ce0b58aaaa99476cf6c2c113f8c206cdf564eaa4a8a5daad0b4930aeedbab9f3",
-    "iframeURL": "",
-    "date": "2025-03-03",
-    "time": "14:00",
-    "teams": "Pepper Savings Bank W vs Expressway Co W",
-    "league": "Volleyball League Women"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/hpiejgnce7zjoehwdcyphwiduciipf16lv/playlist.m3u8?hdnts=st=1740978928~exp=1741011338~acl=*/hpiejgnce7zjoehwdcyphwiduciipf16lv/*~hmac=ad7bc9c26feed6d70b7d1f355c2e3b80181b9c1d60c990517561f22f48fa151e",
-    "iframeURL": "",
-    "date": "2025-03-03",
-    "time": "12:00",
-    "teams": "KB Stars vs Samsung Blue Fangs",
-    "league": "Volleyball League"
   },
   {
     "videoId": "",
