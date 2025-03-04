@@ -81,11 +81,13 @@ function filterSchedule() {
 
         let searchMatch = matchTeams.includes(searchInput) || matchLeague.includes(searchInput);
         let dateMatch = dateFilter ? matchDate === dateFilter : true;
-        let leagueMatch = leagueFilter ? matchLeague === leagueFilter : true;
+        let leagueMatch = leagueFilter ? matchLeague === leagueFilter.toLowerCase() : true;
 
+        console.log(`Search Match: ${searchMatch}, Date Match: ${dateMatch}, League Match: ${leagueMatch}`);
         return searchMatch && dateMatch && leagueMatch;
     });
 
+    console.log('Filtered Data:', filteredData);
     displaySchedule(filteredData);
 }
 
