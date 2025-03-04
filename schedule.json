@@ -1,7 +1,7 @@
 [
   {
-    "videoId": "ucl_1",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291356.m3u8?txSecret=2c7f43d29382036e380a13f45ec1cc7c&txTime=67C76032",
     "iframeURL": "",
     "date": "2025-03-05",
     "time": "00:45",
@@ -9,7 +9,7 @@
     "league": "Champions League"
   },
   {
-    "videoId": "ucl_2",
+    "videoId": "2y8m4zh62p15ql0",
     "m3u8Url": "",
     "iframeURL": "",
     "date": "2025-03-05",
@@ -18,7 +18,7 @@
     "league": "Champions League"
   },
   {
-    "videoId": "ucl_3",
+    "videoId": "pxwrxlh563v0ryk",
     "m3u8Url": "",
     "iframeURL": "",
     "date": "2025-03-05",
@@ -27,7 +27,7 @@
     "league": "Champions League"
   },
   {
-    "videoId": "ucl_4",
+    "videoId": "3glrw7h7xpoeqdy",
     "m3u8Url": "",
     "iframeURL": "",
     "date": "2025-03-05",
@@ -63,8 +63,8 @@
     "league": "AFC Champions League"
   },
   {
-    "videoId": "dj2ryoh1wdxgq1z",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4289716.m3u8?txSecret=79a4dfb1a8845eb24f6121e0e3bc3dff&txTime=67C75FAB",
     "iframeURL": "",
     "date": "2025-03-04",
     "time": "23:00",
@@ -72,8 +72,8 @@
     "league": "AFC Champions League"
   },
   {
-    "videoId": "afc_4",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4289717.m3u8?txSecret=11c94dbc64880e560869512afb6f52fb&txTime=67C75FF3",
     "iframeURL": "",
     "date": "2025-03-05",
     "time": "01:00",
