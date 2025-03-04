@@ -1,68 +1,5 @@
 [
   {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800169.m3u8?txSecret=68f5f3b1aac0cd7b04e17f23883725a5&txTime=67C693D4",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "07:00",
-    "teams": "Charlotte Hornets vs Golden State Warriors",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800170.m3u8?txSecret=591976eb3c680cf514e56e31164732b0&txTime=67C693F8",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "07:00",
-    "teams": "Philadelphia 76ers vs Portland Trail Blazers",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800171.m3u8?txSecret=5fff55a11cc76df273f0ac2fd3fefb17&txTime=67C6941C",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "07:30",
-    "teams": "Miami Heat vs Washington Wizards",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800172.m3u8?txSecret=45550ea170aac6c1349f0b6214ccb262&txTime=67C6943E",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "08:00",
-    "teams": "Memphis Grizzlies vs Atlanta Hawks",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800173.m3u8?txSecret=5bab93579f5e28c6be320f93204a81a0&txTime=67C6945C",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "08:00",
-    "teams": "Oklahoma City Thunder vs Houston Rockets",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800174.m3u8?txSecret=6cfa4424419981cb1106c33c407dc256&txTime=67C69485",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "08:30",
-    "teams": "Dallas Mavericks vs Sacramento Kings",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800175.m3u8?txSecret=78b3bd5edeff250a5e07ad04b034e0f8&txTime=67C6A655",
-    "iframeURL": "",
-    "date": "2025-03-04",
-    "time": "09:00",
-    "teams": "Utah Jazz vs Detroit Pistons",
-    "league": "NBA"
-  },
-  {
     "videoId": "ucl_1",
     "m3u8Url": "",
     "iframeURL": "",
@@ -99,8 +36,8 @@
     "league": "Champions League"
   },
   {
-    "videoId": "liga1_1",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184611.m3u8?txSecret=48bb96de9a1318e4270abbbe88c65908&txTime=67C7327D",
     "iframeURL": "",
     "date": "2025-03-04",
     "time": "19:30",
@@ -108,7 +45,7 @@
     "league": "Liga 1"
   },
   {
-    "videoId": "liga1_2",
+    "videoId": "4jwq2gheg582m0v",
     "m3u8Url": "",
     "iframeURL": "",
     "date": "2025-03-04",
@@ -117,8 +54,8 @@
     "league": "Liga 1"
   },
   {
-    "videoId": "afc_1",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4290598.m3u8?txSecret=4009b034106b86fa8123bd19981fc08a&txTime=67C73223",
     "iframeURL": "",
     "date": "2025-03-04",
     "time": "19:00",
@@ -126,8 +63,8 @@
     "league": "AFC Champions League"
   },
   {
-    "videoId": "afc_2",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4290600.m3u8?txSecret=556f362a30ba517c0ca8e041328ae50f&txTime=67C732B5",
     "iframeURL": "",
     "date": "2025-03-04",
     "time": "21:00",
@@ -135,7 +72,7 @@
     "league": "AFC Champions League"
   },
   {
-    "videoId": "afc_3",
+    "videoId": "dj2ryoh1wdxgq1z",
     "m3u8Url": "",
     "iframeURL": "",
     "date": "2025-03-04",
