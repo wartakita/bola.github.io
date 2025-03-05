@@ -18,8 +18,8 @@
     "league": "AFC Champions League 2"
   },
   {
-    "videoId": "00008",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184613.m3u8?txSecret=54e33290d02bb52711999204a31d00bc&txTime=67C8828D",
     "iframeURL": "",
     "date": "2025-03-05",
     "time": "20:30",
@@ -27,8 +27,8 @@
     "league": "Liga 1 Indonesia"
   },
   {
-    "videoId": "00009",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184614.m3u8?txSecret=7e4b26cf264093d1cab9f246e815a1cb&txTime=67C882BA",
     "iframeURL": "",
     "date": "2025-03-05",
     "time": "20:30",
