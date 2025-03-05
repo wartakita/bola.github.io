@@ -10,37 +10,10 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184613.m3u8?txSecret=54e33290d02bb52711999204a31d00bc&txTime=67C8828D",
-    "iframeURL": "",
-    "date": "2025-03-05",
-    "time": "20:30",
-    "teams": "Dewa United vs Semen Padang",
-    "league": "Liga 1 Indonesia"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184614.m3u8?txSecret=7e4b26cf264093d1cab9f246e815a1cb&txTime=67C882BA",
-    "iframeURL": "",
-    "date": "2025-03-05",
-    "time": "20:30",
-    "teams": "Persib Bandung vs Persik Kediri",
-    "league": "Liga 1 Indonesia"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://v101.sportcdn.live/live/live-1-4184612-0.m3u8?txSecret=b99a261bcec789c6333d9d6a9bc1410a&txTime=67c88ff1",
-    "iframeURL": "",
-    "date": "2025-03-05",
-    "time": "20:30",
-    "teams": "Persija Jakarta vs PSIS Semarang",
-    "league": "Liga 1 Indonesia"
-  },
-  {
-    "videoId": "8yomo4h3w4zyq0j",
-    "m3u8Url": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291358.m3u8?txSecret=efb039f261a19ba68fd9f5038eedf610&txTime=67C8BB6B",
     "iframeURL": "",
     "date": "2025-03-06",
-    "time": "03:00",
+    "time": "00:45",
     "teams": "Feyenoord vs Inter",
     "league": "UEFA Champions League"
   },
