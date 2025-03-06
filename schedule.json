@@ -90,8 +90,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "m2q19srwvzmaek6",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800191.m3u8?txSecret=842e0bf2212b5d03107095b4ac162f2b&txTime=67C937FD",
     "iframeURL": "",
     "date": "2025-03-06",
     "time": "08:00",
