@@ -1,50 +1,5 @@
 [
   {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291184.m3u8?txSecret=3f7b8dd461fadba8a3a0624d5fd9a901&txTime=67C9C11E",
-    "iframeURL": "",
-    "date": "2025-03-06",
-    "time": "17:00",
-    "teams": "Jeonbuk vs Sydney FC",
-    "league": "AFC Champions League 2"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184616.m3u8?txSecret=b63592e3560ac37cc00a75e77931177d&txTime=67C9CDDF",
-    "iframeURL": "",
-    "date": "2025-03-06",
-    "time": "20:30",
-    "teams": "Persis Solo vs Bali United",
-    "league": "Liga 1 Indonesia"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184615.m3u8?txSecret=39c9f729f46f11aaa3032cc30782233b&txTime=67C9CE06",
-    "iframeURL": "",
-    "date": "2025-03-06",
-    "time": "20:30",
-    "teams": "PSBS Biak Numfor vs Borneo",
-    "league": "Liga 1 Indonesia"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0002/cmdgf6kbrlrfu1keuksf3sjdx2xo9is3o9/playlist.m3u8?hdnts=st=1741256875~exp=1741289285~acl=*/cmdgf6kbrlrfu1keuksf3sjdx2xo9is3o9/*~hmac=83f5304a6c76d97743b9627ed23a2579e835d86fa13c4728ab85951a84a300bc",
-    "iframeURL": "",
-    "date": "2025-03-06",
-    "time": "17:00",
-    "teams": "Ansan OK vs KAL Jumbos",
-    "league": "Volleyball League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0004/n18993exz6yds3chd0aeha7kmaf1vsye64/playlist.m3u8?hdnts=st=1741256855~exp=1741289265~acl=*/n18993exz6yds3chd0aeha7kmaf1vsye64/*~hmac=2b436007fe469311cc59046019b9cde397945a2535a7f917dc73245925e152a8",
-    "iframeURL": "",
-    "date": "2025-03-06",
-    "time": "17:00",
-    "teams": "Hungkuk W vs Hyundai E&C Hillstate W",
-    "league": "Volleyball League Women"
-  },
-  {
     "videoId": "00001",
     "m3u8Url": "",
     "iframeURL": "",
@@ -63,8 +18,8 @@
     "league": "Liga 1 Indonesia"
   },
   {
-    "videoId": "00003",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291379.m3u8?txSecret=b579a3f0740dde1b0c6ea18209fb8ff0&txTime=67CA1C53",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -72,8 +27,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00004",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291386.m3u8?txSecret=98f7b981fbdbb7b705ef345a72d90dcc&txTime=67CA1C34",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -81,8 +36,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00005",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291376.m3u8?txSecret=8c37eb501ad13555efcc5f76ce1d493d&txTime=67CA1C0E",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -90,8 +45,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00006",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291388.m3u8?txSecret=962eef4f955f41bae3576863ead8bea9&txTime=67CA1BE5",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -99,8 +54,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00007",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291377.m3u8?txSecret=e6b0673b04022fb82add4453fe52f90b&txTime=67CA1BC5",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -108,8 +63,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00008",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291382.m3u8?txSecret=46afd0dfb8718a5740e759c01c4dd99c&txTime=67CA1BA5",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -117,8 +72,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00009",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291375.m3u8?txSecret=6dd8eeb1022c48c7ff8e4fd03b6937de&txTime=67CA1B82",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -126,8 +81,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00010",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291381.m3u8?txSecret=107fa5ba51b8fb5cfc7ccb58da4005e4&txTime=67CA1B5C",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -135,8 +90,8 @@
     "league": "Europa League"
   },
   {
-    "videoId": "00011",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291456.m3u8?txSecret=7a586d9c456199b42b6b33dd5084d213&txTime=67CA1B38",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -144,8 +99,8 @@
     "league": "Conference League"
   },
   {
-    "videoId": "00012",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291449.m3u8?txSecret=a55460921c3b334135529c093b9982c6&txTime=67CA1B16",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -153,8 +108,8 @@
     "league": "Conference League"
   },
   {
-    "videoId": "00013",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291451.m3u8?txSecret=24d612ea8f0554f50994c9b3f376c0ea&txTime=67CA1AF9",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -162,8 +117,8 @@
     "league": "Conference League"
   },
   {
-    "videoId": "00014",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291454.m3u8?txSecret=1ba7b64ec8db970126c590594325949a&txTime=67CA1AC2",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "00:45",
@@ -171,8 +126,8 @@
     "league": "Conference League"
   },
   {
-    "videoId": "00015",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291455.m3u8?txSecret=0a4d8155ebd6ad2cf2ee9b5523afe015&txTime=67CA1A96",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -180,8 +135,8 @@
     "league": "Conference League"
   },
   {
-    "videoId": "00016",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291452.m3u8?txSecret=bd77f5e434a92441f4fb0e426bde305c&txTime=67CA1A75",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -189,8 +144,8 @@
     "league": "Conference League"
   },
   {
-    "videoId": "00017",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291450.m3u8?txSecret=76eca40f2125db90317a11af13b9bbd3&txTime=67CA1A59",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -198,8 +153,8 @@
     "league": "Conference League"
   },
   {
-    "videoId": "00018",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291453.m3u8?txSecret=f142a60b6b081ef209960eda25fa2f61&txTime=67CA1A37",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
@@ -216,8 +171,8 @@
     "league": "CONCACAF Champions Cup"
   },
   {
-    "videoId": "00020",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4171963.m3u8?txSecret=42896669384099c3dc529c09cffd0da7&txTime=67CA19F1",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "02:00",
@@ -225,8 +180,8 @@
     "league": "Saudi Professional League"
   },
   {
-    "videoId": "00021",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4171958.m3u8?txSecret=395b9d26ab36536688df4927e8f5a032&txTime=67CA19AF",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "02:00",
@@ -234,35 +189,8 @@
     "league": "Saudi Professional League"
   },
   {
-    "videoId": "00022",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-07",
-    "time": "03:00",
-    "teams": "Al Wehda vs Al Raed",
-    "league": "Saudi Professional League"
-  },
-  {
-    "videoId": "00023",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-07",
-    "time": "02:00",
-    "teams": "Al Kholood vs Al Fateh",
-    "league": "Saudi Professional League"
-  },
-  {
-    "videoId": "00024",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-07",
-    "time": "02:00",
-    "teams": "Al Qadisiyah vs Al Ittihad",
-    "league": "Saudi Professional League"
-  },
-  {
-    "videoId": "00025",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4171996.m3u8?txSecret=f35fe3597ee97cae6a6291c7dec6d281&txTime=67CA19CF",
     "iframeURL": "",
     "date": "2025-03-07",
     "time": "03:00",
