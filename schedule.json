@@ -169,5 +169,14 @@
     "time": "10:00",
     "teams": "Los Angeles Lakers vs New York Knicks",
     "league": "NBA"
+  },
+  {
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4294740.m3u8?txSecret=b3f7696c7020fe79158efb7d1c1751c3&txTime=67CA776D",
+    "iframeURL": "",
+    "date": "2025-03-07",
+    "time": "08:00",
+    "teams": "Inter Miami vs Cavalier",
+    "league": "CONCACAF Champions Cup"
   }
 ]
