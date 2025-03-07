@@ -44,9 +44,12 @@ function displayMatches(matches) {
 
         const matchTime = new Date(match.match_time * 1000).toLocaleTimeString('id-ID', {
             hour: '2-digit',
-            minute: '2-digit'
+            minute: '2-digit',
+            hour12: false
         });
-        timeCell.textContent = matchTime;
+        // Mengubah format waktu dari "20.30" menjadi "20:30"
+        const formattedTime = matchTime.replace('.', ':');
+        timeCell.textContent = formattedTime;
         homeTeamCell.innerHTML = `<img src="${match.home_team.logo}" width="20" class="me-2"> ${match.home_team.name}`;
         awayTeamCell.innerHTML = `<img src="${match.away_team.logo}" width="20" class="me-2"> ${match.away_team.name}`;
         competitionCell.innerHTML = `<img src="${match.competition.logo}" width="20" class="me-2"> ${match.competition.name}`;
@@ -82,31 +85,24 @@ function displayMatchInfo(matches) {
         return;
     }
 
-    let allMatchInfo = [];
     let allMatchJson = [];
 
     matches.forEach(match => {
         const matchTime = new Date(match.match_time * 1000).toLocaleTimeString('id-ID', {
             hour: '2-digit',
-            minute: '2-digit'
+            minute: '2-digit',
+            hour12: false
         });
+        // Mengubah format waktu dari "20.30" menjadi "20:30"
+        const formattedTime = matchTime.replace('.', ':');
         const matchDate = selectedDate; // Menggunakan tanggal yang dipilih
-        const matchInfo = `
-${match.home_team.name} vs ${match.away_team.name}
-Kompetisi: ${match.competition.name}
-Tanggal: ${matchDate}
-Waktu: ${matchTime}
-Link: https://bit.ly/zonasportlive
-----------------------------------
-`;
-        allMatchInfo.push(matchInfo);
 
         const matchJson = {
             videoId: match.ts_id, // Menggunakan ts_id sebagai videoId
             m3u8Url: "", // Placeholder untuk m3u8Url
             iframeURL: "", // Placeholder untuk iframeURL
             date: matchDate,
-            time: matchTime,
+            time: formattedTime,
             teams: `${match.home_team.name} vs ${match.away_team.name}`,
             league: match.competition.name
         };
@@ -117,7 +113,7 @@ Link: https://bit.ly/zonasportlive
 <p>${match.home_team.name} vs ${match.away_team.name}</p>
 <p>Kompetisi: ${match.competition.name}</p>
 <p>Tanggal: ${matchDate}</p>
-<p>Waktu: ${matchTime}</p>
+<p>Waktu: ${formattedTime}</p>
 <p>Link: <a href="https://bit.ly/zonasportlive" target="_blank">https://bit.ly/zonasportlive</a></p>
 <hr>
 `;
@@ -130,7 +126,7 @@ Link: https://bit.ly/zonasportlive
 `;
     matchInfoContainer.appendChild(jsonInfoDiv);
 
-    document.getElementById('copyTextButton').onclick = () => copyMatchInfo(allMatchInfo.join(''));
+    document.getElementById('copyTextButton').onclick = () => copyMatchInfo(allMatchJson.map(match => `${match.teams}\nTanggal: ${match.date}\nWaktu: ${match.time}\nKompetisi: ${match.league}\nLink: https://bit.ly/zonasportlive`).join('\n\n'));
     document.getElementById('copyJsonButton').onclick = () => copyMatchInfo(JSON.stringify(allMatchJson, null, 2));
 }
 
