@@ -1,32 +1,5 @@
 [
   {
-    "videoId": "23xmvkh8ywyeqg8",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "13:00",
-    "teams": "Adelaide United vs Brisbane Roar",
-    "league": "Australia A-League"
-  },
-  {
-    "videoId": "zp5rzgh53038q82",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:00",
-    "teams": "Western United FC vs Wellington Phoenix",
-    "league": "Australia A-League"
-  },
-  {
-    "videoId": "1l4rjnh4n2gym7v",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "15:35",
-    "teams": "Melbourne Victory vs Central Coast Mariners",
-    "league": "Australia A-League"
-  },
-  {
     "videoId": "965mkyhy2n5xr1g",
     "m3u8Url": "",
     "iframeURL": "",
@@ -234,69 +207,6 @@
     "league": "Italian Serie A"
   },
   {
-    "videoId": "vjxm8ghldzozr6o",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "12:00",
-    "teams": "Urawa Red Diamonds vs Fagiano Okayama",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "y39mp1hzg2o5moj",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "12:05",
-    "teams": "Albirex Niigata vs Tokyo Verdy",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "pxwrxlh58k08ryk",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "13:00",
-    "teams": "Gamba Osaka vs Shimizu S-Pulse",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "2y8m4zh6ykvwql0",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:00",
-    "teams": "Kashiwa Reysol vs Kashima Antlers",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "pxwrxlh58kn8ryk",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:00",
-    "teams": "FC Tokyo vs Shonan Bellmare",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "n54qllh7gow5qvy",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:00",
-    "teams": "Yokohama FC vs Machida Zelvia",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "4jwq2ghey3dxm0v",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:00",
-    "teams": "Cerezo Osaka vs Nagoya Grampus",
-    "league": "Japanese J1 League"
-  },
-  {
     "videoId": "vjxm8ghldwpjr6o",
     "m3u8Url": "",
     "iframeURL": "",
@@ -331,33 +241,6 @@
     "time": "22:30",
     "teams": "Fortuna Sittard vs Heracles Almelo",
     "league": "Netherlands Eredivisie"
-  },
-  {
-    "videoId": "965mkyhyv1j8r1g",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "12:00",
-    "teams": "Suwon Football Club vs Football Club Seoul",
-    "league": "Korean K League 1"
-  },
-  {
-    "videoId": "4wyrn4hx30pyq86",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:30",
-    "teams": "FC Anyang vs Gimcheon Sangmu Football Club",
-    "league": "Korean K League 1"
-  },
-  {
-    "videoId": "3glrw7h7808dqdy",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:30",
-    "teams": "Daegu Football Club vs Daejeon Citizen",
-    "league": "Korean K League 1"
   },
   {
     "videoId": "n54qllh7p7j3qvy",
@@ -421,23 +304,5 @@
     "time": "02:00",
     "teams": "Al-Riyadh vs Al-Okhdood",
     "league": "Saudi Professional League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/vh9bcbestggghtrbxtfmyh25ow59wsk37l/playlist.m3u8?hdnts=st=1741409525~exp=1741441935~acl=*/vh9bcbestggghtrbxtfmyh25ow59wsk37l/*~hmac=be667169bcd20518d4a147da27ecf7fd60820a9994ee3ac95f23673b073b9546",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "12:00",
-    "teams": "Samsung Blue Fangs vs Kepco",
-    "league": "SOUTH KOREA: Volleyball League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/e0lfoksbenfvx9uciw1ntljknvxnkkvyq5/playlist.m3u8?hdnts=st=1741416880~exp=1741449290~acl=*/e0lfoksbenfvx9uciw1ntljknvxnkkvyq5/*~hmac=e68c19bbed25ea500381277571703c5be701309d1d72805a50c4c1f94106fcd1",
-    "iframeURL": "",
-    "date": "2025-03-08",
-    "time": "14:00",
-    "teams": "IBK W vs Expressway Co W",
-    "league": "SOUTH KOREA: Volleyball League Women"
   }
 ]
