@@ -1,15 +1,6 @@
 [
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4136484.m3u8?txSecret=ee2f52ee0f2117f622e1c9c07d64a6c9&txTime=67CDBB01",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "19:30",
-    "teams": "Cercle Brugge vs Club Brugge",
-    "league": "Belgian Pro League"
-  },
-  {
-    "videoId": "",
     "m3u8Url": "https://live.bbapcall.com/live/sd-1-4136496.m3u8?txSecret=3e42f67b2e5519f08d3d49b2d56c96bc&txTime=67CDE7C5",
     "iframeURL": "",
     "date": "2025-03-09",
@@ -163,15 +154,6 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4141377.m3u8?txSecret=658f70e6b7b7aafd1044dc329e7c06d8&txTime=67CDBA80",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "18:15",
-    "teams": "Willem II vs FC Utrecht",
-    "league": "Netherlands Eredivisie"
-  },
-  {
-    "videoId": "",
     "m3u8Url": "https://live.bbapcall.com/live/sd-1-4141369.m3u8?txSecret=8b53463e0887982be9c00dd285d57f3f&txTime=67CDCBDF",
     "iframeURL": "",
     "date": "2025-03-09",
@@ -205,15 +187,6 @@
     "time": "22:45",
     "teams": "FC Twente Enschede vs Almere City FC",
     "league": "Netherlands Eredivisie"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4140424.m3u8?txSecret=131ba52180ad25bd95203c0bfb7fd6d7&txTime=67CDCB80",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "20:00",
-    "teams": "Getafe vs Atletico Madrid",
-    "league": "Spanish La Liga"
   },
   {
     "videoId": "",
