@@ -118,15 +118,6 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184621.m3u8?txSecret=5c113ed6dc90811ce5ca5bb413aaf762&txTime=67CDCC1A",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "20:30",
-    "teams": "Persija Jakarta vs Arema FC",
-    "league": "Indonesian Liga 1"
-  },
-  {
-    "videoId": "",
     "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4149746.m3u8?txSecret=caf324c0f15e4d4493cb89e4401e42de&txTime=67CDE888",
     "iframeURL": "",
     "date": "2025-03-09",
@@ -151,24 +142,6 @@
     "time": "02:45",
     "teams": "Juventus vs Atalanta",
     "league": "Italian Serie A"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4141369.m3u8?txSecret=8b53463e0887982be9c00dd285d57f3f&txTime=67CDCBDF",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "20:30",
-    "teams": "NEC Nijmegen vs Go Ahead Eagles",
-    "league": "Netherlands Eredivisie"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4141379.m3u8?txSecret=b3800d36b5d9f7a163e09ccc31c834fb&txTime=67CDCBBA",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "20:30",
-    "teams": "PEC Zwolle vs AFC Ajax",
-    "league": "Netherlands Eredivisie"
   },
   {
     "videoId": "y39mp1hz06lgmoj",
