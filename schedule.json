@@ -9,8 +9,8 @@
     "league": "Belgian Pro League"
   },
   {
-    "videoId": "l5ergphwln80r8k",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4136496.m3u8?txSecret=3e42f67b2e5519f08d3d49b2d56c96bc&txTime=67CDE7C5",
     "iframeURL": "",
     "date": "2025-03-09",
     "time": "22:00",
@@ -108,8 +108,8 @@
     "league": "French Ligue 1"
   },
   {
-    "videoId": "ednm9wh77z4vryo",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4149364.m3u8?txSecret=55c46e248110e1ee824e6d5436fd1251&txTime=67CDE783",
     "iframeURL": "",
     "date": "2025-03-09",
     "time": "21:30",
@@ -136,16 +136,7 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4149748.m3u8?txSecret=b9c0147c780b52977e876d42a4750af4&txTime=67CDBAAB",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "18:30",
-    "teams": "Verona vs Bologna",
-    "league": "Italian Serie A"
-  },
-  {
-    "videoId": "y39mp1hzzy45moj",
-    "m3u8Url": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4149746.m3u8?txSecret=caf324c0f15e4d4493cb89e4401e42de&txTime=67CDE888",
     "iframeURL": "",
     "date": "2025-03-09",
     "time": "21:00",
