@@ -108,15 +108,6 @@
     "league": "Italian Serie A"
   },
   {
-    "videoId": "y39mp1hz06lgmoj",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-09",
-    "time": "22:45",
-    "teams": "AZ Alkmaar vs RKC Waalwijk",
-    "league": "Netherlands Eredivisie"
-  },
-  {
     "videoId": "",
     "m3u8Url": "https://live.bbapcall.com/live/sd-1-4141375.m3u8?txSecret=98649959dbbf81f20db8a9f2a5bfd20c&txTime=67CDF8DC",
     "iframeURL": "",
