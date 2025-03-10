@@ -3,35 +3,20 @@ document.addEventListener("DOMContentLoaded", function() {
     let opened = false;
 
     function openPopunder() {
-        if (opened || localStorage.getItem('disablePopunder') === 'true') return;
+        if (opened) return;
         opened = true;
 
-        setTimeout(function() {
-            let popunder = window.open(popunderUrl, "_blank");
-            if (popunder) {
-                popunder.blur();
-                window.focus();
-            }
-        }, 500); // Penundaan 500 ms
+        let popunder = window.open(popunderUrl, "_blank");
+        if (popunder) {
+            popunder.blur();
+            window.focus();
+        }
     }
 
-    document.addEventListener("mouseleave", function(event) {
-        if (event.clientY <= 0) {
-            openPopunder();
-        }
+    document.addEventListener("click", openPopunder, {
+        once: true
     });
-
-    // Menambahkan tombol untuk menonaktifkan popunder
-    let disableButton = document.createElement('button');
-    disableButton.textContent = 'Nonaktifkan Popunder';
-    disableButton.style.position = 'fixed';
-    disableButton.style.bottom = '10px';
-    disableButton.style.right = '10px';
-    disableButton.style.zIndex = '1000';
-    document.body.appendChild(disableButton);
-
-    disableButton.addEventListener('click', function() {
-        localStorage.setItem('disablePopunder', 'true');
-        disableButton.remove();
+    document.addEventListener("touchstart", openPopunder, {
+        once: true
     });
 });
