@@ -99,8 +99,8 @@
     "league": "UEFA Champions League"
   },
   {
-    "videoId": "1",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/hpk7ufdo4g5rdxvsjvkjugj2wvity2q6hq/playlist.m3u8?hdnts=st=1741686425~exp=1741718835~acl=*/hpk7ufdo4g5rdxvsjvkjugj2wvity2q6hq/*~hmac=f02b58ec3def24cbffbedc823d38f0326552fcf444c8f34a9002f8c65615ee71",
     "iframeURL": "",
     "date": "2025-03-11",
     "time": "17:00",
