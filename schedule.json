@@ -1,56 +1,38 @@
 [
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4289720.m3u8?txSecret=2b5d1b82390c9fd8a2fb4e2e78fc3f39&txTime=67D0F092",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800234.m3u8?txSecret=006697e5bab19aaebf4ae195cadcf7f5&txTime=67D109D5",
     "iframeURL": "",
     "date": "2025-03-12",
-    "time": "03:00",
-    "teams": "Al-Hilal Saudi FC vs Pakhtakor",
-    "league": "AFC Champions League Elite"
+    "time": "06:00",
+    "teams": "Cleveland Cavaliers vs Brooklyn Nets",
+    "league": "NBA"
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4289721.m3u8?txSecret=08e770b55b1adf83cf57cb4dba727519&txTime=67D0F0BC",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800235.m3u8?txSecret=a677e9b4580864ee3ab8f37a2ae3fc10&txTime=67D109F9",
     "iframeURL": "",
     "date": "2025-03-12",
-    "time": "03:00",
-    "teams": "Al-Ahli SFC vs Al Rayyan",
-    "league": "AFC Champions League Elite"
+    "time": "06:00",
+    "teams": "Detroit Pistons vs Washington Wizards",
+    "league": "NBA"
   },
   {
-    "videoId": "n54qllh7lzdoqvy",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800236.m3u8?txSecret=907e5521b7d23d394a90075373faa370&txTime=67D10A17",
+    "iframeURL": "",
+    "date": "2025-03-12",
+    "time": "06:30",
+    "teams": "Indiana Pacers vs Milwaukee Bucks",
+    "league": "NBA"
+  },
+  {
+    "videoId": "00004",
     "m3u8Url": "",
     "iframeURL": "",
     "date": "2025-03-12",
-    "time": "00:45",
-    "teams": "FC Barcelona vs Benfica",
-    "league": "UEFA Champions League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291366.m3u8?txSecret=d54db20485eee23b394b318bdc97eb5c&txTime=67D0F0E2",
-    "iframeURL": "",
-    "date": "2025-03-12",
-    "time": "03:00",
-    "teams": "Bayer Leverkusen vs Bayern Munich",
-    "league": "UEFA Champions League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291367.m3u8?txSecret=8f61f95040c1ec2cbbee15c7de9b01b0&txTime=67D0F102",
-    "iframeURL": "",
-    "date": "2025-03-12",
-    "time": "03:00",
-    "teams": "Inter Milan vs Feyenoord",
-    "league": "UEFA Champions League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291372.m3u8?txSecret=ccb96465a196f3d4f57c38b67dbbcc86&txTime=67D0F126",
-    "iframeURL": "",
-    "date": "2025-03-12",
-    "time": "03:00",
-    "teams": "Liverpool vs Paris Saint Germain (PSG)",
-    "league": "UEFA Champions League"
+    "time": "07:00",
+    "teams": "New Orleans Pelicans vs Los Angeles Clippers",
+    "league": "NBA"
   }
 ]
