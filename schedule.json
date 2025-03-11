@@ -1,25 +1,7 @@
 [
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4290601.m3u8?txSecret=6decc493686e28dcf6038eaf67244c06&txTime=67D04E3F",
-    "iframeURL": "",
-    "date": "2025-03-11",
-    "time": "17:00",
-    "teams": "Yokohama F. Marinos vs Shanghai Port FC",
-    "league": "AFC Champions League Elite"
-  },
-  {
-    "videoId": "8yomo4h3w9n2q0j",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-11",
-    "time": "19:00",
-    "teams": "Johor Darul Ta'zim FC vs Buriram United",
-    "league": "AFC Champions League Elite"
-  },
-  {
-    "videoId": "pxwrxlh56237ryk",
-    "m3u8Url": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4289720.m3u8?txSecret=2b5d1b82390c9fd8a2fb4e2e78fc3f39&txTime=67D0F092",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "03:00",
@@ -27,40 +9,13 @@
     "league": "AFC Champions League Elite"
   },
   {
-    "videoId": "3glrw7h7xlp6qdy",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4289721.m3u8?txSecret=08e770b55b1adf83cf57cb4dba727519&txTime=67D0F0BC",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "03:00",
     "teams": "Al-Ahli SFC vs Al Rayyan",
     "league": "AFC Champions League Elite"
-  },
-  {
-    "videoId": "2y8m4zh6velnql0",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-11",
-    "time": "20:30",
-    "teams": "Bali United vs PSBS Biak Numfor ",
-    "league": "Indonesian Liga 1"
-  },
-  {
-    "videoId": "8yomo4h3y6nxq0j",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-11",
-    "time": "20:30",
-    "teams": "Persik Kediri vs PSM Makassar",
-    "league": "Indonesian Liga 1"
-  },
-  {
-    "videoId": "6ypq3nh3kpxnmd7",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-11",
-    "time": "20:30",
-    "teams": "PSS Sleman vs Persis Solo FC",
-    "league": "Indonesian Liga 1"
   },
   {
     "videoId": "n54qllh7lzdoqvy",
@@ -72,8 +27,8 @@
     "league": "UEFA Champions League"
   },
   {
-    "videoId": "23xmvkh8e0xeqg8",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291366.m3u8?txSecret=d54db20485eee23b394b318bdc97eb5c&txTime=67D0F0E2",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "03:00",
@@ -81,8 +36,8 @@
     "league": "UEFA Champions League"
   },
   {
-    "videoId": "zp5rzgh5nw18q82",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291367.m3u8?txSecret=8f61f95040c1ec2cbbee15c7de9b01b0&txTime=67D0F102",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "03:00",
@@ -90,30 +45,12 @@
     "league": "UEFA Champions League"
   },
   {
-    "videoId": "y39mp1hzx4kymoj",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291372.m3u8?txSecret=ccb96465a196f3d4f57c38b67dbbcc86&txTime=67D0F126",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "03:00",
     "teams": "Liverpool vs Paris Saint Germain (PSG)",
     "league": "UEFA Champions League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/hpk7ufdo4g5rdxvsjvkjugj2wvity2q6hq/playlist.m3u8?hdnts=st=1741686425~exp=1741718835~acl=*/hpk7ufdo4g5rdxvsjvkjugj2wvity2q6hq/*~hmac=f02b58ec3def24cbffbedc823d38f0326552fcf444c8f34a9002f8c65615ee71",
-    "iframeURL": "",
-    "date": "2025-03-11",
-    "time": "17:00",
-    "teams": "KB Stars vs Ansan OK",
-    "league": "South Korea: Volleyball League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0002/fnjmvyr9qdhgcdv7tt2fvup5rmesp4d8a2/playlist.m3u8?hdnts=st=1741686591~exp=1741719001~acl=*/fnjmvyr9qdhgcdv7tt2fvup5rmesp4d8a2/*~hmac=da394407c3589a9159c0be867831106dea05f8269022d76d46faa11c6a30bb9a",
-    "iframeURL": "",
-    "date": "2025-03-11",
-    "time": "17:00",
-    "teams": "Pepper Savings Bank W vs Hungkuk W",
-    "league": "South Korea: Volleyball League Women"
   }
 ]
