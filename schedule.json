@@ -27,8 +27,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "00004",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800237.m3u8?txSecret=b6e3694b96feabe40befc75c90fc1a71&txTime=67D11523",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "07:00",
