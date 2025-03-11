@@ -108,8 +108,8 @@
     "league": "South Korea: Volleyball League"
   },
   {
-    "videoId": "2",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0002/fnjmvyr9qdhgcdv7tt2fvup5rmesp4d8a2/playlist.m3u8?hdnts=st=1741686591~exp=1741719001~acl=*/fnjmvyr9qdhgcdv7tt2fvup5rmesp4d8a2/*~hmac=da394407c3589a9159c0be867831106dea05f8269022d76d46faa11c6a30bb9a",
     "iframeURL": "",
     "date": "2025-03-11",
     "time": "17:00",
