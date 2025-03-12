@@ -1,7 +1,7 @@
 [
   {
-    "videoId": "2y8m4zh62nljql0",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4290602.m3u8?txSecret=498c7d7ed8032ae50f46432428504775&txTime=67D1A2A6",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "17:00",
@@ -9,8 +9,8 @@
     "league": "AFC Champions League Elite"
   },
   {
-    "videoId": "6ypq3nh32gxwmd7",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4290604.m3u8?txSecret=ba36242a75e82e3c6e97bc6862125fa7&txTime=67D1A2C6",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "17:00",
@@ -72,8 +72,8 @@
     "league": "UEFA Champions League"
   },
   {
-    "videoId": "001",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/qj2lrvpmztybcyma3zfryvzkrea0n3vie5/playlist.m3u8?hdnts=st=1741773164~exp=1741805574~acl=*/qj2lrvpmztybcyma3zfryvzkrea0n3vie5/*~hmac=c330685b68c053b576acc34754c972a09735086b5c9301781bb1aacea38169a8",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "17:00",
@@ -81,8 +81,8 @@
     "league": "South Korea Volleyball League"
   },
   {
-    "videoId": "002",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/epwpsd60gsdlhliyutc0nfm1a5e7fbg0x9/playlist.m3u8?hdnts=st=1741773209~exp=1741805619~acl=*/epwpsd60gsdlhliyutc0nfm1a5e7fbg0x9/*~hmac=875d8dd0e209218e89c28bfae4dbf32762c6fca3a65ae7756411ea966a5aca37",
     "iframeURL": "",
     "date": "2025-03-12",
     "time": "17:00",
