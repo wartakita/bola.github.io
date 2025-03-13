@@ -1,43 +1,7 @@
 [
   {
-    "videoId": "6ypq3nh32n48md7",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Olympiakos Piraeus vs Bodo Glimt",
-    "league": "UEFA Europa League"
-  },
-  {
-    "videoId": "3glrw7h7xpleqdy",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Eintracht Frankfurt vs AFC Ajax",
-    "league": "UEFA Europa League"
-  },
-  {
-    "videoId": "3glrw7h7xplxqdy",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Lazio vs FC Viktoria Plzen",
-    "league": "UEFA Europa League"
-  },
-  {
-    "videoId": "vjxm8ghlnw2yr6o",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Athletic Bilbao vs AS Roma",
-    "league": "UEFA Europa League"
-  },
-  {
-    "videoId": "jw2r09h2e0p0rz8",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291378.m3u8?txSecret=2265429e8dc54fdbd3692796d45c1161&txTime=67D38C88",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -45,8 +9,8 @@
     "league": "UEFA Europa League"
   },
   {
-    "videoId": "dj2ryoh1wxd1q1z",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291380.m3u8?txSecret=ff36d0c855bb1242006c7870311da843&txTime=67D38CAE",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -54,8 +18,8 @@
     "league": "UEFA Europa League"
   },
   {
-    "videoId": "pxwrxlh56320ryk",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291384.m3u8?txSecret=84e16d74b804cfe93a3728eee589ed2d&txTime=67D38CCF",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -63,8 +27,8 @@
     "league": "UEFA Europa League"
   },
   {
-    "videoId": "x7lm7phzl75ym2w",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291387.m3u8?txSecret=7f5075bc9598392904a26e0ce7eaa9bd&txTime=67D38CF2",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -72,44 +36,8 @@
     "league": "UEFA Europa League"
   },
   {
-    "videoId": "y0or5jhnvoolqwz",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Cercle Brugge vs Jagiellonia Bialystok",
-    "league": "UEFA Europa Conference League"
-  },
-  {
-    "videoId": "23xmvkh8e00dqg8",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Lugano vs NK Publikum Celje",
-    "league": "UEFA Europa Conference League"
-  },
-  {
-    "videoId": "zp5rzgh5nwwpq82",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Djurgardens vs Pafos FC",
-    "league": "UEFA Europa Conference League"
-  },
-  {
-    "videoId": "4jwq2ghe8991m0v",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "00:45",
-    "teams": "Rapid Wien vs Borac Banja Luka",
-    "league": "UEFA Europa Conference League"
-  },
-  {
-    "videoId": "n54qllh7lzzeqvy",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291442.m3u8?txSecret=364135f48ac442f76e06e8aa302c0e88&txTime=67D38D22",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -117,8 +45,8 @@
     "league": "UEFA Europa Conference League"
   },
   {
-    "videoId": "1l4rjnh48llkm7v",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291445.m3u8?txSecret=d597003510f20018ac9e04ab08160ccb&txTime=67D38D40",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -126,8 +54,8 @@
     "league": "UEFA Europa Conference League"
   },
   {
-    "videoId": "ednm9wh7j00dryo",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291447.m3u8?txSecret=eda2d042cd4a890a14830e78a03c3b21&txTime=67D38D63",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -135,8 +63,8 @@
     "league": "UEFA Europa Conference League"
   },
   {
-    "videoId": "965mkyhyjoo1r1g",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291448.m3u8?txSecret=75f3b9e3089463a767a46c226eba55f5&txTime=67D38D82",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "03:00",
@@ -144,8 +72,8 @@
     "league": "UEFA Europa Conference League"
   },
   {
-    "videoId": "y39mp1hz6gvxmoj",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4171990.m3u8?txSecret=dbbaef070f5e9032bdb2be1467ff6c18&txTime=67D38DA3",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "02:00",
@@ -153,8 +81,8 @@
     "league": "Saudi Professional League"
   },
   {
-    "videoId": "3glrw7h7n2w3qdy",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4172003.m3u8?txSecret=fe1fc928f78ed73a4216347cf54b022e&txTime=67D38DC6",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "02:00",
@@ -162,8 +90,8 @@
     "league": "Saudi Professional League"
   },
   {
-    "videoId": "x7lm7phzjykem2w",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4172010.m3u8?txSecret=7516f16576eae20bb70eb9eaac77a892&txTime=67D38DE4",
     "iframeURL": "",
     "date": "2025-03-14",
     "time": "02:00",
