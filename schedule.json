@@ -1,16 +1,7 @@
 [
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4291185.m3u8?txSecret=25cf5fab46dbde6760ace23141a825e9&txTime=67D2ED2C",
-    "iframeURL": "",
-    "date": "2025-03-13",
-    "time": "15:00",
-    "teams": "Sydney FC vs Jeonbuk Hyundai Motors",
-    "league": "AFC Champions League 2"
-  },
-  {
-    "videoId": "vjxm8ghlk7yer6o",
-    "m3u8Url": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184629.m3u8?txSecret=4c57fb2af8543b0c028507a843c775a6&txTime=67D31C91",
     "iframeURL": "",
     "date": "2025-03-13",
     "time": "20:30",
@@ -19,16 +10,7 @@
   },
   {
     "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4238118.m3u8?txSecret=d3497dac8745b7ba0e133246c44d75ff&txTime=67D2ED56",
-    "iframeURL": "",
-    "date": "2025-03-13",
-    "time": "17:30",
-    "teams": "Shan United vs Svay Rieng FC",
-    "league": "AFC Challenge League"
-  },
-  {
-    "videoId": "965mkyhyxkv1r1g",
-    "m3u8Url": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4238120.m3u8?txSecret=de920f421d9c6b1d653d10e2a870ff29&txTime=67D31C6A",
     "iframeURL": "",
     "date": "2025-03-13",
     "time": "20:30",
@@ -205,23 +187,5 @@
     "time": "02:00",
     "teams": "Al-Shabab FC vs Al-Orubah",
     "league": "Saudi Professional League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/bypwqdc4mhg9onvuxrlzaepks8yzg3teon/playlist.m3u8?hdnts=st=1741859320~exp=1741891730~acl=*/bypwqdc4mhg9onvuxrlzaepks8yzg3teon/*~hmac=f6830c04a9cf495679359471a2422468f2b60033e817ac7f90e809fd429d8a52",
-    "iframeURL": "",
-    "date": "2025-03-13",
-    "time": "17:00",
-    "teams": "KAL Jumbos vs Kepco",
-    "league": "South Korea: Volleyball League"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/nmp1ff5ojembftjo6zygknbks8xpoqcs91/playlist.m3u8?hdnts=st=1741859369~exp=1741891779~acl=*/nmp1ff5ojembftjo6zygknbks8xpoqcs91/*~hmac=c3cc4cec0e12ce259f9c3ce12a1e5ebb8666e759b0eb7e3a648f6ed6e23124dd",
-    "iframeURL": "",
-    "date": "2025-03-13",
-    "time": "17:00",
-    "teams": "Hyundai E&C Hillstate W vs IBK W",
-    "league": "South Korea: Volleyball League Women"
   }
 ]
