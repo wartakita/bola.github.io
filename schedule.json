@@ -1,23 +1,5 @@
 [
   {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4184629.m3u8?txSecret=4c57fb2af8543b0c028507a843c775a6&txTime=67D31C91",
-    "iframeURL": "",
-    "date": "2025-03-13",
-    "time": "20:30",
-    "teams": "Arema FC vs Barito Putera",
-    "league": "Indonesian Liga 1"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4238120.m3u8?txSecret=de920f421d9c6b1d653d10e2a870ff29&txTime=67D31C6A",
-    "iframeURL": "",
-    "date": "2025-03-13",
-    "time": "20:30",
-    "teams": "Madura United vs Tainan City Steel",
-    "league": "AFC Challenge League"
-  },
-  {
     "videoId": "6ypq3nh32n48md7",
     "m3u8Url": "",
     "iframeURL": "",
