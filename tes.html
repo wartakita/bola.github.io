@@ -222,18 +222,44 @@
 
             const embedParam = getParameterByName('embed');
             if (embedParam) {
-                playerLoad.style.display = "block";  // Show loading animation
-                iframe.src = embedParam;
+                // Split the embed parameter by commas to handle multiple embed URLs
+                const embedUrls = embedParam.split(',');
+                if (embedUrls.length > 1) {
+                    // Generate server options from embed URLs
+                    embedUrls.forEach((url, index) => {
+                        const li = document.createElement('li');
+                        const div = document.createElement('div');
+                        div.className = 'DagPlayOpt';
+                        div.dataset.embed = url;
+                        div.innerHTML = `<span>Server ${index + 1}</span>`;
+                        li.appendChild(div);
+                        serverList.appendChild(li);
 
-                iframe.onload = function() {
-                    playerLoad.style.display = "none";  // Hide loading animation when iframe loads
-                };
+                        div.addEventListener('click', function() {
+                            loadServerFromUrl(url);
+                        });
 
-                iframe.onerror = function() {
-                    playerLoad.style.display = "none";  // Hide loading animation if iframe fails to load
-                    alert("Failed to load the video from the provided URL.");
-                };
+                        // Trigger click on the first server option
+                        if (index === 0) {
+                            div.click();
+                        }
+                    });
+                } else {
+                    // Single embed URL
+                    playerLoad.style.display = "block";  // Show loading animation
+                    iframe.src = embedUrls[0];
+
+                    iframe.onload = function() {
+                        playerLoad.style.display = "none";  // Hide loading animation when iframe loads
+                    };
+
+                    iframe.onerror = function() {
+                        playerLoad.style.display = "none";  // Hide loading animation if iframe fails to load
+                        alert("Failed to load the video from the provided URL.");
+                    };
+                }
             } else {
+                // Generate server options from predefined servers
                 servers.forEach((server, index) => {
                     const li = document.createElement('li');
                     const div = document.createElement('div');
@@ -252,6 +278,26 @@
                         div.click();
                     }
                 });
+            }
+
+            function loadServerFromUrl(url) {
+                playerLoad.style.display = "block";  // Show loading animation
+                iframe.src = url;
+
+                iframe.onload = function() {
+                    playerLoad.style.display = "none";  // Hide loading animation when iframe loads
+                };
+
+                iframe.onerror = function() {
+                    playerLoad.style.display = "none";  // Hide loading animation if iframe fails to load
+                    alert("Failed to load the video from the provided URL.");
+                };
+
+                document.querySelectorAll('.DagPlayOpt').forEach(opt => opt.classList.remove('on'));
+                const currentOption = document.querySelector(`.DagPlayOpt[data-embed="${url}"]`);
+                if (currentOption) {
+                    currentOption.classList.add('on');
+                }
             }
 
             // Function to update time in WIB
