@@ -1,7 +1,7 @@
 [
   {
-    "videoId": "001",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800252.m3u8?txSecret=a30f3dbde37e12edcb8790b0021aaf0b&txTime=67D4FB85",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "06:00",
@@ -9,8 +9,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "002",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800253.m3u8?txSecret=b1d6d71afee657c44c7a545f380197f5&txTime=67D4FBA7",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "06:00",
@@ -18,8 +18,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "003",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800254.m3u8?txSecret=bf1130f326fa3285a19a1b1f2da3a371&txTime=67D4FBC6",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "06:30",
@@ -27,8 +27,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "004",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800255.m3u8?txSecret=22af6d533b42eefbf9898377f92aed8c&txTime=67D4FBE9",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "07:00",
@@ -36,8 +36,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "005",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800256.m3u8?txSecret=17a12aed364568e684042d4cfd67412a&txTime=67D4FC0C",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "07:00",
@@ -45,8 +45,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "006",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800257.m3u8?txSecret=18bdc1e766d7c0e69e0ba3a8aa678395&txTime=67D4FC31",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "07:00",
@@ -54,8 +54,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "007",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800258.m3u8?txSecret=0a5ebd05909589cf9522d1cf94673870&txTime=67D4FC51",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "07:00",
@@ -63,8 +63,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "008",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800259.m3u8?txSecret=cc64be17d7e2da0fa1d4826425482372&txTime=67D4FC71",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "08:30",
@@ -72,8 +72,8 @@
     "league": "NBA"
   },
   {
-    "videoId": "009",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800260.m3u8?txSecret=8af291e316ae0a9c99fe09f8189a1726&txTime=67D4FC9C",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "08:30",
@@ -81,7 +81,7 @@
     "league": "NBA"
   },
   {
-    "videoId": "010",
+    "videoId": "vrqw9s93ymea47n",
     "m3u8Url": "",
     "iframeURL": "",
     "date": "2025-03-15",
