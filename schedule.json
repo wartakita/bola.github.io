@@ -2,51 +2,6 @@
   {
     "videoId": "",
     "m3u8Url": "",
-    "iframeURL": "https://hostspotku.blogspot.com/?embed=aHR0cHM6Ly9zdHJlYW10cDMuY29tL2dsb2JhbDIucGhwP3N0cmVhbT10bnRfMl9nYixodHRwczovL3N0cmVhbXRwMy5jb20vZ2xvYmFsMi5waHA/c3RyZWFtPXNreWYx",
-    "date": "2025-03-14",
-    "time": "06:00",
-    "teams": "Detroit Pistons vs Washington Wizards",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800249.m3u8?txSecret=d45c22447f9d719855960b01c73527d9&txTime=67D3B4B7",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "06:30",
-    "teams": "Milwaukee Bucks vs Los Angeles Lakers",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800250.m3u8?txSecret=d8d45ac589da4f7213a3d023aedcceea&txTime=67D3B4D8",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "07:00",
-    "teams": "Chicago Bulls vs Brooklyn Nets",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800435.m3u8?txSecret=fbd245e9bd0180e926087b86610d265b&txTime=67D3B4FC",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "07:00",
-    "teams": "New Orleans Pelicans vs Orlando Magic",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://live.bbapcall.com/live/hd-en-2-3800251.m3u8?txSecret=b038d7a6688e7fba117a0915b5e25678&txTime=67D3D345",
-    "iframeURL": "",
-    "date": "2025-03-14",
-    "time": "09:00",
-    "teams": "Golden State Warriors vs Sacramento Kings",
-    "league": "NBA"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "",
     "iframeURL": "https://streamtp3.com/global2.php?stream=skyf1",
     "date": "2025-03-14",
     "time": "08:30",
