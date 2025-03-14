@@ -220,10 +220,20 @@
                 return decodeURIComponent(results[2].replace(/\+/g, ' '));
             }
 
+            function decodeBase64(str) {
+                try {
+                    return atob(str);
+                } catch (e) {
+                    return str; // Return original string if decoding fails
+                }
+            }
+
             const embedParam = getParameterByName('embed');
             if (embedParam) {
+                // Decode base64 if necessary
+                const decodedEmbedParam = decodeBase64(embedParam);
                 // Split the embed parameter by commas to handle multiple embed URLs
-                const embedUrls = embedParam.split(',');
+                const embedUrls = decodedEmbedParam.split(',');
                 if (embedUrls.length > 1) {
                     // Generate server options from embed URLs
                     embedUrls.forEach((url, index) => {
