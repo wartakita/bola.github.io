@@ -21,7 +21,7 @@
     <div id="mse"></div>
     <script src="https://unpkg.byted-static.com/xgplayer/3.0.1/dist/index.min.js" charset="utf-8"></script>
     <script src="https://unpkg.byted-static.com/xgplayer-flv/3.0.1/dist/index.min.js" charset="utf-8"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://unpkg.byted-static.com/xgplayer-hls/3.0.1/dist/index.min.js" charset="utf-8"></script>
     <script type="text/javascript">
       var url = window.location.search.slice(5);
       
@@ -32,20 +32,16 @@
 
       // Inisialisasi pemutar video
       if (isHLS(url)) {
-        if (Hls.isSupported()) {
-          var video = document.getElementById('mse');
-          var hls = new Hls();
-          hls.loadSource(url);
-          hls.attachMedia(video);
-          hls.on(Hls.Events.MANIFEST_PARSED, function() {
-            video.play();
-          });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          video.src = url;
-          video.addEventListener('canplay', function() {
-            video.play();
-          });
-        }
+        let player = new window.Player({
+          id: 'mse',
+          isLive: true,
+          playsinline: true,
+          url: url,
+          autoplay: true,
+          height: window.innerHeight,
+          width: window.innerWidth,
+          plugins: [window.HlsPlayer]
+        });
       } else {
         let player = new window.Player({
           id: 'mse',
