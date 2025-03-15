@@ -1,16 +1,18 @@
 [
   {
-    "league": "premier",
-    "title": "Tim A vs Tim B",
-    "thumbnail": "match-thumbnail.jpg",
-    "start_time": "2025-03-16T08:00:00+07:00",
-    "duration": 90
+    "title": "Manchester United vs Liverpool",
+    "league": "Premier League",
+    "start_time": "2025-03-16T19:00:00",
+    "duration": 90,
+    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/45fspy1718955138.jpg",
+    "watch_url": "https://example.com/watch1.html"
   },
   {
-    "league": "laliga",
-    "title": "Tim C vs Tim D",
-    "thumbnail": "match-thumbnail2.jpg",
-    "start_time": "2025-03-16T09:00:00+07:00",
-    "duration": 90
+    "title": "Real Madrid vs Barcelona",
+    "league": "La Liga",
+    "start_time": "2025-03-17T20:00:00",
+    "duration": 90,
+    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/2vbcky1720175946.jpg",
+    "watch_url": "https://example.com/watch2.html"
   }
 ]
