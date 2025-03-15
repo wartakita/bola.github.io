@@ -117,8 +117,8 @@
     "league": "Bundesliga"
   },
   {
-    "videoId": "x7lm7phzzw3dm2w",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4149785.m3u8?txSecret=9bcff4dd8e0f0559c68ffc23fdaf40a4&txTime=67D5BA7A",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "21:00",
@@ -126,8 +126,8 @@
     "league": "Italian Serie A"
   },
   {
-    "videoId": "pxwrxlh55jx8ryk",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4149787.m3u8?txSecret=ea0838548db0ea47654192404e66c306&txTime=67D5BA5A",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "21:00",
@@ -153,17 +153,8 @@
     "league": "Italian Serie A"
   },
   {
-    "videoId": "k82rekhw2ne3rep",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "15:30",
-    "teams": "Western Sydney vs Melbourne Victory",
-    "league": "Australia A-League"
-  },
-  {
-    "videoId": "318q66hw8n1kqo9",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/sd-1-4179822.m3u8?txSecret=b465cec6a6f21f4cf1cb87934dcd0787&txTime=67D5BA38",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "17:45",
@@ -216,26 +207,8 @@
     "league": "Netherlands Eredivisie"
   },
   {
-    "videoId": "k82rekhwkn40rep",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "14:30",
-    "teams": "Daegu Football Club vs FC Anyang",
-    "league": "Korean K League 1"
-  },
-  {
-    "videoId": "4wyrn4hx303yq86",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "14:30",
-    "teams": "Gangwon Football Club vs Football Club Seoul",
-    "league": "Korean K League 1"
-  },
-  {
-    "videoId": "4wyrn4hxox9eq86",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://live.bbapcall.com/live/hd-en-1-4140434.flv?txSecret=27c6fb4c50b05929041a10a351838a75&txTime=67D5B9DB",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "20:00",
@@ -313,14 +286,5 @@
     "time": "20:10",
     "teams": "Gran Premio YPF Energía de Argentina 2025",
     "league": "MotoGP"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0001/r9wrcmamr2dtjozcbz3ito3ebd3u3ojr61/playlist.m3u8?hdnts=st=1742022707~exp=1742055117~acl=*/r9wrcmamr2dtjozcbz3ito3ebd3u3ojr61/*~hmac=3911f2d2b382b5ea6d713862fc4e2c031924cf98cdb3f06ca8feb1391b3ac2f5",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "14:00",
-    "teams": "Hungkuk W vs Expressway Co W",
-    "league": "Korea Women's Volleyball League"
   }
 ]
