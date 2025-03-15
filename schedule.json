@@ -171,42 +171,6 @@
     "league": "Australia A-League"
   },
   {
-    "videoId": "vjxm8ghldzk7r6o",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "12:00",
-    "teams": "Avispa Fukuoka vs FC Tokyo",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "318q66hwy514qo9",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "12:00",
-    "teams": "Machida Zelvia vs Albirex Niigata",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "vjxm8ghldz0zr6o",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "12:00",
-    "teams": "Yokohama FC vs Cerezo Osaka",
-    "league": "Japanese J1 League"
-  },
-  {
-    "videoId": "318q66hwy5d2qo9",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "12:00",
-    "teams": "Tokyo Verdy vs Nagoya Grampus",
-    "league": "Japanese J1 League"
-  },
-  {
     "videoId": "8yomo4h3l4vnq0j",
     "m3u8Url": "",
     "iframeURL": "",
@@ -250,15 +214,6 @@
     "time": "03:00",
     "teams": "SC Heerenveen vs Heracles Almelo",
     "league": "Netherlands Eredivisie"
-  },
-  {
-    "videoId": "x7lm7phz6n1km2w",
-    "m3u8Url": "",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "12:00",
-    "teams": "Jeju United vs Daejeon Citizen",
-    "league": "Korean K League 1"
   },
   {
     "videoId": "k82rekhwkn40rep",
@@ -358,15 +313,6 @@
     "time": "20:10",
     "teams": "Gran Premio YPF Energía de Argentina 2025",
     "league": "MotoGP"
-  },
-  {
-    "videoId": "",
-    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/ositrzaibtyiqrcz3smsnb1b5emaxp6vy5/playlist.m3u8?hdnts=st=1742015586~exp=1742047996~acl=*/ositrzaibtyiqrcz3smsnb1b5emaxp6vy5/*~hmac=bf8ffe9931a6c479812f40cfb77eb5aedc3e9c7cdbed03bb8255987aa5116b52",
-    "iframeURL": "",
-    "date": "2025-03-15",
-    "time": "12:00",
-    "teams": "Ansan OK vs Samsung Blue Fangs",
-    "league": "Korea Volleyball League"
   },
   {
     "videoId": "",
