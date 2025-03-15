@@ -360,8 +360,8 @@
     "league": "MotoGP"
   },
   {
-    "videoId": "001",
-    "m3u8Url": "",
+    "videoId": "",
+    "m3u8Url": "https://livecloud.akamaized.net/sports/lip2_kr2/anmssgpu0003/ositrzaibtyiqrcz3smsnb1b5emaxp6vy5/playlist.m3u8?hdnts=st=1742015586~exp=1742047996~acl=*/ositrzaibtyiqrcz3smsnb1b5emaxp6vy5/*~hmac=bf8ffe9931a6c479812f40cfb77eb5aedc3e9c7cdbed03bb8255987aa5116b52",
     "iframeURL": "",
     "date": "2025-03-15",
     "time": "12:00",
