@@ -149,7 +149,7 @@
     "start_time": "2025-03-16T18:15:00",
     "duration": 110,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/t482ja1740218186.jpg",
-    "watch_url": "/"
+    "watch_url": "https://da.gd/wTSqF"
   },
   {
     "title": "Groningen vs Fortuna Sittard",
@@ -216,14 +216,6 @@
     "watch_url": "/"
   },
   {
-    "title": "Grand Prix Australia 2025",
-    "league": "Formula 1",
-    "start_time": "2025-03-16T11:00:00",
-    "duration": 110,
-    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/dk1c8q1740496403.jpg",
-    "watch_url": "https://da.gd/IKPgh"
-  },
-  {
     "title": "Gran Premio YPF Energía de Argentina 2025",
     "league": "MotoGP",
     "start_time": "2025-03-17T01:00:00",
@@ -231,20 +223,4 @@
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/fuvw0e1739534753.jpg",
     "watch_url": "/"
   },
-  {
-    "title": "IBK W vs GS Caltex W",
-    "league": "South Korea: Volleyball League Women",
-    "start_time": "2025-03-16T14:00:00",
-    "duration": 120,
-    "thumbnail": "https://ssl.pstatic.net/static/sports/common/livecenter/new/bg_live_volleyball.jpg",
-    "watch_url": "https://da.gd/7JhFLv"
-  },
-  {
-    "title": "Kepco vs Hyundai Skywalkers",
-    "league": "South Korea: Volleyball League",
-    "start_time": "2025-03-16T12:00:00",
-    "duration": 120,
-    "thumbnail": "https://ssl.pstatic.net/static/sports/common/livecenter/new/bg_live_volleyball.jpg",
-    "watch_url": "https://da.gd/um2to"
-  }
 ]
