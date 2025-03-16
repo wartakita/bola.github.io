@@ -133,7 +133,7 @@ async function fetchMatches() {
         const leagueFilter = document.getElementById('leagueFilter');
         liveMatchList.innerHTML = ''; // Clear existing content
         upcomingMatchList.innerHTML = ''; // Clear existing content
-        leagueFilter.innerHTML = '<option value="">Semua Liga</option>'; // Clear existing options
+        leagueFilter.innerHTML = '<option value="">Semua Kompetisi</option>'; // Clear existing options
 
         // Collect unique leagues
         const uniqueLeagues = new Set(matches.map(match => match.league));
