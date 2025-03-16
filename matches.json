@@ -109,7 +109,7 @@
     "start_time": "2025-03-16T18:30:00",
     "duration": 110,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/50djmv1720175951.jpg",
-    "watch_url": "/"
+    "watch_url": "https://da.gd/7dINY"
   },
   {
     "title": "Bologna vs Lazio",
@@ -144,14 +144,6 @@
     "watch_url": "/"
   },
   {
-    "title": "Go Ahead Eagles vs Willem II",
-    "league": "Netherlands Eredivisie",
-    "start_time": "2025-03-16T18:15:00",
-    "duration": 110,
-    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/t482ja1740218186.jpg",
-    "watch_url": "https://da.gd/wTSqF"
-  },
-  {
     "title": "Groningen vs Fortuna Sittard",
     "league": "Netherlands Eredivisie",
     "start_time": "2025-03-16T20:30:00",
@@ -181,7 +173,7 @@
     "start_time": "2025-03-16T20:00:00",
     "duration": 110,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/48pnvw1719563583.jpg",
-    "watch_url": "/"
+    "watch_url": "https://da.gd/gEWjBb"
   },
   {
     "title": "Sevilla vs Athletic Bilbao",
@@ -222,5 +214,5 @@
     "duration": 110,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/fuvw0e1739534753.jpg",
     "watch_url": "/"
-  },
+  }
 ]
