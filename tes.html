@@ -1,759 +1,95 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streaming Sepak Bola</title>
-    <link href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9EKzMXISjHw_eUPmhpiXr_phivE-qeROlWfYcNESP6uXRTDTQ-B191g07QGLOouxYzfDkUzqu2jq03jpxZlDOVyKD99RiuyXH6-SaVIX3O5NuJq6cgmwG1mQK-wd09RKMIXsDlDQp-SxH54g-p9_7FgtEvNTYab43sRGzJ0xBZJmXVKBdyDuTzu2i_wtM/s500/logomotosports.ico' rel='icon' type='image/x-icon'/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+    <!--<script src="https://ssl.p.jwpcdn.com/player/v/8.36.4/jwplayer.js"></script>-->
+
     <style>
-        :root {
-            --primary: #000000;
-            --gray-dark: #444444;
-            --accent: #ff4500;
-        }
-
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            overflow-y: hidden;
         }
 
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-        .DagTo {
-            margin-bottom: 8px;
-            width: 100%;
-            background: var(--gray-dark);
-            border-radius: 4px;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .DagPlaArea {
-            width: 100%;
-            position: relative;
-            padding: 0;
-            overflow: hidden;
-            border-bottom-right-radius: 4px;
-            border-bottom-left-radius: 4px;
-        }
-
-        #server ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 10px;
-            background: #fff;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        #server ul li {
-            margin: 5px;
-        }
-
-        .DagPlayOpt {
-            padding: 8px 16px;
-            text-align: center;
-            cursor: pointer;
-            font-size: 14px;
-            background: var(--accent);
-            border-radius: 4px;
-            transition: background 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .DagPlayOpt:hover {
-            background: #e53935;
-        }
-
-        .DagPlayOpt.on {
-            background: var(--primary);
-            color: #fff;
-        }
-
-        .video-content {
-            background: #000;
-            overflow: hidden;
-            position: relative;
-        }
-
-        #pembed {
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%;
-            position: relative;
-        }
-
-        .playerload {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 10px solid transparent;
-            border-top-color: var(--accent);
-            border-bottom-color: var(--accent);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: translate(-50%, -50%) rotate(0deg);
-            }
-            100% {
-                transform: translate(-50%, -50%) rotate(360deg);
-            }
-        }
-
-        iframe {
-            position: absolute;
+        #player {
             width: 100%;
             height: 100%;
+            position: absolute;
             top: 0;
+            bottom: 0;
             left: 0;
-            border: none;
+            right: 0;
         }
 
-        .marquee-container {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 10px 0;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-
-        .marquee {
-            white-space: nowrap;
-            overflow: hidden;
-            flex: 1;
-        }
-
-        .marquee div {
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 25s linear infinite;
-        }
-
-        @keyframes marquee {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-
-        .time-display {
-            margin-right: 20px;
-            white-space: nowrap;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 16px;
-            animation: fadeInOut 1s linear infinite alternate;
-        }
-
-        @keyframes fadeInOut {
-            0% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        .telegram-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #0088cc;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .telegram-button:hover {
-            background-color: #005f8c;
-        }
-
-        .telegram-button i {
-            margin-right: 5px;
-        }
-
-        .adsense-container {
-            margin: 20px 0;
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .match-card {
-            position: relative;
-        }
-
-        .match-card:hover {
-            transform: scale(1.05);
-            transition: 0.3s ease-in-out;
-        }
-
-        .league-label {
+        .watermark-text {
             position: absolute;
             top: 10px;
             right: 10px;
-            background-color: rgba(0, 0, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
             padding: 5px 10px;
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
             border-radius: 5px;
-        }
-
-        .live-label {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(255, 0, 0, 0.8);
-            color: white;
-            padding: 5px 10px;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .match-date {
-            position: absolute;
-            top: 40px;
-            right: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 5px 10px;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            z-index: 1000;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .scroll-to-top:hover {
-            background-color: #0056b3;
-        }
-
-        .no-results {
-            display: none;
-            margin-top: 20px;
-            color: red;
-            text-align: center;
-        }
-
-        .divider {
-            margin: 20px 0;
-            border-top: 1px solid #ccc;
+            z-index: 10;
         }
     </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Football Stream</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Jadwal</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Live</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="container mt-4">
-        <h2 class="text-center">Pertandingan Langsung</h2>
-        
-        <div class="mb-3">
-            <input type="text" id="searchInput" class="form-control" placeholder="Cari pertandingan...">
-        </div>
-        
-        <div class="mb-3">
-            <select id="leagueFilter" class="form-select">
-                <option value="">Semua Liga</option>
-                <!-- Opsi liga akan diisi dari JSON -->
-            </select>
-        </div>
-        
-        <div id="liveMatchesSection">
-            <h3 class="text-center">Pertandingan Live</h3>
-            <div class="row" id="liveMatchList">
-                <!-- Pertandingan live akan ditampilkan di sini -->
-            </div>
-        </div>
-        
-        <div class="divider"></div>
-        
-        <div id="upcomingMatchesSection">
-            <h3 class="text-center">Pertandingan Akan Datang</h3>
-            <div class="row" id="upcomingMatchList">
-                <!-- Pertandingan yang belum mulai akan ditampilkan di sini -->
-            </div>
-        </div>
-        
-        <div class="no-results" id="noResults">
-            Tidak ada pertandingan yang cocok dengan pencarian Anda.
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="DagPlaArea DagTo">
-            <div id="PlayVideo" class="video-content">
-                <div id="embed_holder">
-                    <div class="player-embed" id="pembed">
-                        <div class="playerload"><i class="fas fa-spinner fa-spin"></i></div>
-                        <div class="pframe">
-                            <iframe src="" frameborder="0" allow="encrypted-media" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" referrerpolicy="no-referrer"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="marquee-container">
-                <div class="time-display" id="timeDisplay"></div>
-                <div class="marquee">
-                    <div>Pastikan koneksi internet Anda dalam keadaan stabil. Kami menyarankan penggunaan Google Chrome untuk memastikan tampilan yang lebih optimal. Apabila Anda mengalami kehilangan koneksi atau kecepatan yang lambat, Anda dapat melakukan penyegaran halaman untuk mendapatkan tautan yang lebih terbaru. Jika Anda ingin mengetahui jadwal atau jika terdapat kesalahan, silakan segera laporkan melalui grup Telegram yang telah disediakan.</div>
-                </div>
-            </div>
-        </div>
-        <div id="server">
-            <ul id="serverList">
-                <!-- Server options will be generated here -->
-            </ul>
-        </div>
-        <center>
-            <a href="https://t.me/+XLm3s_QdAIRmN2Zl" class="telegram-button"><i class="fab fa-telegram-plane"></i> Join our Telegram Group</a>
-        </center>
-        <div class="adsense-container">
-            <!-- Contoh kode iklan AdSense -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
-            <!-- Iklan Atas -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-1234567890123456"
-                 data-ad-slot="9876543210"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
-    
-    <button id="scrollToTop" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    
     <script>
-        document.getElementById("searchInput").addEventListener("keyup", function() {
-            let filter = this.value.toLowerCase();
-            let matchItems = document.querySelectorAll(".match-item");
-            let noResults = document.getElementById("noResults");
-            let found = false;
+        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
 
-            matchItems.forEach(item => {
-                let title = item.querySelector(".card-title").textContent.toLowerCase();
-                if (title.includes(filter)) {
-                    item.style.display = "block";
-                    found = true;
-                } else {
-                    item.style.display = "none";
-                }
-            });
-
-            if (!found) {
-                noResults.style.display = "block";
-            } else {
-                noResults.style.display = "none";
-            }
-        });
-        
-        document.getElementById("leagueFilter").addEventListener("change", function() {
-            let selectedLeague = this.value;
-            let matchItems = document.querySelectorAll(".match-item");
-            let noResults = document.getElementById("noResults");
-            let found = false;
-
-            matchItems.forEach(item => {
-                let league = item.getAttribute("data-league");
-                if (selectedLeague === "" || league === selectedLeague) {
-                    item.style.display = "block";
-                    found = true;
-                } else {
-                    item.style.display = "none";
-                }
-            });
-
-            if (!found) {
-                noResults.style.display = "block";
-            } else {
-                noResults.style.display = "none";
-            }
-        });
-
-        function updateMatchStatus() {
-            let liveMatchList = document.getElementById('liveMatchList');
-            let upcomingMatchList = document.getElementById('upcomingMatchList');
-            let matchItems = document.querySelectorAll(".match-item");
-            let now = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta', hour12: false });
-
-            liveMatchList.innerHTML = '';
-            upcomingMatchList.innerHTML = '';
-
-            matchItems.forEach(item => {
-                let startTime = new Date(item.getAttribute("data-start-time")).toLocaleString('en-US', { timeZone: 'Asia/Jakarta', hour12: false });
-                let duration = parseInt(item.getAttribute("data-duration"), 10);
-                let endTime = new Date(new Date(startTime).getTime() + duration * 60 * 1000).toLocaleString('en-US', { timeZone: 'Asia/Jakarta', hour12: false });
-
-                let liveLabel = item.querySelector(".live-label");
-                let matchDateElement = item.querySelector(".match-date");
-
-                let nowTime = new Date(now).getTime();
-                let startTimeTime = new Date(startTime).getTime();
-                let endTimeTime = new Date(endTime).getTime();
-
-                // Format match date
-                let matchDate = new Date(startTime).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-                matchDateElement.textContent = matchDate;
-
-                if (nowTime < startTimeTime) {
-                    // Match has not started yet
-                    if (liveLabel) {
-                        liveLabel.remove();
-                    }
-                    upcomingMatchList.appendChild(item);
-                } else if (nowTime >= startTimeTime && nowTime < endTimeTime) {
-                    // Match is live
-                    if (!liveLabel) {
-                        liveLabel = document.createElement("span");
-                        liveLabel.className = "live-label";
-                        liveLabel.textContent = "LIVE";
-                        item.querySelector(".match-card").appendChild(liveLabel);
-                    }
-                    liveMatchList.appendChild(item);
-                } else {
-                    // Match is finished
-                    item.style.display = "none";
-                }
-            });
-
-            // Hide sections if no matches are found
-            if (liveMatchList.children.length === 0) {
-                document.getElementById('liveMatchesSection').style.display = 'none';
-            } else {
-                document.getElementById('liveMatchesSection').style.display = 'block';
-            }
-
-            if (upcomingMatchList.children.length === 0) {
-                document.getElementById('upcomingMatchesSection').style.display = 'none';
-            } else {
-                document.getElementById('upcomingMatchesSection').style.display = 'block';
-            }
+        function getParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
         }
 
-        setInterval(updateMatchStatus, 1000);
-        updateMatchStatus(); // Initial call to set the status immediately
-
-        // Fetch matches from JSON file
-        async function fetchMatches() {
-            try {
-                const response = await fetch('https://wartakita.github.io/bola.github.io/tes.json');
-                const matches = await response.json();
-                const liveMatchList = document.getElementById('liveMatchList');
-                const upcomingMatchList = document.getElementById('upcomingMatchList');
-                const leagueFilter = document.getElementById('leagueFilter');
-                liveMatchList.innerHTML = ''; // Clear existing content
-                upcomingMatchList.innerHTML = ''; // Clear existing content
-                leagueFilter.innerHTML = '<option value="">Semua Liga</option>'; // Clear existing options
-
-                // Collect unique leagues
-                const uniqueLeagues = new Set(matches.map(match => match.league));
-
-                // Populate league filter
-                uniqueLeagues.forEach(league => {
-                    const option = document.createElement('option');
-                    option.value = league;
-                    option.textContent = league;
-                    leagueFilter.appendChild(option);
-                });
-
-                matches.forEach(match => {
-                    const matchItem = document.createElement('div');
-                    matchItem.className = 'col-md-4 match-item';
-                    matchItem.setAttribute('data-league', match.league);
-                    matchItem.setAttribute('data-start-time', match.start_time);
-                    matchItem.setAttribute('data-duration', match.duration);
-
-                    matchItem.innerHTML = `
-                        <div class="card match-card">
-                            <span class="league-label">${match.league.toUpperCase()}</span>
-                            <span class="match-date"></span>
-                            <img src="${match.thumbnail}" class="card-img-top" alt="Match Thumbnail">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">${match.title}</h5>
-                                <a href="${match.watch_url}" class="btn btn-primary">Tonton Sekarang</a>
-                                <div class="mt-2">
-                                    <button class="btn btn-outline-primary btn-sm share-btn" data-title="${match.title}" data-url="${match.watch_url}">
-                                        <i class="fas fa-share-alt"></i> Bagikan
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-
-                    // Append to respective sections
-                    if (new Date(match.start_time).getTime() <= new Date().getTime() && new Date(match.start_time).getTime() + match.duration * 60 * 1000 > new Date().getTime()) {
-                        liveMatchList.appendChild(matchItem);
-                    } else {
-                        upcomingMatchList.appendChild(matchItem);
-                    }
-                });
-
-                updateMatchStatus(); // Update match status after fetching data
-            } catch (error) {
-                console.error('Error fetching matches:', error);
-            }
+        function decodeBase64(encodedStr) {
+            return atob(encodedStr);
         }
+    </script>
+</head>
 
-        fetchMatches();
+<body>
+    <div id="player"></div>
 
-        // Scroll to top functionality
-        const scrollToTopButton = document.getElementById('scrollToTop');
+    <div class="watermark-text">zonasportlive.blogspot.com</div>
 
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopButton.style.display = "block";
-            } else {
-                scrollToTopButton.style.display = "none";
-            }
-        };
+    <script>
+        var playerInstance = jwplayer("player");
 
-        scrollToTopButton.onclick = function() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-        };
+        var encodedVideoParam = getParameter('video');
+        var videoFile = encodedVideoParam ? decodeBase64(encodedVideoParam) : 'default_video_url.mp4';
 
-        // Share functionality
-        document.addEventListener('click', function(event) {
-            if (event.target.classList.contains('share-btn')) {
-                const title = event.target.getAttribute('data-title');
-                const url = event.target.getAttribute('data-url');
-
-                if (navigator.share) {
-                    navigator.share({
-                        title: title,
-                        url: url
-                    }).then(() => {
-                        console.log('Berhasil dibagikan');
-                    }).catch((error) => {
-                        console.error('Gagal membagikan:', error);
-                    });
-                } else {
-                    // Fallback for browsers that do not support Web Share API
-                    navigator.clipboard.writeText(url).then(() => {
-                        alert('Tautan telah disalin ke clipboard: ' + url);
-                    }).catch((error) => {
-                        console.error('Gagal menyalin tautan:', error);
-                    });
-                }
+        playerInstance.setup({
+            playlist: [{
+                title: " ",
+                description: " ",
+                image: " ",
+                sources: [{
+                    default: true,
+                    file: videoFile,
+                    label: "HD Quality"
+                }]
+            }],
+            width: "100%",
+            height: "100%",
+            aspectratio: "16:9",
+            autostart: true,
+            sharing: {
+                link: window.location.href,
+                sites: ["facebook", "twitter", "email", "whatsapp"]
             }
         });
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const servers = [
-                { name: "Server 1", embed: "https://example.com/embed1" },
-                { name: "Server 2", embed: "https://example.com/embed2" },
-                { name: "Server 3", embed: "https://example.com/embed3" }
-            ];
-
-            const serverList = document.getElementById('serverList');
-            const iframe = document.querySelector("#pembed iframe");
-            const playerLoad = document.querySelector(".playerload");
-            let currentServerIndex = 0;
-
-            function loadServer(index) {
-                if (index >= servers.length) {
-                    playerLoad.style.display = "none";
-                    alert("All servers failed to load. Please try again later.");
-                    return;
-                }
-
-                const embedURL = servers[index].embed;
-                playerLoad.style.display = "block";  // Show loading animation
-                iframe.src = embedURL;
-
-                iframe.onload = function() {
-                    playerLoad.style.display = "none";  // Hide loading animation when iframe loads
-                };
-
-                iframe.onerror = function() {
-                    playerLoad.style.display = "none";  // Hide loading animation if iframe fails to load
-                    alert(`Failed to load ${servers[index].name}. Trying next server...`);
-                    loadServer(index + 1);  // Try next server
-                };
-
-                document.querySelectorAll('.DagPlayOpt').forEach(opt => opt.classList.remove('on'));
-                serverList.children[index].firstChild.classList.add('on');
-                currentServerIndex = index;
-            }
-
-            function getParameterByName(name, url = window.location.href) {
-                name = name.replace(/[\[\]]/g, '\\$&');
-                const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                    results = regex.exec(url);
-                if (!results) return null;
-                if (!results[2]) return '';
-                return decodeURIComponent(results[2].replace(/\+/g, ' '));
-            }
-
-            function decodeBase64(str) {
-                try {
-                    return atob(str);
-                } catch (e) {
-                    return str;
-                }
-            }
-
-            const embedParam = getParameterByName('embed');
-            if (embedParam) {
-                // Decode base64 if necessary
-                const decodedEmbedParam = decodeBase64(embedParam);
-                // Split the embed parameter by commas to handle multiple embed URLs
-                const embedUrls = decodedEmbedParam.split(',');
-                if (embedUrls.length > 1) {
-                    // Generate server options from embed URLs
-                    embedUrls.forEach((url, index) => {
-                        const li = document.createElement('li');
-                        const div = document.createElement('div');
-                        div.className = 'DagPlayOpt';
-                        div.dataset.embed = url;
-                        div.innerHTML = `<i class="fas fa-play"></i> <span>Server ${index + 1}</span>`;
-                        li.appendChild(div);
-                        serverList.appendChild(li);
-
-                        div.addEventListener('click', function() {
-                            loadServerFromUrl(url);
-                        });
-
-                        // Trigger click on the first server option
-                        if (index === 0) {
-                            div.click();
-                        }
-                    });
-                } else {
-                    // Single embed URL
-                    playerLoad.style.display = "block";  // Show loading animation
-                    iframe.src = embedUrls[0];
-
-                    iframe.onload = function() {
-                        playerLoad.style.display = "none";  // Hide loading animation when iframe loads
-                    };
-
-                    iframe.onerror = function() {
-                        playerLoad.style.display = "none";  // Hide loading animation if iframe fails to load
-                        alert("Failed to load the video from the provided URL.");
-                    };
-                }
-            } else {
-                // Generate server options from predefined servers
-                servers.forEach((server, index) => {
-                    const li = document.createElement('li');
-                    const div = document.createElement('div');
-                    div.className = 'DagPlayOpt';
-                    div.dataset.embed = server.embed;
-                    div.innerHTML = `<i class="fas fa-play"></i> <span>${server.name}</span>`;
-                    li.appendChild(div);
-                    serverList.appendChild(li);
-
-                    div.addEventListener('click', function() {
-                        loadServer(index);
-                    });
-
-                    // Trigger click on the first server option
-                    if (index === 0) {
-                        div.click();
-                    }
-                });
-            }
-
-            function loadServerFromUrl(url) {
-                playerLoad.style.display = "block";  // Show loading animation
-                iframe.src = url;
-
-                iframe.onload = function() {
-                    playerLoad.style.display = "none";  // Hide loading animation when iframe loads
-                };
-
-                iframe.onerror = function() {
-                    playerLoad.style.display = "none";  // Hide loading animation if iframe fails to load
-                    alert("Failed to load the video from the provided URL.");
-                };
-
-                document.querySelectorAll('.DagPlayOpt').forEach(opt => opt.classList.remove('on'));
-                const currentOption = document.querySelector(`.DagPlayOpt[data-embed="${url}"]`);
-                if (currentOption) {
-                    currentOption.classList.add('on');
-                }
-            }
-
-            // Function to update time in WIB
-            function updateTime() {
-                const now = new Date();
-                const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-                const timeString = now.toLocaleTimeString('en-GB', options);
-                document.getElementById('timeDisplay').textContent = `${timeString} WIB`;
-            }
-
-            // Update time every second
-            setInterval(updateTime, 1000);
-            updateTime();  // Initial call to set time immediately
+        playerInstance.on('error', function(event) {
+            console.log("Error occurred: ", event.message);
+            alert("An error occurred while loading the video. Please try again later.");
         });
     </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
