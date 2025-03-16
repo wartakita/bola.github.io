@@ -3,7 +3,7 @@
     "title": "Los Angeles Lakers vs Phoenix Suns",
     "league": "NBA",
     "start_time": "2025-03-17T02:30:00",
-    "duration": 240,
+    "duration": 150,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/44of5l1728123175.jpg",
     "watch_url": "https://da.gd/yZzC"
   },
@@ -11,15 +11,15 @@
     "title": "Brooklyn Nets vs Atlanta Hawks",
     "league": "NBA",
     "start_time": "2025-03-17T05:00:00",
-    "duration": 240,
-    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/aeoap61728123180.jpg",
+    "duration": 150,
+    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/aeoap61728123150.jpg",
     "watch_url": "https://da.gd/lZWxD"
   },
   {
     "title": "Portland Trail Blazers vs Toronto Raptors",
     "league": "NBA",
     "start_time": "2025-03-17T05:00:00",
-    "duration": 240,
+    "duration": 150,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/chwegc1728123182.jpg",
     "watch_url": "https://da.gd/KseS"
   },
@@ -27,7 +27,7 @@
     "title": "Los Angeles Clippers vs Charlotte Hornets",
     "league": "NBA",
     "start_time": "2025-03-17T06:00:00",
-    "duration": 240,
+    "duration": 150,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/m2z8g21728122455.jpg",
     "watch_url": "https://da.gd/ltaQf"
   },
@@ -35,7 +35,7 @@
     "title": "Minnesota Timberwolves vs Utah Jazz",
     "league": "NBA",
     "start_time": "2025-03-17T06:00:00",
-    "duration": 240,
+    "duration": 150,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/1l0pf91728123184.jpg",
     "watch_url": "https://da.gd/afelw"
   },
@@ -43,7 +43,7 @@
     "title": "Milwaukee Bucks vs Oklahoma City Thunder",
     "league": "NBA",
     "start_time": "2025-03-17T08:00:00",
-    "duration": 240,
+    "duration": 150,
     "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/4jj3151728123163.jpg",
     "watch_url": "https://da.gd/7DWsvn"
   }
