@@ -14,7 +14,7 @@ function generateEmbed() {
         return;
     }
     let base64Encoded = btoa(inputUrl);
-    document.getElementById('embedLink').href = `https://playerzona.blogspot.com/?embed=${base64Encoded}`;
+    document.getElementById('embedLink').href = `https://embedzona.blogspot.com/?embed=${base64Encoded}`;
     document.getElementById('embedLink').innerText = document.getElementById('embedLink').href;
 }
 
@@ -25,7 +25,7 @@ function generateHLS() {
         return;
     }
     let base64Encoded = btoa(inputUrl);
-    document.getElementById('hlsLink').href = `https://jwplayerhls.blogspot.com/?video=${base64Encoded}`;
+    document.getElementById('hlsLink').href = `https://hlszona.blogspot.com/?video=${base64Encoded}`;
     document.getElementById('hlsLink').innerText = document.getElementById('hlsLink').href;
 }
 
