@@ -172,7 +172,7 @@
     "league": "FIFA World Cup qualification (CONMEBOL)",
     "start_time": "2025-03-21T06:00:00",
     "duration": 110,
-    "thumbnail": "https://hypebeast.com/image/2023/05/fifa-unveils-official-2026-world-cup-logo-1.jpg",
+    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/7ctncx1636792953.jpg",
     "watch_url": "/"
   },
   {
@@ -180,7 +180,7 @@
     "league": "FIFA World Cup qualification (CONMEBOL)",
     "start_time": "2025-03-21T07:45:00",
     "duration": 110,
-    "thumbnail": "https://hypebeast.com/image/2023/05/fifa-unveils-official-2026-world-cup-logo-1.jpg",
+    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/dvuoma1636792953.jpg",
     "watch_url": "/"
   },
   {
@@ -188,16 +188,8 @@
     "league": "FIFA World Cup qualification (CONMEBOL)",
     "start_time": "2025-03-21T08:30:00",
     "duration": 110,
-    "thumbnail": "https://hypebeast.com/image/2023/05/fifa-unveils-official-2026-world-cup-logo-1.jpg",
+    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/2vbk811636792953.jpg",
     "watch_url": "/"
-  },
-  {
-    "title": "Woori vs Samsung Blue Fangs",
-    "league": "South Korea: Volleyball League",
-    "start_time": "2025-03-19T17:00:00",
-    "duration": 150,
-    "thumbnail": "https://ssl.pstatic.net/static/sports/common/livecenter/new/bg_live_volleyball.jpg",
-    "watch_url": "https://da.gd/yEPw"
   },
   {
     "title": "Hyundai Skywalkers vs Ansan OK",
@@ -206,14 +198,6 @@
     "duration": 150,
     "thumbnail": "https://ssl.pstatic.net/static/sports/common/livecenter/new/bg_live_volleyball.jpg",
     "watch_url": "/"
-  },
-  {
-    "title": "Daejeon JKW vs Expressway Co W",
-    "league": "South Korea: Volleyball League Women",
-    "start_time": "2025-03-19T17:00:00",
-    "duration": 150,
-    "thumbnail": "https://ssl.pstatic.net/static/sports/common/livecenter/new/bg_live_volleyball.jpg",
-    "watch_url": "https://da.gd/HCe8X"
   },
   {
     "title": "GS Caltex W vs Hungkuk W",
