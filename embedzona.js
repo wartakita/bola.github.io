@@ -1,19 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Daftar domain yang diizinkan
-    const allowedDomains = ['embedzona.blogspot.com', 'https://embedzona.blogspot.com'];
+    // Domain yang diizinkan
+    const allowedDomain = "embedzona.blogspot.com";
 
-    // Fungsi untuk memeriksa domain
-    function checkDomain() {
-        const currentDomain = window.location.hostname;
-        if (!allowedDomains.includes(currentDomain)) {
-            // Jika domain tidak diizinkan, tampilkan pesan kesalahan dan arahkan ke halaman lain
-            alert('Akses dilarang. Anda tidak diizinkan untuk mengakses halaman ini dari domain ini.');
-            window.location.href = 'https://zonasportlive.blogspot.com'; // Arahkan ke halaman utama atau halaman lain
+    // Periksa apakah halaman sedang di-embed dalam iframe dari domain yang diizinkan
+    if (window.top !== window.self) {
+        if (window.top.location.hostname !== allowedDomain) {
+            // Jika domain tidak sesuai, tampilkan pesan kesalahan dan arahkan ke halaman lain
+            alert("Akses tidak diizinkan. Halaman ini tidak dapat di-embed dari domain ini.");
+            window.top.location.href = "https://" + allowedDomain;
         }
     }
-
-    // Jalankan fungsi pemeriksaan domain
-    checkDomain();
 
     const servers = [{
             name: "Server 1",
