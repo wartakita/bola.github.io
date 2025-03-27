@@ -28,6 +28,14 @@ document.getElementById("logoTimBOption").addEventListener("change", function() 
     }
 });
 
+document.getElementById("bgOption").addEventListener("change", function() {
+    if (this.value === "custom") {
+        document.getElementById("bgInput").style.display = "block";
+    } else {
+        document.getElementById("bgInput").style.display = "none";
+    }
+});
+
 function updateThumbnail() {
     document.getElementById("namaLiga").innerText = document.getElementById("namaLigaInput").value || "Nama Liga";
     document.getElementById("namaA").innerText = document.getElementById("namaTimA").value || "Tim A";
@@ -49,10 +57,10 @@ function updateThumbnail() {
     document.getElementById("waktuKickoff").innerText = document.getElementById("waktuInput").value || "19:00";
 
     let bgUrl = document.getElementById("bgInput").value;
-    if (bgUrl) {
+    if (document.getElementById("bgOption").value === "custom" && bgUrl) {
         document.getElementById("thumbnail").style.backgroundImage = `url('${bgUrl}')`;
     } else {
-        document.getElementById("thumbnail").style.backgroundImage = document.getElementById("bgPattern").value;
+        document.getElementById("thumbnail").style.backgroundImage = "url('https://i.imgur.com/dltikbe.jpeg')";
     }
 
     // Update warna teks
