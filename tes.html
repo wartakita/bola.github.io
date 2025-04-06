@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta name="referrer" content="no-referrer">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
-    <!--<script src="https://ssl.p.jwpcdn.com/player/v/8.36.4/jwplayer.js"></script>-->
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-y: hidden;
-        }
-
-        #player {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .watermark-text {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 5px 10px;
-            font-size: 20px;
-            font-family: Arial, sans-serif;
-            border-radius: 5px;
-            z-index: 10;
-        }
-    </style>
-    <script>
-        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-
-        function getParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-
-        function decodeBase64(encodedStr) {
-            return atob(encodedStr);
-        }
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.6/shaka-player.compiled.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.6/shaka-player.ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.6/controls.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div id="player"></div>
-
-    <div class="watermark-text">zonasportlive.blogspot.com</div>
-
+    <div data-shaka-player-container style="max-width:100em" data-shaka-player-cast-receiver-id="8D8C71A7">
+        <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
+    </div>
     <script>
-        var playerInstance = jwplayer("player");
+        // Fungsi untuk mendapatkan parameter dari URL
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[
 
-        var encodedVideoParam = getParameter('video');
-        var videoFile = encodedVideoParam ? decodeBase64(encodedVideoParam) : 'default_video_url.mp4';
+$$$$
 
-        playerInstance.setup({
-            playlist: [{
-                title: " ",
-                description: " ",
-                image: " ",
-                sources: [{
-                    default: true,
-                    file: videoFile,
-                    label: "HD Quality"
-                }]
-            }],
-            width: "100%",
-            height: "100%",
-            aspectratio: "16:9",
-            autostart: true,
-            sharing: {
-                link: window.location.href,
-                sites: ["facebook", "twitter", "email", "whatsapp"]
+]/g, '\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        const manifestUri = getParameterByName('manifest');
+        const clearKeyId = getParameterByName('clearKeyId');
+        const clearKeyValue = getParameterByName('clearKeyValue');
+
+        async function init() {
+            const video = document.getElementById('video');
+            const ui = video['ui'];
+            const controls = ui.getControls();
+            const player = controls.getPlayer();
+            const config = {
+                'controlPanelElements': ['play_pause', 'rewind', 'fast_forward', 'spacer',
+                    'mute', 'volume', 'quality', 'fullscreen','cast'
+                ]
             }
-        });
+            player.configure({
+                drm: {
+                    clearKeys: {
+                        [clearKeyId]: clearKeyValue,
+                    }
+                }
+            });
+            ui.configure(config);
 
-        playerInstance.on('error', function(event) {
-            console.log("Error occurred: ", event.message);
-            alert("An error occurred while loading the video. Please try again later.");
-        });
+            window.player = player;
+            window.ui = ui;
+
+            player.addEventListener('error', onPlayerErrorEvent);
+            controls.addEventListener('error', onUIErrorEvent);
+
+            try {
+                await player.load(manifestUri);
+                console.log('The video has now been loaded!');
+            } catch (error) {
+                onPlayerError(error);
+            }
+        }
+
+        function onPlayerErrorEvent(errorEvent) {
+            onPlayerError(errorEvent.detail);
+        }
+
+        function onPlayerError(error) {
+            console.error('Error code', error.code, 'object', error);
+        }
+
+        function onUIErrorEvent(errorEvent) {
+            onPlayerError(errorEvent.detail);
+        }
+
+        function initFailed(errorEvent) {
+            console.error('Unable to load the UI library!');
+        }
+
+        document.addEventListener('shaka-ui-loaded', init);
+        document.addEventListener('shaka-ui-load-failed', initFailed);
     </script>
 </body>
-
 </html>
