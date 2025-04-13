@@ -1,9 +1,9 @@
 (function ignielAdBlock() {
     const script = document.currentScript;
     const adPub = script.getAttribute('data-pub') || 'xxxx';
-    const adTitle = script.getAttribute('data-title') || 'AdBlock Terdeteksi';
-    const adText = script.getAttribute('data-text') || 'Harap nonaktifkan AdBlock Anda untuk melanjutkan mendukung konten kami.';
-    const adButtonText = 'Saya Mengerti';
+    const adTitle = script.getAttribute('data-title') || 'AdBlock Detected';
+    const adText = script.getAttribute('data-text') || 'Please disable your AdBlock to continue supporting our content.';
+    const adButtonText = 'I understand';
 
     const ad = document.createElement('script');
     ad.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${adPub}`;
