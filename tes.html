@@ -1,86 +1,62 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta content='no-referrer' name='referrer'/>
-<title>Clappr Player</title>
-<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clappr-pip-plugin@latest/dist/clappr-pip-plugin.js"></script>
+<meta charset="UTF-8">
+<title>Live Stream Player</title>
+<meta content='no-referrer' name='referrer'/>    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body,
-html {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #000;
 }
 
-#player {
+#player-wrapper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 </style>
 </head>
-
 <body>
-<div id="player"></div>
 
-<script type="text/javascript">
-function getQueryParam(param) {
-var urlParams = new URLSearchParams(window.location.search);
-return urlParams.get(param);
-}
+<div id="player-wrapper"></div>
+<!-- Clappr core -->
+<script src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+<!-- Level Selector plugin -->
+<script src="//cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
 
-var sourceURL = getQueryParam('video') || ''; // Ganti dengan URL default Anda
-var posterURL = getQueryParam('poster') || ''; // Ganti dengan URL default poster jika ada
-var watermarkURL = getQueryParam('watermark') || ''; // Ganti dengan URL default watermark jika ada
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var source = "https://golivestream.online/n11"; // Ganti dengan URL HLS kamu
 
-var player = new Clappr.Player({
-    source: sourceURL,
-    height: '100%',
-    width: '100%',
-    poster: posterURL,
-    watermark: watermarkURL,
-    position: 'bottom-right',
-    autoPlay: true,
-    mediacontrol: {
-        seekbar: "#ffffff",
-        buttons: "#ffffff",
-    },
-    plugins: [DashShakaPlayback, LevelSelector, ChromecastPlugin, ClapprPIPPlugin],
-    chromecast: {
-        appId: '9DFB77C0',
-        contentType: 'video/mp4',
-    },
-    parentId: '#player',
-    events: {
-        onError: function(e) {
-            console.error("Error occurred: ", e);
+    var player = new Clappr.Player({
+        source: source,
+        parentId: "#player-wrapper",
+        mimeType: "application/x-mpegURL",
+        autoPlay: true,
+        mute: true, // Agar autoplay tidak diblokir browser
+        mediacontrol: {
+            seekbar: "#FFA500",
+            buttons: "#FFFFFF"
         },
-        onPlay: function() {
-            console.log("Playing");
-        },
-        onPause: function() {
-            console.log("Paused");
-        },
-        onEnded: function() {
-            console.log("Video ended");
-        },
-        onTimeUpdate: function(currentTime) {
-            console.log("Current time: ", currentTime);
+        height: "100%",
+        width: "100%",
+        plugins: [LevelSelector],
+        watermark: "", // Ganti jika perlu
+        watermarkLink: "",
+        position: "top-right",
+        language: "en",
+        playback: {
+            hlsjsConfig: {
+                debug: false,
+            },
+            playInline: true,
+            preload: "auto"
         }
-    }
+    });
 });
 </script>
 </body>
-
 </html>
