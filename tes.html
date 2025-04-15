@@ -1,86 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.6/shaka-player.compiled.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.6/shaka-player.ui.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.6/controls.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content='no-referrer' name='referrer'/>
+<title>Clappr Player</title>
+<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/clappr/dash-shaka-playback@latest/dist/dash-shaka-playback.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clappr-pip-plugin@latest/dist/clappr-pip-plugin.js"></script>
+<style>
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+#player {
+    width: 100%;
+    height: 100%;
+}
+</style>
 </head>
 
 <body>
-    <div data-shaka-player-container style="max-width:100em" data-shaka-player-cast-receiver-id="8D8C71A7">
-        <video autoplay data-shaka-player id="video" style="width:100%;height:100%"></video>
-    </div>
-    <script>
-        // Fungsi untuk mendapatkan parameter dari URL
-        function getParameterByName(name, url = window.location.href) {
-            name = name.replace(/[
+<div id="player"></div>
 
-$$$$
+<script type="text/javascript">
+function getQueryParam(param) {
+var urlParams = new URLSearchParams(window.location.search);
+return urlParams.get(param);
+}
 
-]/g, '\$&');
-            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+var sourceURL = getQueryParam('video') || ''; // Ganti dengan URL default Anda
+var posterURL = getQueryParam('poster') || ''; // Ganti dengan URL default poster jika ada
+var watermarkURL = getQueryParam('watermark') || ''; // Ganti dengan URL default watermark jika ada
+
+var player = new Clappr.Player({
+    source: sourceURL,
+    height: '100%',
+    width: '100%',
+    poster: posterURL,
+    watermark: watermarkURL,
+    position: 'bottom-right',
+    autoPlay: true,
+    mediacontrol: {
+        seekbar: "#ffffff",
+        buttons: "#ffffff",
+    },
+    plugins: [DashShakaPlayback, LevelSelector, ChromecastPlugin, ClapprPIPPlugin],
+    chromecast: {
+        appId: '9DFB77C0',
+        contentType: 'video/mp4',
+    },
+    parentId: '#player',
+    events: {
+        onError: function(e) {
+            console.error("Error occurred: ", e);
+        },
+        onPlay: function() {
+            console.log("Playing");
+        },
+        onPause: function() {
+            console.log("Paused");
+        },
+        onEnded: function() {
+            console.log("Video ended");
+        },
+        onTimeUpdate: function(currentTime) {
+            console.log("Current time: ", currentTime);
         }
-
-        const manifestUri = getParameterByName('manifest');
-        const clearKeyId = getParameterByName('clearKeyId');
-        const clearKeyValue = getParameterByName('clearKeyValue');
-
-        async function init() {
-            const video = document.getElementById('video');
-            const ui = video['ui'];
-            const controls = ui.getControls();
-            const player = controls.getPlayer();
-            const config = {
-                'controlPanelElements': ['play_pause', 'rewind', 'fast_forward', 'spacer',
-                    'mute', 'volume', 'quality', 'fullscreen','cast'
-                ]
-            }
-            player.configure({
-                drm: {
-                    clearKeys: {
-                        [clearKeyId]: clearKeyValue,
-                    }
-                }
-            });
-            ui.configure(config);
-
-            window.player = player;
-            window.ui = ui;
-
-            player.addEventListener('error', onPlayerErrorEvent);
-            controls.addEventListener('error', onUIErrorEvent);
-
-            try {
-                await player.load(manifestUri);
-                console.log('The video has now been loaded!');
-            } catch (error) {
-                onPlayerError(error);
-            }
-        }
-
-        function onPlayerErrorEvent(errorEvent) {
-            onPlayerError(errorEvent.detail);
-        }
-
-        function onPlayerError(error) {
-            console.error('Error code', error.code, 'object', error);
-        }
-
-        function onUIErrorEvent(errorEvent) {
-            onPlayerError(errorEvent.detail);
-        }
-
-        function initFailed(errorEvent) {
-            console.error('Unable to load the UI library!');
-        }
-
-        document.addEventListener('shaka-ui-loaded', init);
-        document.addEventListener('shaka-ui-load-failed', initFailed);
-    </script>
+    }
+});
+</script>
 </body>
+
 </html>
