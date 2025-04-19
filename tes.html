@@ -1,87 +1,126 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Live Stream Player</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta content='no-referrer' name='referrer'/>
-<style>
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #000;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get Iframe</title>
+    <style>
+        :root {
+            --background-color: #100b0c;
+            --iframe-width: 100%;
+            --iframe-height: 100vh;
+            --banner-right-offset: 17px;
+            --button-bg-color: #0088cc;
+            --button-text-color: #ffffff;
+            --button-padding: 10px 20px;
+            --button-border-radius: 5px;
+        }
 
-#player-wrapper {
-    width: 100%;
-    height: 100vh;
-}
-</style>
+        body {
+            margin: 0;
+            background-color: var(--background-color);
+            font-family: Arial, sans-serif;
+        }
+
+        #main-iframe {
+            width: var(--iframe-width);
+            height: var(--iframe-height);
+            display: block;
+            margin: auto;
+            border: none;
+        }
+
+        .banner-ngang {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            display: block;
+        }
+
+        .ngang-mobi {
+            display: none;
+        }
+
+        .banner-sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .banner-sidebar.banner-right {
+            right: var(--banner-right-offset);
+            left: auto;
+        }
+
+        @media only screen and (max-width: 728px) {
+            #main-iframe {
+                width: calc(100vw - 20px);
+            }
+
+            .banner-ngang {
+                display: none;
+            }
+
+            .ngang-mobi {
+                display: block;
+            }
+
+            .banner-sidebar {
+                display: none;
+            }
+        }
+
+        .join-telegram-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            padding: var(--button-padding);
+            border: none;
+            border-radius: var(--button-border-radius);
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .join-telegram-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <div id="iframe-container"></div>
 
-<div id="player-wrapper"></div>
-<!-- Clappr core -->
-<script src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
-<!-- Level Selector plugin -->
-<script src="//cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
+    <!--<a href="https://t.me/volisports" class="join-telegram-button" target="_blank">Join Telegram</a>-->
 
-<script>
-// Fungsi untuk mengambil parameter dari URL (LENGKAP)
-function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[[\]]/g, "\\$&");
+            const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+            const results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
 
-$$$$
+        document.addEventListener("DOMContentLoaded", function() {
+            const srcParam = getParameterByName('src');
 
-]/g, '\$&');
-    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
+            const iframe = document.createElement('iframe');
+            iframe.id = 'main-iframe';
+            iframe.src = srcParam || ' ';
+            iframe.frameBorder = '0';
+            iframe.sandbox = 'allow-scripts allow-same-origin';
+            iframe.allowFullscreen = true;
+            iframe.title = 'Iframe Konten Utama';
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Mengambil parameter URL stream dari query string
-    var streamUrl = getParameterByName('stream_url');
-    
-     // Fallback ke nilai default jika parameter tidak ada
-     var source = streamUrl || " "; 
-
-     // Inisialisasi player dengan konfigurasi lengkap
-     var player = new Clappr.Player({
-         source: source,
-         parentId: "#player-wrapper",
-         mimeType: "application/x-mpegURL",
-         autoPlay: true,
-         mute: true,
-         mediacontrol: { 
-             seekbar: "#FFA500",
-             buttons: "#FFFFFF"
-         },
-         height:"100%", 
-          width:"100%",
-          plugins:[LevelSelector],
-          watermark:"",
-          watermarkLink:"", 
-          position:"top-right",
-           language:"en",
-           playback:{
-               hlsjsConfig:{ debug : false },
-                playInline : true ,
-                 preload : "auto"
-            }
-      });
-
-      // Debugging - tampilkan URL yang digunakan di console
-      console.log("Stream URL:", source);
-});
-</script>
-
-<!-- Pesan error jika JavaScript tidak support -->
-<noscript>Browser Anda tidak mendukung JavaScript. Player streaming membutuhkan JS.</noscript>
-
+            const iframeContainer = document.getElementById('iframe-container');
+            iframeContainer.appendChild(iframe);
+        });
+    </script>
 </body>
 </html>
