@@ -4,41 +4,47 @@
     "time": "20:00 WIB",
     "league": "UEFA Champions League",
     "type": "soccer",
-    "videoUrl": "https://cdn.jwplayer.com/videos/real-madrid-liverpool.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/real-madrid-liverpool.mp4",
+    "embedURL": "https://www.youtube.com/embed/real-madrid-liverpool"
   },
   {
     "title": "NBA: Los Angeles Lakers vs Miami Heat",
     "time": "19:30 WIB",
     "league": "NBA",
     "type": "basket",
-    "videoUrl": "https://cdn.jwplayer.com/videos/lakers-heat.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/lakers-heat.mp4",
+    "embedURL": "https://www.youtube.com/embed/lakers-heat"
   },
   {
     "title": "MotoGP: Grand Prix Italia",
     "time": "15:00 WIB",
     "league": "MotoGP",
     "type": "motogp",
-    "videoUrl": "https://cdn.jwplayer.com/videos/motogp-italia.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/motogp-italia.mp4",
+    "embedURL": "https://player.vimeo.com/video/motogp-italia"
   },
   {
     "title": "Volleyball: Indonesia vs Thailand",
     "time": "18:00 WIB",
     "league": "Asian Volleyball Championship",
     "type": "volley",
-    "videoUrl": "https://cdn.jwplayer.com/videos/ind-thailand-volley.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/ind-thailand-volley.mp4",
+    "embedURL": "https://vku.youku.com/live/ilpshare?id=8192894"
   },
   {
     "title": "Formula 1: Grand Prix Monaco",
     "time": "16:00 WIB",
     "league": "Formula 1",
     "type": "f1",
-    "videoUrl": "https://cdn.jwplayer.com/videos/f1-monaco.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/f1-monaco.mp4",
+    "embedURL": "https://player.vimeo.com/video/f1-monaco"
   },
   {
     "title": "Badminton: All England Open Final",
     "time": "14:00 WIB",
     "league": "BWF World Tour",
     "type": "badminton",
-    "videoUrl": "https://cdn.jwplayer.com/videos/badminton-final.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/badminton-final.mp4",
+    "embedURL": "https://www.youtube.com/embed/badminton-final"
   }
 ]
