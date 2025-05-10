@@ -4,8 +4,47 @@
     "time": "18:00",
     "league": "Liga 1 Indonesia",
     "type": "soccer",
-    "videoUrl": "https://cdn.jwplayer.com/videos/abc123.mp4",
-    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895",
-    "thumbnail": "https://cdn.jwplayer.com/thumbs/abc123-720.jpg"
+    "videoUrl": "/",
+    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
+  },
+  {
+    "title": "Pertandingan Basket: Tim C vs Tim D",
+    "time": "20:00",
+    "league": "NBA",
+    "type": "basket",
+    "videoUrl": "https://cdn.jwplayer.com/videos/def456.mp4",
+    "embedUrl": "https://player.vimeo.com/video/76979871"
+  },
+  {
+    "title": "Balapan MotoGP: Seri Sepang",
+    "time": "15:00",
+    "league": "MotoGP",
+    "type": "motogp",
+    "videoUrl": "https://cdn.jwplayer.com/videos/ghi789.mp4",
+    "embedUrl": "https://www.youtube.com/embed/5NV6Rdv1a3I"
+  },
+  {
+    "title": "Pertandingan Voli: Tim E vs Tim F",
+    "time": "19:30",
+    "league": "Pro Volleyball League",
+    "type": "volley",
+    "videoUrl": "https://cdn.jwplayer.com/videos/jkl012.mp4",
+    "embedUrl": "https://player.vimeo.com/video/22439234"
+  },
+  {
+    "title": "Balapan Formula 1: Grand Prix Monako",
+    "time": "14:00",
+    "league": "Formula 1",
+    "type": "f1",
+    "videoUrl": "https://cdn.jwplayer.com/videos/mno345.mp4",
+    "embedUrl": "https://www.youtube.com/embed/3fumBcKC6RE"
+  },
+  {
+    "title": "Pertandingan Badminton: Final All England",
+    "time": "17:00",
+    "league": "BWF World Tour",
+    "type": "badminton",
+    "videoUrl": "https://cdn.jwplayer.com/videos/pqr678.mp4",
+    "embedUrl": "https://www.youtube.com/embed/2Vv-BfVoq4g"
   }
 ]
