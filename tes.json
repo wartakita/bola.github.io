@@ -5,22 +5,6 @@
     "league": "Liga 1 Indonesia",
     "type": "soccer",
     "videoUrl": "https://example.com/videos/nba-finals-game7.mp4",
-    "iframePlayerUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
-  },
-  {
-    "title": "NBA Finals Game 7",
-    "time": "19:00 ET",
-    "league": "NBA",
-    "type": "basket",
-    "videoUrl": "https://example.com/videos/nba-finals-game7.mp4",
-    "embedUrl": "https://example.com/embed/nba-finals-game7"
-  },
-  {
-    "title": "MotoGP Qatar",
-    "time": "15:00 GMT",
-    "league": "MotoGP",
-    "type": "motogp",
-    "videoUrl": "https://example.com/videos/motogp-qatar.mp4",
-    "embedUrl": "https://example.com/embed/motogp-qatar"
+    "iframeUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
   }
 ]
