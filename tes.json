@@ -4,41 +4,47 @@
     "title": "⚽ Persija vs Persebaya",
     "time": "18:30 WIB",
     "league": "Liga 1 Indonesia",
-    "videoUrl": "https://cdn.jwplayer.com/videos/video-1.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/video-1.mp4",
+    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
   },
   {
     "type": "basket",
     "title": "🏀 Pelita Jaya vs Satria Muda",
     "time": "20:00 WIB",
     "league": "IBL Indonesia",
-    "videoUrl": "https://cdn.jwplayer.com/videos/video-2.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/video-2.mp4",
+    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
   },
   {
     "type": "volley",
     "title": "🏐 Jakarta Elektrik vs Bank Jatim",
     "time": "21:00 WIB",
     "league": "Proliga Indonesia",
-    "videoUrl": "https://cdn.jwplayer.com/videos/video-3.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/video-3.mp4",
+    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
   },
   {
     "type": "motogp",
     "title": "🏍️ MotoGP Mandalika",
     "time": "13:00 WIB",
     "league": "MotoGP World Championship",
-    "videoUrl": "https://cdn.jwplayer.com/videos/video-4.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/video-4.mp4",
+    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
   },
   {
     "type": "f1",
     "title": "🏎️ Formula 1 Monaco GP",
     "time": "15:00 WIB",
     "league": "F1 World Championship",
-    "videoUrl": "https://cdn.jwplayer.com/videos/video-5.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/video-5.mp4",
+    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
   },
   {
     "type": "badminton",
     "title": "🏸 Indonesia vs Jepang",
     "time": "17:00 WIB",
     "league": "Thomas Cup",
-    "videoUrl": "https://cdn.jwplayer.com/videos/video-6.mp4"
+    "videoUrl": "https://cdn.jwplayer.com/videos/video-6.mp4",
+    "embedUrl": "https://vku.youku.com/live/ilpshare?id=8192895"
   }
 ]
