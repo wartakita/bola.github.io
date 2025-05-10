@@ -1,18 +1,58 @@
-[
-  {
-    "title": "Grand Prix Australia 2025",
-    "league": "Formula 1",
-    "start_time": "2025-03-16T11:00:00",
-    "duration": 90,
-    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/dk1c8q1740496403.jpg",
-    "watch_url": "/"
-  },
-  {
-    "title": "Gran Premio YPF Energía de Argentina 2025",
-    "league": "MotoGP",
-    "start_time": "2025-03-17T01:00:00",
-    "duration": 90,
-    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/fuvw0e1739534753.jpg",
-    "watch_url": "/"
-  }
-]
+{
+  "matches": [
+    {
+      "id": 1,
+      "type": "soccer",
+      "teams": "Persija vs Persebaya",
+      "time": "18:30 WIB",
+      "league": "Liga 1 Indonesia",
+      "videoUrl": "https://cdn.jwplayer.com/videos/video-1.mp4",
+      "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/video-1-720.jpg"
+    },
+    {
+      "id": 2,
+      "type": "basket",
+      "teams": "Pelita Jaya vs Satria Muda",
+      "time": "20:00 WIB",
+      "league": "IBL Indonesia",
+      "videoUrl": "https://cdn.jwplayer.com/videos/video-2.mp4",
+      "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/video-2-720.jpg"
+    },
+    {
+      "id": 3,
+      "type": "volley",
+      "teams": "Jakarta Elektrik vs Bank Jatim",
+      "time": "21:00 WIB",
+      "league": "Proliga Indonesia",
+      "videoUrl": "https://cdn.jwplayer.com/videos/video-3.mp4",
+      "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/video-3-720.jpg"
+    },
+    {
+      "id": 4,
+      "type": "motogp",
+      "teams": "MotoGP Mandalika",
+      "time": "13:00 WIB",
+      "league": "MotoGP World Championship",
+      "videoUrl": "https://cdn.jwplayer.com/videos/video-4.mp4",
+      "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/video-4-720.jpg"
+    },
+    {
+      "id": 5,
+      "type": "f1",
+      "teams": "Formula 1 Monaco GP",
+      "time": "15:00 WIB",
+      "league": "F1 World Championship",
+      "videoUrl": "https://cdn.jwplayer.com/videos/video-5.mp4",
+      "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/video-5-720.jpg"
+    },
+    {
+      "id": 6,
+      "type": "badminton",
+      "teams": "Indonesia vs Jepang",
+      "time": "17:00 WIB",
+      "league": "Thomas Cup",
+      "videoUrl": "https://cdn.jwplayer.com/videos/video-6.mp4",
+      "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/video-6-720.jpg"
+    }
+  ]
+}
