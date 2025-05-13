@@ -1,50 +1,22 @@
 [
   {
-    "title": "Liga Champions: Real Madrid vs Liverpool",
-    "time": "20:00 WIB",
-    "league": "UEFA Champions League",
+    "id": 1,
+    "title": "Tim A vs Tim B",
+    "time": "18:00 WIB",
+    "league": "Liga Sepak Bola Indonesia",
     "type": "soccer",
-    "videoUrl": "https://live.bbapcall.com/live/sd-1-4255118.m3u8?txSecret=2b0c96af159b12cac715eac4a7bae08d&txTime=681F6E08",
-    "embedURL": "https://vku.youku.com/live/ilpshare?id=8192894"
+    "videoUrl": "https://cdn.jwplayer.com/videos/IDzF9Zmk-720p.mp4",
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/IDzF9Zmk-720.jpg",
+    "iframeURL": "https://www.youtube.com/embed/AOr4hVnj9ds"
   },
   {
-    "title": "NBA: Los Angeles Lakers vs Miami Heat",
-    "time": "19:30 WIB",
+    "id": 2,
+    "title": "Tim C vs Tim D",
+    "time": "20:00 WIB",
     "league": "NBA",
     "type": "basket",
-    "videoUrl": "https://cdn.jwplayer.com/videos/lakers-heat.mp4",
-    "embedURL": "https://www.youtube.com/embed/lakers-heat"
-  },
-  {
-    "title": "MotoGP: Grand Prix Italia",
-    "time": "15:00 WIB",
-    "league": "MotoGP",
-    "type": "motogp",
-    "videoUrl": "https://cdn.jwplayer.com/videos/motogp-italia.mp4",
-    "embedURL": "https://player.vimeo.com/video/motogp-italia"
-  },
-  {
-    "title": "Volleyball: Indonesia vs Thailand",
-    "time": "18:00 WIB",
-    "league": "Asian Volleyball Championship",
-    "type": "volley",
-    "videoUrl": "https://cdn.jwplayer.com/videos/ind-thailand-volley.mp4",
-    "embedURL": "https://www.youtube.com/embed/ind-thailand-volley"
-  },
-  {
-    "title": "Formula 1: Grand Prix Monaco",
-    "time": "16:00 WIB",
-    "league": "Formula 1",
-    "type": "f1",
-    "videoUrl": "https://cdn.jwplayer.com/videos/f1-monaco.mp4",
-    "embedURL": "https://player.vimeo.com/video/f1-monaco"
-  },
-  {
-    "title": "Badminton: All England Open Final",
-    "time": "14:00 WIB",
-    "league": "BWF World Tour",
-    "type": "badminton",
-    "videoUrl": "https://cdn.jwplayer.com/videos/badminton-final.mp4",
-    "embedURL": "https://www.youtube.com/embed/badminton-final"
+    "videoUrl": "https://cdn.jwplayer.com/videos/another-video-720p.mp4",
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/another-video-720.jpg",
+    "iframeURL": "https://player.vimeo.com/video/123456789"
   }
 ]
