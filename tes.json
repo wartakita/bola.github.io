@@ -1,9 +1,11 @@
-{
-  "title": "Match Title",
-  "time": "20:00",
-  "league": "Premier League",
-  "type": "soccer",
-  "videoUrl": "https://example.com/video.mp4",
-  "thumbnailUrl": "https://example.com/thumb.jpg",
-  "iframeUrl": "https://www.youtube.com/embed/AOr4hVnj9ds"
-}
+[
+  {
+    "title": "Match Title",
+    "time": "20:00",
+    "league": "Premier League",
+    "type": "soccer",
+    "videoUrl": "https://example.com/video.mp4",
+    "thumbnailUrl": "https://example.com/thumb.jpg",
+    "iframeUrl": "https://www.youtube.com/embed/AOr4hVnj9ds"
+  }
+]
