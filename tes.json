@@ -6,8 +6,7 @@
     "league": "Liga Sepak Bola Indonesia",
     "type": "soccer",
     "videoUrl": "https://cdn.jwplayer.com/videos/IDzF9Zmk-720p.mp4",
-    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/IDzF9Zmk-720.jpg",
-    "iframeURL": "https://www.youtube.com/embed/AOr4hVnj9ds"
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/IDzF9Zmk-720.jpg"
   },
   {
     "id": 2,
@@ -16,7 +15,42 @@
     "league": "NBA",
     "type": "basket",
     "videoUrl": "https://cdn.jwplayer.com/videos/another-video-720p.mp4",
-    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/another-video-720.jpg",
-    "iframeURL": "https://player.vimeo.com/video/123456789"
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/another-video-720.jpg"
+  },
+  {
+    "id": 3,
+    "title": "MotoGP Grand Prix",
+    "time": "15:00 WIB",
+    "league": "MotoGP",
+    "type": "motogp",
+    "videoUrl": "https://cdn.jwplayer.com/videos/motogp-video-720p.mp4",
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/motogp-video-720.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Pertandingan Voli Putra",
+    "time": "19:30 WIB",
+    "league": "Proliga",
+    "type": "volley",
+    "videoUrl": "https://cdn.jwplayer.com/videos/volley-video-720p.mp4",
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/volley-video-720.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Formula 1 Grand Prix",
+    "time": "14:00 WIB",
+    "league": "Formula 1",
+    "type": "f1",
+    "videoUrl": "https://cdn.jwplayer.com/videos/f1-video-720p.mp4",
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/f1-video-720.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Final Badminton",
+    "time": "17:00 WIB",
+    "league": "BWF World Tour",
+    "type": "badminton",
+    "videoUrl": "https://cdn.jwplayer.com/videos/badminton-video-720p.mp4",
+    "thumbnailUrl": "https://cdn.jwplayer.com/thumbs/badminton-video-720.jpg"
   }
 ]
