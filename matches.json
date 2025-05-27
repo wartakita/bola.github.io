@@ -1,50 +1,20 @@
 [
   {
-    "title": "Bali United vs PSIS Semarang",
-    "league": "Indonesian Liga 1",
-    "start_time": "2025-05-01T19:00:00",
-    "duration": 120,
-    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/2flzsd1690793281.jpg",
-    "watch_url": "https://embedzona.blogspot.com/?embed=aHR0cHM6Ly9obHN6b25hLmJsb2dzcG90LmNvbS8/dmlkZW89YUhSMGNITTZMeTlsWkdkbE1UUXVlRzFsWkdsaFoyVjBMbU52YlM5b2JITXRiR2wyWlM4eE5qQTFPVGsyTVM4eEwyMWxaR2xoY0d4aGVXeHBjM1F1YlROMU9EOXpQV0U1TTJFek9XSmlPVFV5T1RjellqVTRNek14TkRFNU9HRmxaalUxTkRFeU1tTXhaakV4TkdNME4ySmlaVE5oWlRsaVl6WmlaVEF5TWpjeU5qRTFObU1tZEQweE56UTJNVEF4TVRrMk1UY3hKbUZwUFRNbVlYWTlNVEF5TlNaMWFUMHcsaHR0cHM6Ly9obHN6b25hLmJsb2dzcG90LmNvbS8/dmlkZW89YUhSMGNITTZMeTlzYVhabExtSmlZWEJqWVd4c0xtTnZiUzlzYVhabEwzTmtMVEV0TkRFNE5EWTFPQzV0TTNVNFAzUjRVMlZqY21WMFBUZGpNalV5WlRFM01HSXhZMk5sTUdWak1UZGpORFV4WmpFeFpUZ3hOMkU0Sm5SNFZHbHRaVDAyT0RFelFUbERNdz09LGh0dHBzOi8vc3BvcnQuaW5wbGF5bmV0LnRlY2gvbGl2ZXN0cmVhbS5odG1sP3NyYz1hSFIwY0hNNkx5OXpiV1F1YzNCdmNuUndiR0Y1WlhJdWFXOHZaVzFpWldRdWNHaHdMejl0WVhSamFGOXBaRDB4TWpZeE16VTNPQ1p6YXoweFl6bGhZekF4Sm5SNWNHVTljdz09LGh0dHBzOi8vaGxzem9uYS5ibG9nc3BvdC5jb20vP3ZpZGVvPWFIUjBjSE02THk5b2JITXVkVzkxWlhSeWNURTVMbU52YlM5c2FYWmxMM05rTFRaTmMwUkNSbGRqWTFoRFJEbG1Xbmw0UWk1dE0zVTRQM1I0VTJWamNtVjBQVEZsTVdVME9EVXlOemxoTmpNNVlqUXdZVEk0T0RKaFl6SmhZMlEyWXpoaUpuUjRWR2x0WlQwMk9ERTBRak5ET1E9PQ=="
+    "id": 4297033,
+    "type": 1,
+    "langtype": "en",
+    "zoneId": "Asia/Jakarta"
   },
   {
-    "title": "Nottingham Forest vs Brentford",
-    "league": "English Premier League",
-    "start_time": "2025-05-02T01:30:00",
-    "duration": 120,
-    "thumbnail": "https://r2.thesportsdb.com/images/media/event/thumb/e5derq1689062493.jpg",
-    "watch_url": "https://embedzona.blogspot.com/?embed=aHR0cHM6Ly9nZXRpZnJhbWV3ZWIuYmxvZ3Nwb3QuY29tLz9zcmM9aHR0cHM6Ly9nb2Fsc3RyZWFtei5jb20vZXZlbnRzL3N0cmVhbTUvLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9Ta3lTcG9ydHNQcmVtaWVyTGVhZ3VlW1VLXSxodHRwczovL3RvcGVtYmVkLnB3L2NoYW5uZWwvU2t5U3BvcnRzTWFpbkV2ZW50W1VLXSxodHRwczovL3RvcGVtYmVkLnB3L2NoYW5uZWwvVVNBTmV0d29ya1tVU0FdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9BcmVuYVNwb3J0MltTZXJiaWFdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9EQVpOMVtTcGFpbl0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL0RpZW1hU3BvcnQyW0J1bGdhcmlhXQ=="
+    "id": 4170353,
+    "type": 1,
+    "langtype": "en",
+    "zoneId": "Asia/Jakarta"
   },
   {
-    "title": "Ath Bilbao vs Manchester Utd",
-    "league": "Europa League",
-    "start_time": "2025-05-02T02:00:00",
-    "duration": 120,
-    "thumbnail": "https://www.thesportsdb.com/images/media/event/thumb/blblbh1745052388.jpg",
-    "watch_url": "https://embedzona.blogspot.com/?embed=aHR0cHM6Ly9zdHJlYW10cDQuY29tL2dsb2JhbDEucGhwP3N0cmVhbT1zcG9ydHR2NSxodHRwczovL3N0cmVhbXRwNC5jb20vZ2xvYmFsMS5waHA/c3RyZWFtPXR1ZG5fdXNhLGh0dHBzOi8vc3RyZWFtdHA0LmNvbS9nbG9iYWwxLnBocD9zdHJlYW09ZGlzbmV5NCxodHRwczovL3N0cmVhbXRwNC5jb20vZ2xvYmFsMS5waHA/c3RyZWFtPWZveHNwb3J0c3ByZW1pdW0saHR0cHM6Ly9zdHJlYW10cDQuY29tL2dsb2JhbDEucGhwP3N0cmVhbT1mb3hzcG9ydHNteCxodHRwczovL3N0cmVhbXRwNC5jb20vZ2xvYmFsMS5waHA/c3RyZWFtPXBhcmFtb3VudDIsaHR0cHM6Ly9nZXRpZnJhbWV3ZWIuYmxvZ3Nwb3QuY29tLz9zcmM9aHR0cHM6Ly9nb2Fsc3RyZWFtei5jb20vZXZlbnRzL3N0cmVhbTEsaHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ROVFNwb3J0czFbVUtdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9UVUROW1VTQV0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL0FyZW5hUHJlbWl1bTJbU2VyYmlhXSxodHRwczovL3RvcGVtYmVkLnB3L2NoYW5uZWwvQ29zbW90ZVNwb3J0MltHcmVlY2VdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9FU1BOW0FyZ2VudGluYV0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ByaW1hU3BvcnQxW1JvbWFuaWFdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9TdXBlclNwb3J0Rm9vdGJhbGxbU291dGhBZnJpY2FdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9TdXBlclNwb3J0UHJlbWllckxlYWd1ZVtTb3V0aEFmcmljYV0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ppZ2dvU3BvcnRbTmV0aGVybGFuZHNd"
-  },
-  {
-    "title": "Tottenham vs Bodo/Glimt",
-    "league": "Europa League",
-    "start_time": "2025-05-02T02:00:00",
-    "duration": 120,
-    "thumbnail": "https://www.thesportsdb.com/images/media/event/thumb/7ca9oj1745052385.jpg",
-    "watch_url": "https://embedzona.blogspot.com/?embed=aHR0cHM6Ly9nZXRpZnJhbWV3ZWIuYmxvZ3Nwb3QuY29tLz9zcmM9aHR0cHM6Ly9nb2Fsc3RyZWFtei5jb20vZXZlbnRzL3N0cmVhbTIsaHR0cHM6Ly9zdHJlYW10cDQuY29tL2dsb2JhbDEucGhwP3N0cmVhbT1wYXJhbW91bnQxLGh0dHBzOi8vc3RyZWFtdHA0LmNvbS9nbG9iYWwxLnBocD9zdHJlYW09ZGlzbmV5NSxodHRwczovL3N0cmVhbXRwNC5jb20vZ2xvYmFsMS5waHA/c3RyZWFtPWVsZXZlbjFfcHQsaHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ROVFNwb3J0czJbVUtdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9FU1BOMltBcmdlbnRpbmFdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9Db3Ntb3RlU3BvcnQ1W0dyZWVjZV0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ppZ2dvU3BvcnQyW05ldGhlcmxhbmRzXQ=="
-  },
-  {
-    "title": "Betis vs Fiorentina",
-    "league": "Conference League",
-    "start_time": "2025-05-02T02:00:00",
-    "duration": 120,
-    "thumbnail": "https://www.thesportsdb.com/images/media/event/thumb/2ru39x1745052396.jpg",
-    "watch_url": "https://embedzona.blogspot.com/?embed=aHR0cHM6Ly9nZXRpZnJhbWV3ZWIuYmxvZ3Nwb3QuY29tLz9zcmM9aHR0cHM6Ly9nb2Fsc3RyZWFtei5jb20vZXZlbnRzL3N0cmVhbTQsaHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ROVFNwb3J0czVbVUtdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9BcmVuYVNwb3J0NFtTZXJiaWFdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9Db3Ntb3RlU3BvcnQzW0dyZWVjZV0="
-  },
-  {
-    "title": "Djurgarden vs Chelsea",
-    "league": "Conference League",
-    "start_time": "2025-05-02T02:00:00",
-    "duration": 120,
-    "thumbnail": "https://www.thesportsdb.com/images/media/event/thumb/7ukwnc1745052399.jpg",
-    "watch_url": "https://embedzona.blogspot.com/?embed=aHR0cHM6Ly9nZXRpZnJhbWV3ZWIuYmxvZ3Nwb3QuY29tLz9zcmM9aHR0cHM6Ly9nb2Fsc3RyZWFtei5jb20vZXZlbnRzL3N0cmVhbTMsaHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ROVFNwb3J0czRbVUtdLGh0dHBzOi8vdG9wZW1iZWQucHcvY2hhbm5lbC9Db3Ntb3RlU3BvcnQ3W0dyZWVjZV0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL1ppZ2dvU3BvcnQzW05ldGhlcmxhbmRzXSxodHRwczovL3RvcGVtYmVkLnB3L2NoYW5uZWwvUHJpbWFTcG9ydDRbUm9tYW5pYV0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL0RpZ2lTcG9ydDNbUm9tYW5pYV0saHR0cHM6Ly90b3BlbWJlZC5wdy9jaGFubmVsL0FyZW5hU3BvcnQ1W1NlcmJpYV0="
+    "id": 4318861,
+    "type": 1,
+    "langtype": "en",
+    "zoneId": "Asia/Jakarta"
   }
 ]
