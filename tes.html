@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>BolabongTV Mobile</title>
 <style>
   * { box-sizing: border-box; }
   html, body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -254,6 +258,196 @@
       font-size: 0.9rem;
       padding: 8px;
     }
+  }
+  /* Global Responsive Enhancements */
+  @media (max-width: 1024px) {
+    .container {
+      padding: 10px;
+    }
+    .match-header {
+      font-size: 0.95rem;
+    }
+    .score {
+      font-size: 1.1rem;
+    }
+    .status {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .match-header {
+      font-size: 0.85rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .team-name {
+      font-size: 0.9rem;
+    }
+    .score {
+      font-size: 1rem;
+    }
+    .status {
+      font-size: 0.75rem;
+      text-align: left;
+    }
+    .filters {
+      flex-direction: column;
+    }
+    .container {
+      padding: 12px 10px;
+    }
+  }
+  @media (max-width: 480px) {
+    .team {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .team img {
+      width: 28px;
+      height: 28px;
+    }
+    .filters select,
+    .filters input[type="date"],
+    .filters input[type="search"] {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+    .container {
+      padding: 10px 8px;
+    }
+    header {
+      font-size: 1.2rem;
+      padding: 12px;
+    }
+    .live-badge {
+      font-size: 0.65rem;
+      padding: 3px 8px;
+    }
+    .toast {
+      font-size: 0.85rem;
+      padding: 10px 16px;
+    }
+  }
+  /* Landscape mobile & tablet tweaks */
+  @media screen and (orientation: landscape) and (max-width: 1024px) {
+    .team {
+      flex-direction: row !important;
+      align-items: center !important;
+    }
+    .teams {
+      flex-wrap: nowrap;
+    }
+    .team-name {
+      font-size: 0.9rem;
+    }
+    .score {
+      font-size: 1.1rem;
+    }
+    .status {
+      text-align: right;
+    }
+  }
+  /* Full responsive for all screen sizes */
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+    .team-name, .score, .status {
+      font-size: 1.1rem;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (max-width: 767px) {
+    .match-item {
+      padding: 10px;
+    }
+    .filters select,
+    .filters input[type="date"],
+    .filters input[type="search"] {
+      width: 100%;
+    }
+  }
+  html {
+    font-size: clamp(14px, 1.2vw + 0.5rem, 20px);
+  }
+
+  @media (min-width: 1920px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    html {
+      font-size: 20px;
+    }
+  }
+  :root {
+    --padding-sm: clamp(10px, 1.5vw, 20px);
+    --gap-sm: clamp(6px, 1vw, 15px);
+  }
+  .container {
+    padding: var(--padding-sm);
+  }
+  .filters {
+    gap: var(--gap-sm);
+  }
+  .match-item {
+    padding: var(--padding-sm);
+  }
+  .team-name {
+    font-size: clamp(0.9rem, 1vw + 0.2rem, 1.2rem);
+  }
+  .score {
+    font-size: clamp(1rem, 1.2vw + 0.3rem, 1.5rem);
+  }
+  .status {
+    font-size: clamp(0.75rem, 0.8vw + 0.25rem, 1rem);
+  }
+  .team img {
+    width: clamp(24px, 3vw, 40px);
+    height: clamp(24px, 3vw, 40px);
+  }
+  .filters select,
+  .filters input[type="date"],
+  .filters input[type="search"] {
+    padding: clamp(6px, 1vw, 12px);
+    font-size: clamp(0.85rem, 1vw, 1rem);
+  }
+  button {
+    padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 20px);
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    border-radius: clamp(4px, 1vw, 8px);
+  }
+  .league-logo, .match-icon {
+    width: clamp(20px, 2.5vw, 36px);
+    height: clamp(20px, 2.5vw, 36px);
+    transition: all 0.3s ease;
+  }
+  .team img,
+  .filters select,
+  .filters input[type="date"],
+  .filters input[type="search"],
+  button,
+  .score,
+  .status,
+  .team-name {
+    transition: all 0.3s ease;
   }
 </style>
 <script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
