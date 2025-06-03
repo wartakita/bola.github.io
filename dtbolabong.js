@@ -4,11 +4,11 @@ const apiBase = 'https://api2.asiasport.com/match/getMatchListv4';
 const leagueFilter = document.getElementById('leagueFilter');
 const statusFilter = document.getElementById('statusFilter');
 const dateFilter = document.getElementById('dateFilter');
+const today = new Date().toISOString().split('T')[0];
+dateFilter.value = today;
 const searchInput = document.getElementById('searchInput');
 const matchList = document.getElementById('matchList');
 const loader = document.getElementById('loader');
-
-
 
 function showToast(message) {
     let toast = document.createElement('div');
@@ -27,7 +27,6 @@ let leagues = [],
     leagueOptionSet = new Set();
 
 async function fetchMatches() {
-    // matchList.innerHTML = ''; // removed for scroll preservation
     const leagueIds = leagueFilter.value;
     const status = statusFilter.value;
     const date = dateFilter.value;
@@ -64,7 +63,7 @@ async function fetchMatches() {
     } catch (err) {
         showToast('Network error: failed to load match data');
         matchList.innerHTML = '<li>Failed to fetch data.</li>';
-    } finally {}
+    }
 }
 
 function renderMatches() {
@@ -82,7 +81,10 @@ function renderMatches() {
     }).sort((a, b) => new Date(`${a.matchDate}T${a.matchTime}`) - new Date(`${b.matchDate}T${b.matchTime}`));
 
     if (!filtered.length) {
-        matchList.innerHTML = '<li>No matches found.</li>';
+        matchList.innerHTML = '';
+        searchInput.classList.add('shake');
+        setTimeout(() => searchInput.classList.remove('shake'), 500);
+        showToast('⚠️ Tidak ada pertandingan yang cocok dengan pencarian Anda.');
         return;
     }
 
@@ -96,6 +98,7 @@ function renderMatches() {
     function renderMatchItem(match) {
         const li = document.createElement('li');
         li.className = 'match-item';
+        li.setAttribute('tabindex', '0');
         li.style.position = 'relative';
         const icon = icons[match.matchStatus] || '';
         const countdown = match.matchStatus === 'NS' ? (() => {
@@ -108,13 +111,13 @@ function renderMatches() {
       <div class="match-header">${match.leagueName} - ${match.roundEn || ''}</div>
       <div class="teams">
         <div class="team">
-          <img src="https://asset.asiasport.com/${match.opponents[0].logo}" alt="${match.opponents[0].name} logo" />
+          <img loading="lazy" src="https://asset.asiasport.com/${match.opponents[0].logo}" alt="${match.opponents[0].name} logo" />
           <div class="team-name">${match.opponents[0].name}</div>
         </div>
         <div class="score">${match.opponents[0].score} - ${match.opponents[1].score}</div>
         <div class="team" style="justify-content: flex-end;">
           <div class="team-name">${match.opponents[1].name}</div>
-          <img src="https://asset.asiasport.com/${match.opponents[1].logo}" alt="${match.opponents[1].name} logo" />
+          <img loading="lazy" src="https://asset.asiasport.com/${match.opponents[1].logo}" alt="${match.opponents[1].name} logo" />
         </div>
       </div>
       <div class="status ${match.matchStatus}">${icon} ${match.matchStatus} | ${match.matchDate} ${match.matchTime}${countdown}</div>
@@ -167,7 +170,6 @@ async function handlePlay(match) {
                 autostart: true
             });
 
-            // Show quality selector if multiple qualities
             if (streams.length > 1) {
                 const selector = document.createElement('select');
                 selector.style.position = 'absolute';
