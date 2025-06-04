@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Football Match Schedule Thumbnail Generator</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #121212;
+      color: #ffffff;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 40px;
+    }
+    h1 {
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #f39c12;
+      text-align: center;
+    }
+    form {
+      width: 100%;
+      max-width: 400px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    input[type="text"], input[type="date"], input[type="time"], input[type="url"], input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    .input-toggle {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #f39c12;
+      border: none;
+      border-radius: 6px;
+      color: #121212;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover { background-color: #d87b0a; }
+    .thumbnail {
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #f39c12, #d35400);
+      border-radius: 15px;
+      padding: 20px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      font-weight: 700;
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
+    }
+    .thumbnail header.league {
+      font-size: 1.2rem;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: 900;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+      padding-bottom: 6px;
+    }
+    .match-info {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 1.9rem;
+      margin-top: 15px;
+    }
+    .team {
+      flex: 1;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .team img {
+      max-width: 80px;
+      max-height: 80px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #fff;
+      padding: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .vs {
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 0 20px;
+      color: #fafafa;
+    }
+    .datetime {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      margin-top: 15px;
+      letter-spacing: 1.1px;
+    }
+    @media (max-width: 480px) {
+      .thumbnail { font-size: 0.85rem; aspect-ratio: 4 / 3; }
+      .match-info { font-size: 1.3rem; flex-direction: column; }
+      .vs { margin: 10px 0; }
+      .team img { max-width: 60px; max-height: 60px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Football Match Schedule Thumbnail Generator</h1>
+  <form id="matchForm">
+    <label for="leagueName">Nama Liga</label>
+    <input type="text" id="leagueName" placeholder="Masukkan nama liga" required />
+
+    <label for="teamA">Tim A</label>
+    <input type="text" id="teamA" placeholder="Masukkan nama Tim A" required />
+
+    <div class="input-toggle">
+      <label><input type="radio" name="logoAType" value="url" checked /> URL</label>
+      <label><input type="radio" name="logoAType" value="upload" /> Upload</label>
+    </div>
+    <input type="url" id="logoAUrl" placeholder="Masukkan URL logo Tim A" />
+    <input type="file" id="logoAFile" accept="image/*" style="display:none;" />
+
+    <label for="teamB">Tim B</label>
+    <input type="text" id="teamB" placeholder="Masukkan nama Tim B" required />
+
+    <div class="input-toggle">
+      <label><input type="radio" name="logoBType" value="url" checked /> URL</label>
+      <label><input type="radio" name="logoBType" value="upload" /> Upload</label>
+    </div>
+    <input type="url" id="logoBUrl" placeholder="Masukkan URL logo Tim B" />
+    <input type="file" id="logoBFile" accept="image/*" style="display:none;" />
+
+    <label for="matchDate">Tanggal Pertandingan</label>
+    <input type="date" id="matchDate" required />
+
+    <label for="matchTime">Waktu Pertandingan</label>
+    <input type="time" id="matchTime" required />
+
+    <button type="submit">Generate Thumbnail</button>
+  <label for="bgColor">Warna Latar Thumbnail</label>
+<select id="bgColor" style="background: #1e1e1e; color: #fff; padding: 8px; border-radius: 6px; font-size: 1rem;">
+  <option value="#f39c12,#d35400" style="background: linear-gradient(to right, #f39c12, #d35400); color: #000">Oranye Cerah</option>
+  <option value="#3498db,#2980b9" style="background: linear-gradient(to right, #3498db, #2980b9); color: #fff">Biru Modern</option>
+  <option value="#2ecc71,#27ae60" style="background: linear-gradient(to right, #2ecc71, #27ae60); color: #000">Hijau Segar</option>
+  <option value="#9b59b6,#8e44ad" style="background: linear-gradient(to right, #9b59b6, #8e44ad); color: #fff">Ungu Elegan</option>
+  <option value="#e74c3c,#c0392b" style="background: linear-gradient(to right, #e74c3c, #c0392b); color: #fff">Merah Enerjik</option>
+  <option value="#34495e,#2c3e50" style="background: linear-gradient(to right, #34495e, #2c3e50); color: #fff">Biru Gelap</option>
+  <option value="#00c6ff,#0072ff" style="background: linear-gradient(to right, #00c6ff, #0072ff); color: #fff">Biru Laut</option>
+  <option value="#f7971e,#ffd200" style="background: linear-gradient(to right, #f7971e, #ffd200); color: #000">Kuning Hangat</option>
+  <option value="#ff6a00,#ee0979" style="background: linear-gradient(to right, #ff6a00, #ee0979); color: #fff">Pink Sunset</option>
+  <option value="#43cea2,#185a9d" style="background: linear-gradient(to right, #43cea2, #185a9d); color: #fff">Hijau-Biru Sejuk</option>
+  <option value="#bdc3c7,#2c3e50" style="background: linear-gradient(to right, #bdc3c7, #2c3e50); color: #000">Abu Elegan</option>
+</select>
+<label for="watermark">Teks Watermark</label>
+<input type="text" id="watermark" placeholder="Misal: @jadwalbola.id" />
+</form>
+
+  <div class="thumbnail" id="thumbnailPreview">
+    <header class="league" id="previewLeague">-</header>
+    <div class="match-info">
+      <div class="team" id="previewTeamA">
+        <img src="" alt="Logo Tim A" id="previewLogoA" />
+        <div>-</div>
+      </div>
+      <div class="vs">VS</div>
+      <div class="team" id="previewTeamB">
+        <img src="" alt="Logo Tim B" id="previewLogoB" />
+        <div>-</div>
+      </div>
+    </div>
+    <div class="datetime" id="previewDateTime">-</div>
+  </div>
+
+  <button id="downloadBtn" disabled>Download Thumbnail</button>
+
+  <!-- Skrip JavaScript (telah lengkap dengan logic export PNG) -->
+  <script>
+    const matchForm = document.getElementById('matchForm');
+    const previewLeague = document.getElementById('previewLeague');
+    const previewTeamA = document.querySelector('#previewTeamA div');
+    const previewLogoA = document.getElementById('previewLogoA');
+    const previewTeamB = document.querySelector('#previewTeamB div');
+    const previewLogoB = document.getElementById('previewLogoB');
+    const previewDateTime = document.getElementById('previewDateTime');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const thumbnailPreview = document.getElementById('thumbnailPreview');
+    const logoAUrl = document.getElementById('logoAUrl');
+    const logoAFile = document.getElementById('logoAFile');
+    const logoBUrl = document.getElementById('logoBUrl');
+    const logoBFile = document.getElementById('logoBFile');
+
+    document.querySelectorAll('input[name="logoAType"]').forEach(r => r.addEventListener('change', e => {
+      logoAUrl.style.display = e.target.value === 'url' ? 'block' : 'none';
+      logoAFile.style.display = e.target.value === 'upload' ? 'block' : 'none';
+    }));
+    document.querySelectorAll('input[name="logoBType"]').forEach(r => r.addEventListener('change', e => {
+      logoBUrl.style.display = e.target.value === 'url' ? 'block' : 'none';
+      logoBFile.style.display = e.target.value === 'upload' ? 'block' : 'none';
+    }));
+
+    function readFileAsDataURL(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    matchForm.addEventListener('submit', async (event) => {
+      const bgSelect = document.getElementById('bgColor');
+      const [startColor, endColor] = bgSelect.value.split(',');
+      thumbnailPreview.style.background = `linear-gradient(135deg, ${startColor}, ${endColor})`;
+      event.preventDefault();
+      const league = document.getElementById('leagueName').value.trim();
+      const teamA = document.getElementById('teamA').value.trim();
+      const teamB = document.getElementById('teamB').value.trim();
+      const matchDate = document.getElementById('matchDate').value;
+      const matchTime = document.getElementById('matchTime').value;
+      let logoA = logoAUrl.style.display !== 'none' ? logoAUrl.value.trim() : (logoAFile.files[0] ? await readFileAsDataURL(logoAFile.files[0]) : '');
+      let logoB = logoBUrl.style.display !== 'none' ? logoBUrl.value.trim() : (logoBFile.files[0] ? await readFileAsDataURL(logoBFile.files[0]) : '');
+      if (league && teamA && logoA && teamB && logoB && matchDate && matchTime) {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = new Date(matchDate + 'T' + matchTime).toLocaleDateString('id-ID', options);
+        const formattedTime = new Date(matchDate + 'T' + matchTime).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+        previewLeague.textContent = league.toUpperCase();
+        previewTeamA.textContent = teamA.toUpperCase();
+        previewLogoA.src = logoA;
+        previewTeamB.textContent = teamB.toUpperCase();
+        previewLogoB.src = logoB;
+        previewDateTime.textContent = `${formattedDate} pukul ${formattedTime}`;
+        downloadBtn.disabled = false;
+      }
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      if (!previewLogoA.src || !previewLogoB.src) return;
+      const width = thumbnailPreview.offsetWidth;
+      const height = thumbnailPreview.offsetHeight;
+      const canvas = document.createElement('canvas');
+      canvas.width = width * 2;
+      canvas.height = height * 2;
+      const ctx = canvas.getContext('2d');
+      ctx.scale(2, 2);
+      const selectedColors = document.getElementById('bgColor').value.split(',');
+      const gradient = ctx.createLinearGradient(0, 0, width, height);
+      gradient.addColorStop(0, selectedColors[0]);
+      gradient.addColorStop(1, selectedColors[1]);
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
+      const drawText = (text, x, y, font = '700 20px Segoe UI', color = '#fff', align = 'center') => {
+        ctx.font = font;
+        ctx.fillStyle = color;
+        ctx.textAlign = align;
+        ctx.fillText(text, x, y);
+      };
+      drawText(previewLeague.textContent, width / 2, 40, '900 18px Segoe UI', '#fff');
+      const drawImageFromUrl = (url, x, y, w, h, cb) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => { ctx.drawImage(img, x, y, w, h); cb(); };
+        img.onerror = () => cb();
+        img.src = url;
+      };
+      const textYOffset = 110;
+      const teamALeftX = width / 4 - 40;
+      const teamBLeftX = 3 * width / 4 - 40;
+      const logoSize = 80;
+      drawText('VS', width / 2, textYOffset + 40, '900 30px Segoe UI', '#fafafa');
+      drawText(previewTeamA.textContent, teamALeftX + logoSize / 2, textYOffset + 120);
+      drawText(previewTeamB.textContent, teamBLeftX + logoSize / 2, textYOffset + 120);
+      drawText(previewDateTime.textContent, width / 2, height - 40, '700 16px Segoe UI', 'rgba(255,255,255,0.85)');
+      const watermarkText = document.getElementById('watermark').value.trim();
+      if (watermarkText) {
+        ctx.save();
+        ctx.globalAlpha = 0.2;
+        ctx.font = 'bold 18px Segoe UI';
+        ctx.fillStyle = '#ffffff';
+        ctx.textAlign = 'right';
+        ctx.fillText(watermarkText, width - 20, height - 20);
+        ctx.restore();
+      }
+      let imagesDrawn = 0;
+      const checkDone = () => {
+        imagesDrawn++;
+        if (imagesDrawn === 2) {
+          const a = document.createElement('a');
+          a.href = canvas.toDataURL('image/png');
+          a.download = 'football-match-thumbnail.png';
+          a.click();
+        }
+      };
+      drawImageFromUrl(previewLogoA.src, teamALeftX, textYOffset, logoSize, logoSize, checkDone);
+      drawImageFromUrl(previewLogoB.src, teamBLeftX, textYOffset, logoSize, logoSize, checkDone);
+    });
+  </script>
+</body>
+</html>
