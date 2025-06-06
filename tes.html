@@ -216,14 +216,7 @@
     <main>
         <section class="video-container">
             
-            <iframe
-                class="vidio"
-                id="vidio"
-                src="https://example.com/"
-                allow="encrypted-media; fullscreen; accelerometer; gyroscope; autoplay; picture-in-picture"
-                loading="lazy"
-                name="myiFrame"
-                onerror="document.getElementById('video-error').style.display = 'block'">
+            <iframe class="vidio" id="vidio" src="https://example.com/" allow="autoplay; encrypted-media; fullscreen; accelerometer; gyroscope; picture-in-picture" loading="lazy" name="myiFrame" referrerpolicy="origin">
             </iframe>
             <div id="video-error">Video gagal dimuat. Silakan coba beberapa saat lagi.<br><button onclick="retryIframe()" style="margin-top:10px;padding:8px 16px;border:none;border-radius:20px;background:#00b4d8;color:#1c2732;font-weight:bold;cursor:pointer;">Coba Lagi</button></div>
         </section>
