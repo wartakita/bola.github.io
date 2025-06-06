@@ -1,589 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>  
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BolabongTV - Live football matches, real-time scores, and sports streaming. Watch all your favorite football games online with instant access to live matches and sports highlights.">
-<meta name="keywords" content="live football, sports streaming, match scores, football TV, online football, sports highlights, BolabongTV">
-<meta name="author" content="BolabongTV">
-<meta name="robots" content="index, follow">
+<html lang="id">
 
-<!-- Open Graph Tags -->
-<meta property="og:title" content="BolabongTV - Live Football Streaming">
-<meta property="og:description" content="Watch live football matches and sports events in HD quality. Real-time scores and instant access to ongoing matches.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.bolabongtv.com">
-<meta property="og:image" content="https://www.bolabongtv.com/images/logo-og.png">
-<meta property="og:site_name" content="BolabongTV">
-
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@BolabongTV">
-<meta name="twitter:title" content="BolabongTV - Live Football Streaming">
-<meta name="twitter:description" content="Watch live football matches and sports events in HD quality. Real-time scores and instant access to ongoing matches.">
-<meta name="twitter:image" content="https://www.bolabongtv.com/images/logo-og.png">
-
-<!-- Canonical Link -->
-<link rel="canonical" href="https://www.bolabongtv.com">
-
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-<title>BolabongTV - Live Football Streaming | Real-time Scores & HD Sports</title>
-
-<!-- Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SportsOrganization",
-  "name": "BolabongTV",
-  "alternateName": "BolabongTV Sports Streaming",
-  "description": "Live football streaming service with real-time scores and sports highlights.",
-  "url": "https://www.bolabongtv.com",
-  "logo": "https://www.bolabongtv.com/images/logo.png",
-  "sameAs": [
-    "https://www.facebook.com/bolabongtv",
-    "https://twitter.com/bolabongtv"
-  ]
-}
-</script>
-
-<style>
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
-    color: #eee;
-  }
-  header {
-    background: #1f2937;
-    padding: 15px 20px;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fbbf24;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .container {
-    max-width: 768px;
-    margin: auto;
-    padding: 15px 20px;
-  }
-  .filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-    position: relative;
-  }
-  select, input[type="date"], input[type="search"] {
-    flex: 1 1 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1rem;
-  }
-  @media(min-width: 480px) {
-    select, input[type="date"], input[type="search"] {
-      flex: 1 1 auto;
-    }
-  }
-  .match-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .match-item {
-    background: #1e293b;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    padding: 12px 15px;
-    display: flex;
-    flex-direction: column;
-    transition: background 0.3s ease;
-  }
-  .match-item:hover { background: #374151; }
-  .match-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #fbbf24;
-  }
-  .teams {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  .team {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex: 1 1 45%;
-    min-width: 120px;
-  }
-  .team img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: contain;
-  }
-  .team-name {
-    font-weight: 600;
-    font-size: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .score {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #fbbf24;
-    white-space: nowrap;
-  }
-  .status {
-    margin-top: 8px;
-    font-size: 0.85rem;
-    text-align: right;
-    white-space: nowrap;
-  }
-  .status.FT { color: #10b981; }
-  .status.LIVE { color: #ef4444; }
-  .status.NS { color: #60a5fa; }
-  .loader {
-    text-align: center;
-    margin-top: 30px;
-    color: #fbbf24;
-  }
-  .toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #1f2937;
-    color: #fbbf24;
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-size: 0.95rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .toast.show {
-    opacity: 1;
-  }
-  #playerModal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 99999;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  #jwplayer-container {
-    width: 100%;
-    max-width: 960px;
-    aspect-ratio: 16/9;
-  }
-  #playerModal select {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 6px;
-    border-radius: 6px;
-    z-index: 100001;
-  }
-  @media (max-width: 768px) {
-    #jwplayer-container {
-      max-width: 100%;
-    }
-    #playerModal select {
-      top: 10px;
-      left: 10px;
-      font-size: 0.85rem;
-    }
-    #playerModal button {
-      top: 10px;
-      right: 10px;
-      font-size: 0.85rem;
-      padding: 6px 12px;
-    }
-  }
-  @keyframes pulseLive {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.7; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-  .play-icon span.live-animated {
-    animation: pulseLive 1.5s infinite ease-in-out;
-  }
-  .play-icon {
-    text-align: right;
-    margin-top: 10px;
-  }
-  .play-icon span.live-animated {
-    background: #ef4444;
-    color: #fff;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    display: inline-block;
-    animation: pulseLive 1.5s infinite ease-in-out;
-  }
-  @media (max-width: 480px) {
-    .play-icon span.live-animated {
-      font-size: 0.7rem;
-      padding: 3px 8px;
-    }
-  }
-  .live-badge {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    background: #ef4444;
-    color: #fff;
-    padding: 4px 10px;
-    font-size: 0.7rem;
-    font-weight: bold;
-    border-radius: 12px;
-    animation: pulseLive 1.5s infinite ease-in-out;
-    z-index: 10;
-  }
-  @media (max-width: 768px) {
-    .match-header {
-      font-size: 0.85rem;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .team-name {
-      font-size: 0.9rem;
-    }
-    .score {
-      font-size: 1rem;
-    }
-    .status {
-      font-size: 0.75rem;
-      text-align: left;
-    }
-    .filters {
-      flex-direction: column;
-    }
-  }
-  @media (max-width: 480px) {
-    .team {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .team img {
-      width: 28px;
-      height: 28px;
-    }
-    .filters select,
-    .filters input[type="date"],
-    .filters input[type="search"] {
-      font-size: 0.9rem;
-      padding: 8px;
-    }
-  }
-  #histats_counter,
-  .no-results {
-    display: none
-  }
-  :focus-visible {
-    outline: 2px solid #fbbf24;
-    outline-offset: 3px;
-    border-radius: 6px;
-  }
-  html {
-    font-size: clamp(14px, 1.5vw, 18px);
-  }
-  @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    20%, 60% { transform: translateX(-5px); }
-    40%, 80% { transform: translateX(5px); }
-  }
-  .shake {
-    animation: shake 0.4s ease;
-  }
-  .toast.show {
-    background: #dc2626;
-    color: #fff;
-  }
-</style>
-<script src="https://cdn.jwplayer.com/libraries/IDzF9Zmk.js"></script>
-</head>
-<body>  
-<header>BolabongTV</header>
-
-<div class="container">
-  <div class="filters">
-    <select id="leagueFilter" aria-label="Filter by League">
-      <option value="">All Leagues</option>
-    </select>
-    <select id="statusFilter" aria-label="Filter by Match Status">
-      <option value="">All Status</option>
-      <option value="FT">Finished</option>
-      <option value="NS">Not Started</option>
-      <option value="LIVE">Live</option>
-    </select>
-    <input type="date" id="dateFilter" aria-label="Filter by Date" value="2025-06-02" />
-    <input type="search" id="searchInput" placeholder="Search team or match..." aria-label="Search team or match" />
-  </div>
-
-  <ul class="match-list" id="matchList"></ul>
-</div>
-
-<script>
-const telegramToken = 'YOUR_BOT_TOKEN';
-const telegramChannel = '@your_channel_id';
-const postedLiveMatches = new Set();
-
-function postToTelegram(match) {
-  if (postedLiveMatches.has(match.matchId)) return;
-
-  const message = `🔴 LIVE Now: ${match.opponents[0].name} vs ${match.opponents[1].name}
-League: ${match.leagueName}
-Kick-off: ${match.matchDate} ${match.matchTime}
-📺 Watch now: https://www.bolabongtv.com`;
-
-  fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: telegramChannel,
-      text: message,
-      parse_mode: 'HTML'
-    })
-  });
-
-  postedLiveMatches.add(match.matchId);
-}
-
-const apiToken = 'AfyWw17488374000980ZzU5';
-const apiBase = 'https://api2.asiasport.com/match/getMatchListv4';
-
-const leagueFilter = document.getElementById('leagueFilter');
-const statusFilter = document.getElementById('statusFilter');
-const dateFilter = document.getElementById('dateFilter');
-const today = new Date().toISOString().split('T')[0];
-dateFilter.value = today;
-const searchInput = document.getElementById('searchInput');
-const matchList = document.getElementById('matchList');
-const loader = document.getElementById('loader');
-
-function showToast(message) {
-    let toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.textContent = message;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.classList.add('show'), 100);
-    setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => toast.remove(), 300);
-    }, 3000);
-}
-
-let leagues = [],
-    matches = [],
-    leagueOptionSet = new Set();
-
-async function fetchMatches() {
-    const leagueIds = leagueFilter.value;
-    const status = statusFilter.value;
-    const date = dateFilter.value;
-    const liveOnly = status === 'LIVE' ? 'true' : 'false';
-
-    const url = `${apiBase}?leagueIdList=${leagueIds}&matchDate=${date}&liveOnly=${liveOnly}&lang=en&timeZone=Asia%2FJakarta&token=${apiToken}`;
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        if (data.errorCode === 0) {
-            leagues = data.result.leagueMatchList;
-            matches = [];
-            leagues.forEach(league => {
-                if (!leagueOptionSet.has(league.leagueId)) {
-                    const option = document.createElement('option');
-                    option.value = league.leagueId;
-                    option.textContent = league.leagueName;
-                    leagueFilter.appendChild(option);
-                    leagueOptionSet.add(league.leagueId);
-                }
-                league.matchList.forEach(match => {
-                    matches.push({
-                        ...match,
-                        leagueName: league.leagueName
-                    });
-                });
-            });
-            renderMatches();
-        } else {
-            showToast('Error loading matches: ' + (data.message || 'Unknown error'));
-            matchList.innerHTML = '<li>Error loading matches.</li>';
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vivo Sports - Modern & Responsive</title>
+    <style>
+        /* Reset & Base */
+        * {
+            box-sizing: border-box;
         }
-    } catch (err) {
-        showToast('Network error: failed to load match data');
-        matchList.innerHTML = '<li>Failed to fetch data.</li>';
-    }
-}
 
-function renderMatches() {
-    const status = statusFilter.value;
-    const searchTerm = searchInput.value.toLowerCase();
-
-    const filtered = matches.filter(match => {
-        if (status && status !== 'LIVE' && match.matchStatus !== status) return false;
-        if (searchTerm) {
-            const teamNames = match.opponents.map(t => t.name.toLowerCase());
-            const matchName = match.matchName.toLowerCase();
-            if (!teamNames.some(name => name.includes(searchTerm)) && !matchName.includes(searchTerm)) return false;
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1c2732, #3a5068);
+            color: #f0f0f0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        return true;
-    }).sort((a, b) => new Date(`${a.matchDate}T${a.matchTime}`) - new Date(`${b.matchDate}T${b.matchTime}`));
 
-    if (!filtered.length) {
-        matchList.innerHTML = '';
-        searchInput.classList.add('shake');
-        setTimeout(() => searchInput.classList.remove('shake'), 500);
-        showToast('⚠️ Tidak ada pertandingan yang cocok dengan pencarian Anda.');
-        return;
-    }
-
-    matchList.innerHTML = '';
-    const icons = {
-        LIVE: '🔴',
-        FT: '✅',
-        NS: '🕓'
-    };
-
-    function renderMatchItem(match) {
-        const li = document.createElement('li');
-        li.className = 'match-item';
-        li.setAttribute('tabindex', '0');
-        li.style.position = 'relative';
-        const icon = icons[match.matchStatus] || '';
-        const countdown = match.matchStatus === 'NS' ? (() => {
-            const msDiff = new Date(match.matchDate + ' ' + match.matchTime) - new Date();
-            const min = Math.floor(msDiff / 60000);
-            const sec = Math.floor((msDiff % 60000) / 1000);
-            return ` | <span style='color:#facc15;'>Kick-off in ${min}m${min < 5 ? ` ${sec}s` : ''}</span>`;
-        })() : '';
-        li.innerHTML = `
-      <div class="match-header">${match.leagueName} - ${match.roundEn || ''}</div>
-      <div class="teams">
-        <div class="team">
-          <img loading="lazy" src="https://asset.asiasport.com/${match.opponents[0].logo}" alt="${match.opponents[0].name} logo" />
-          <div class="team-name">${match.opponents[0].name}</div>
-        </div>
-        <div class="score">${match.opponents[0].score} - ${match.opponents[1].score}</div>
-        <div class="team" style="justify-content: flex-end;">
-          <div class="team-name">${match.opponents[1].name}</div>
-          <img loading="lazy" src="https://asset.asiasport.com/${match.opponents[1].logo}" alt="${match.opponents[1].name} logo" />
-        </div>
-      </div>
-      <div class="status ${match.matchStatus}">${icon} ${match.matchStatus} | ${match.matchDate} ${match.matchTime}${countdown}</div>
-      ${match.containLiveStream ? `<div class="live-badge">🔴 LIVE</div>` : ''}
-    `;
-        li.dataset.id = match.matchId;
-        li.addEventListener('click', () => handlePlay(match));
-        return li;
-    }
-
-    filtered.forEach(match => {
-    if (match.matchStatus === 'LIVE') postToTelegram(match);
-        const existing = document.querySelector(`[data-id="${match.matchId}"]`);
-        if (existing) {
-            existing.querySelector('.score').textContent = `${match.opponents[0].score} - ${match.opponents[1].score}`;
-            existing.querySelector('.status').textContent = `${match.matchStatus} | ${match.matchDate} ${match.matchTime}`;
-        } else {
-            matchList.appendChild(renderMatchItem(match));
+        /* Header */
+        header {
+            background: #16222a;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            z-index: 100;
         }
-    });
-}
+        header h1 {
+            font-weight: 700;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: #00b4d8;
+        }
 
-leagueFilter.addEventListener('change', renderMatches);
-statusFilter.addEventListener('change', () => {
-    dateFilter.disabled = statusFilter.value === 'LIVE';
-    fetchMatches();
-});
-dateFilter.addEventListener('change', fetchMatches);
-searchInput.addEventListener('input', renderMatches);
-fetchMatches();
-setInterval(fetchMatches, 1000);
+        /* Nav buttons */
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            background: #00b4d8;
+            color: #1c2732;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 8px rgba(0,180,216,0.6);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background: #0288a3;
+            box-shadow: 0 6px 12px rgba(2,136,163,0.7);
+            transform: scale(1.05);
+        }
+        nav a:active {
+            transform: scale(1);
+            box-shadow: none;
+        }
 
-async function handlePlay(match) {
-    try {
-        const res = await fetch(`https://api2.asiasport.com/match/score?matchId=${match.matchId}&timeZone=Asia%2FJakarta&token=${apiToken}`);
-        const data = await res.json();
-        if (data?.result?.liveStreamUrl) {
-            const streams = Array.isArray(data.result.liveStreamUrl) ? data.result.liveStreamUrl : [{
-                name: 'Default',
-                url: data.result.liveStreamUrl
-            }];
-            const playlist = streams.map(s => ({
-                file: s.url,
-                label: s.name
-            }));
+        /* Main container */
+        main {
+            flex-grow: 1;
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            overflow: hidden;
+        }
 
-            jwplayer("jwplayer-container").setup({
-                playlist,
-                width: "100%",
-                aspectratio: "16:9",
-                autostart: true
-            });
+        /* Video iframe container with gradient border */
+        .video-container {
+            position: relative;
+            flex: 2;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,180,216,0.7);
+            background: linear-gradient(135deg, #00b4d8, #90e0ef);
+            padding: 5px;
+            animation: pulseBorder 4s infinite alternate ease-in-out;
+        }
 
-            if (streams.length > 1) {
-                const selector = document.createElement('select');
-                selector.style.position = 'absolute';
-                selector.style.top = '20px';
-                selector.style.left = '20px';
-                selector.style.padding = '6px';
-                selector.style.borderRadius = '6px';
-                selector.style.zIndex = 100001;
-
-                streams.forEach((s, i) => {
-                    const opt = document.createElement('option');
-                    opt.value = s.url;
-                    opt.textContent = s.name;
-                    if (i === 0) opt.selected = true;
-                    selector.appendChild(opt);
-                });
-
-                selector.onchange = e => {
-                    jwplayer().load([{
-                        file: e.target.value
-                    }]);
-                    jwplayer().play(true);
-                };
-
-                document.getElementById('playerModal').appendChild(selector);
+        @keyframes pulseBorder {
+            0% {
+                box-shadow: 0 0 18px rgba(0,180,216,0.8);
             }
-            document.getElementById('playerModal').style.display = 'flex';
-        } else {
-            showToast("Live stream tidak tersedia untuk pertandingan ini.");
+            100% {
+                box-shadow: 0 0 30px rgba(144,224,239,0.9);
+            }
         }
-    } catch {
-        showToast("Gagal memuat live stream.");
-    }
-}
-</script>
 
-<div id="playerModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.9); z-index:99999; justify-content:center; align-items:center;">
-  <div id="jwplayer-container" style="width:90%; max-width:640px;"></div>
-  <button onclick="jwplayer().remove(); document.getElementById('playerModal').style.display='none'" style="position:absolute; top:20px; right:20px; background:#fbbf24; color:#000; padding:10px; border:none; border-radius:6px; font-weight:bold;">Tutup</button>
-</div>
+        iframe.vidio {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+            border: none;
+            display: block;
+        }
+
+        /* Sidebar for info content */
+        .sidebar {
+            flex: 1;
+            background: rgba(26, 38, 51, 0.85);
+            border-radius: 15px;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .sidebar h2 {
+            color: #90e0ef;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1.3px;
+        }
+
+        .sidebar p {
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #d0d0d0;
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 25px;
+        }
+
+        .sidebar a.button {
+            display: inline-block;
+            text-align: center;
+            background: #00b4d8;
+            color: #1c2732;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,180,216,0.75);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            user-select: none;
+        }
+        .sidebar a.button:hover {
+            background: #0288a3;
+            box-shadow: 0 8px 20px rgba(2,136,163,0.85);
+        }
+        .sidebar a.button:active {
+            transform: scale(0.95);
+        }
+
+        /* Offline banner */
+        #offline-message {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d90429;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(217,4,41,0.8);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        #offline-message.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            main {
+                flex-direction: column;
+                padding: 15px;
+                gap: 20px;
+            }
+            .video-container, .sidebar {
+                flex: none;
+                width: 100%;
+            }
+            iframe.vidio {
+                aspect-ratio: 16 / 9;
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+            nav a {
+                padding: 8px 14px;
+                font-size: 0.85rem;
+            }
+            .sidebar p {
+                font-size: 0.9rem;
+            }
+            .sidebar a.button {
+                font-size: 0.9rem;
+                padding: 10px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Vivo Sports</h1>
+        <nav>
+            <a href="https://www.whatsapp.com/channel/0029VaivAoX4Y9llBm8rog01" target="_blank" rel="noopener">Join Us</a>
+            <a href="https://t.me/vivosports" target="_blank" rel="noopener">Telegram</a>
+            <a href="javascript:location.reload();" title="Reload Video">&#10227;</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="video-container">
+            <iframe
+                class="vidio"
+                id="vidio"
+                src="https://jwplayerdash.blogspot.com/?url=aHR0cHM6Ly9mdGEyLWNkbi1mbHIudmlzaW9ucGx1cy5pZC9vdXQvdjEvODlhNmU0MjYxY2Q3NDcwZjgzZTU4NjllOTA0NDBjZmYvaW5kZXgubXBk&k1=MzljNGRjNjcwNGNmNGNlZWEyZmQ0ODYzYjg4ZDhhN2Q=&k2=NGU5ZDc5NTRjMmZmNDY3NTkyODlkYTRmYzlmMDE4ZWE="
+                allow="encrypted-media; fullscreen; accelerometer; gyroscope; autoplay; picture-in-picture"
+                loading="lazy"
+                name="myiFrame"
+                sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts">
+            </iframe>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Tentang Vivo Sports</h2>
+            <p>
+                Nikmati streaming olahraga terbaik dengan Vivo Sports. Situs kami menyediakan
+                berbagai tayangan langsung dan konten olahraga menarik lainnya yang dapat ditonton
+                di semua perangkat, dari desktop hingga ponsel pintar.
+            </p>
+            <a href="https://www.whatsapp.com/channel/0029VaivAoX4Y9llBm8rog01" target="_blank" rel="noopener" class="button">
+                Bergabung Sekarang
+            </a>
+        </aside>
+    </main>
+
+    <div id="offline-message">Anda sedang offline. Harap periksa koneksi internet Anda.</div>
+
+    <script>
+        const iframe = document.getElementById('vidio');
+        const offlineMessage = document.getElementById('offline-message');
+
+        function updateOnlineStatus() {
+            if (!navigator.onLine) {
+                offlineMessage.classList.add('show');
+                iframe.style.filter = 'grayscale(0.7)';
+                iframe.style.pointerEvents = 'none';
+            } else {
+                offlineMessage.classList.remove('show');
+                iframe.style.filter = 'none';
+                iframe.style.pointerEvents = 'auto';
+            }
+        }
+
+        window.addEventListener('load', updateOnlineStatus);
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+
+        // Ubah src iframe jika parameter URL Xy9ert8 ada
+        const urlParams = new URLSearchParams(window.location.search);
+        const file = urlParams.get('goalplus');
+        if (file) {
+            iframe.src = file;
+        }
+    </script>
 </body>
+
 </html>
