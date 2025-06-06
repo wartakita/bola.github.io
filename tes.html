@@ -2,6 +2,7 @@
 <html lang="id">
 
 <head>
+    <!-- head as current -->
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#00b4d8">
     <meta charset="UTF-8" />
@@ -13,270 +14,300 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="/favicon.png">
     <link rel="icon" href="/favicon.png" type="image/png">
+    <!-- style as current -->
     <style>
-        * {
-            box-sizing: border-box;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1c2732, #3a5068);
-            color: #f0f0f0;
-            min-height: 100vh;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-        }
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1c2732, #3a5068);
+    color: #f0f0f0;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
 
-        header {
-            background: #16222a;
-            padding: 15px 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            z-index: 100;
-        }
-        header h1 {
-            font-weight: 900;
-            font-size: 2.2rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #00b4d8;
-            text-align: center;
-        }
+header {
+    background: #16222a;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+header h1 {
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #00b4d8;
+    text-align: center;
+}
 
-        nav {
-            display: none;
-        }
+nav {
+    display: none;
+}
 
-        main {
-            flex-grow: 1;
-            display: flex;
-            gap: 30px;
-            padding: 30px;
-            overflow: hidden;
-        }
+main {
+    flex-grow: 1;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    overflow: hidden;
+}
 
-        .video-container {
-            position: relative;
-            flex: 2;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 0 15px rgba(0,180,216,0.7);
-            background: linear-gradient(135deg, #00b4d8, #90e0ef);
-            padding: 5px;
-            animation: pulseBorder 4s infinite alternate ease-in-out;
-        }
+.video-container {
+    position: relative;
+    flex: 2;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,180,216,0.7);
+    background: linear-gradient(135deg, #00b4d8, #90e0ef);
+    padding: 5px;
+    animation: pulseBorder 4s infinite alternate ease-in-out;
+}
 
-        @keyframes pulseBorder {
-            0% {
-                box-shadow: 0 0 18px rgba(0,180,216,0.8);
-            }
-            100% {
-                box-shadow: 0 0 30px rgba(144,224,239,0.9);
-            }
-        }
+@keyframes pulseBorder {
+    0% {
+        box-shadow: 0 0 18px rgba(0,180,216,0.8);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(144,224,239,0.9);
+    }
+}
 
-        iframe.vidio {
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 16/9;
-            border-radius: 10px;
-            border: none;
-            display: block;
-        }
+.video-switcher {
+    margin-bottom: 10px;
+    text-align: center;
+}
 
-        .sidebar {
-            flex: 1;
-            background: rgba(26, 38, 51, 0.85);
-            border-radius: 15px;
-            padding: 25px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
+.video-switcher select {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #1c2732;
+    color: #00b4d8;
+    font-weight: bold;
+}
 
-        .sidebar h2 {
-            color: #90e0ef;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: 1.3px;
-        }
+.video-title {
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+    color: #90e0ef;
+}
 
-        .sidebar p {
-            line-height: 1.6;
-            font-size: 1rem;
-            color: #d0d0d0;
-            flex-grow: 1;
-            overflow-y: auto;
-            margin-bottom: 25px;
-        }
+iframe.vidio {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    border: none;
+    display: block;
+}
 
-        .sidebar a.button {
-            display: inline-block;
-            text-align: center;
-            background: #00b4d8;
-            color: #1c2732;
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1rem;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,180,216,0.75);
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-            user-select: none;
-        }
-        .sidebar a.button:hover {
-            background: #0288a3;
-            box-shadow: 0 8px 20px rgba(2,136,163,0.85);
-        }
-        .sidebar a.button:active {
-            transform: scale(0.95);
-        }
+.sidebar {
+    flex: 1;
+    background: rgba(26, 38, 51, 0.85);
+    border-radius: 15px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
 
-        #video-error {
-            background: #d90429;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 10px;
-            margin-top: 10px;
-            text-align: center;
-            font-weight: bold;
-            display: none;
-        }
+.sidebar h2 {
+    color: #90e0ef;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1.3px;
+}
 
-        #offline-message {
-            position: fixed;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #d90429;
-            padding: 14px 30px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 1rem;
-            color: white;
-            box-shadow: 0 4px 12px rgba(217,4,41,0.8);
-            z-index: 999;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
-        }
-        #offline-message.show {
-            opacity: 1;
-            pointer-events: auto;
-        }
+.sidebar p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #d0d0d0;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 25px;
+}
 
-        @media (max-width: 1024px) {
-            main {
-                flex-direction: column;
-                padding: 15px;
-                gap: 20px;
-            }
-            .video-container, .sidebar {
-                flex: none;
-                width: 100%;
-            }
-            iframe.vidio {
-                aspect-ratio: 16 / 9;
-                border-radius: 12px;
-            }
-        }
+.sidebar a.button {
+    display: inline-block;
+    text-align: center;
+    background: #00b4d8;
+    color: #1c2732;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,180,216,0.75);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.3rem;
-            }
-            .sidebar p {
-                font-size: 0.9rem;
-            }
-            .sidebar a.button {
-                font-size: 0.9rem;
-                padding: 10px 18px;
-            }
-        }
-            
-        
-        
-            100% { transform: rotate(360deg); }
-        }
+.sidebar a.button:hover {
+    background: #0288a3;
+    box-shadow: 0 8px 20px rgba(2,136,163,0.85);
+}
+
+.sidebar a.button:active {
+    transform: scale(0.95);
+}
+
+#video-error {
+    background: #d90429;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+    .video-container, .sidebar {
+        flex: none;
+        width: 100%;
+    }
+    iframe.vidio {
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+    .sidebar p {
+        font-size: 0.9rem;
+    }
+    .sidebar a.button {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+    }
+}
 </style>
 </head>
 
 <body>
-    <header>
-        <h1>ZonaSport</h1>
-        <nav></nav>
-    </header>
+  <header>
+    <h1>ZonaSport</h1>
+    <nav></nav>
+  </header>
 
-    <main>
-        <section class="video-container">
-            
-            <iframe class="vidio" id="vidio" src="https://example.com/" allow="autoplay; encrypted-media; fullscreen; accelerometer; gyroscope; picture-in-picture" loading="lazy" name="myiFrame" referrerpolicy="origin">
-            </iframe>
-            <div id="video-error">Video gagal dimuat. Silakan coba beberapa saat lagi.<br><button onclick="retryIframe()" style="margin-top:10px;padding:8px 16px;border:none;border-radius:20px;background:#00b4d8;color:#1c2732;font-weight:bold;cursor:pointer;">Coba Lagi</button></div>
-        </section>
+  <main>
+    <section class="video-container">
+      <div class="video-switcher">
+        <select id="videoSelect"></select>
+      </div>
+      <div class="video-title" id="videoTitle">Memuat Video...</div>
+      <iframe class="vidio" id="vidio" src="" allow="autoplay; encrypted-media; fullscreen; accelerometer; gyroscope; picture-in-picture" loading="lazy" name="myiFrame" referrerpolicy="origin"></iframe>
+      <div id="video-error">Video gagal dimuat. Silakan coba beberapa saat lagi.<br><button onclick="retryIframe()" style="margin-top:10px;padding:8px 16px;border:none;border-radius:20px;background:#00b4d8;color:#1c2732;font-weight:bold;cursor:pointer;">Coba Lagi</button></div>
+    </section>
 
-        <aside class="sidebar">
-            <h2>Tentang ZonaSport</h2>
-            <p>
-                Nikmati streaming olahraga terbaik dengan ZonaSport. Situs kami menyediakan
-                berbagai tayangan langsung dan konten olahraga menarik lainnya yang dapat ditonton
-                di semua perangkat, dari desktop hingga ponsel pintar.
-            </p>
-            <a href="https://www.whatsapp.com/channel/0029VaivAoX4Y9llBm8rog01" target="_blank" rel="noopener" class="button">Bergabung Sekarang</a>
-            <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                <a href="https://www.facebook.com" target="_blank" class="button" style="background:#3b5998">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank" class="button" style="background:#e4405f">Instagram</a>
-                <a href="https://telegram.org" target="_blank" class="button" style="background:#0088cc">Telegram</a>
-            </div>
-        </aside>
-    </main>
+    <aside class="sidebar">
+      <h2>Tentang ZonaSport</h2>
+      <p>
+        Nikmati streaming olahraga terbaik dengan ZonaSport. Situs kami menyediakan
+        berbagai tayangan langsung dan konten olahraga menarik lainnya yang dapat ditonton
+        di semua perangkat, dari desktop hingga ponsel pintar.
+      </p>
+      <a href="https://www.whatsapp.com/channel/0029VaivAoX4Y9llBm8rog01" target="_blank" rel="noopener" class="button">Bergabung Sekarang</a>
+      <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://www.facebook.com" target="_blank" class="button" style="background:#3b5998">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" class="button" style="background:#e4405f">Instagram</a>
+        <a href="https://telegram.org" target="_blank" class="button" style="background:#0088cc">Telegram</a>
+      </div>
+    </aside>
+  </main>
 
-    <footer style="text-align:center; padding: 20px; color: #aaa; font-size: 0.9rem; background: #101820;">
-        &copy; 2025 ZonaSport. All rights reserved. | <a href="#" style="color:#00b4d8; text-decoration:underline">Kebijakan Privasi</a>
-    </footer>
+  <footer style="text-align:center; padding: 20px; color: #aaa; font-size: 0.9rem; background: #101820;">
+    &copy; 2025 ZonaSport. All rights reserved. | <a href="#" style="color:#00b4d8; text-decoration:underline">Kebijakan Privasi</a>
+  </footer>
 
-    <div id="offline-message">Anda sedang offline. Harap periksa koneksi internet Anda.</div>
+  <div id="offline-message" style="position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%); background: #d90429; padding: 14px 30px; border-radius: 30px; font-weight: 700; font-size: 1rem; color: white; box-shadow: 0 4px 12px rgba(217,4,41,0.8); z-index: 999; opacity: 0; pointer-events: none; transition: opacity 0.5s ease;">
+    Anda sedang offline. Harap periksa koneksi internet Anda.
+  </div>
 
-    <script>
-        const iframe = document.getElementById('vidio');
-        const offlineMessage = document.getElementById('offline-message');
+  <script>
+    const iframe = document.getElementById('vidio');
+    const offlineMessage = document.getElementById('offline-message');
+    const videoSelect = document.getElementById('videoSelect');
+    const videoTitle = document.getElementById('videoTitle');
+    let videoList = [];
 
-        function updateOnlineStatus() {
-            if (!navigator.onLine) {
-                offlineMessage.classList.add('show');
-                iframe.style.filter = 'grayscale(0.7)';
-                iframe.style.pointerEvents = 'none';
-            } else {
-                offlineMessage.classList.remove('show');
-                iframe.style.filter = 'none';
-                iframe.style.pointerEvents = 'auto';
-            }
-        }
+    function populateVideoOptions() {
+      videoSelect.innerHTML = '';
+      videoList.forEach(video => {
+        const option = document.createElement('option');
+        option.value = video.url;
+        option.textContent = video.title;
+        videoSelect.appendChild(option);
+      });
+    }
 
-        window.addEventListener('load', () => {
-            updateOnlineStatus();
-            const loader = document.getElementById('loading');
-            
-        });
-        window.addEventListener('online', updateOnlineStatus);
-        window.addEventListener('offline', updateOnlineStatus);
+    function updateVideoSource(url) {
+      iframe.src = url;
+      const current = videoList.find(v => v.url === url);
+      videoTitle.textContent = current ? current.title : 'Video Tidak Diketahui';
+    }
 
-        function retryIframe() {
-            iframe.src = iframe.src;
-        }
+    function updateOnlineStatus() {
+      if (!navigator.onLine) {
+        offlineMessage.classList.add('show');
+        iframe.style.filter = 'grayscale(0.7)';
+        iframe.style.pointerEvents = 'none';
+      } else {
+        offlineMessage.classList.remove('show');
+        iframe.style.filter = 'none';
+        iframe.style.pointerEvents = 'auto';
+      }
+    }
 
+    window.addEventListener('load', async () => {
+      try {
+        const response = await fetch('video.json');
+        videoList = await response.json();
+        populateVideoOptions();
         const urlParams = new URLSearchParams(window.location.search);
         const file = urlParams.get('zonaplus');
-        if (file) {
-            iframe.src = file;
-        }
-    </script>
+        const defaultUrl = file || videoList[0]?.url || '';
+        videoSelect.value = defaultUrl;
+        updateVideoSource(defaultUrl);
+      } catch (e) {
+        videoTitle.textContent = 'Gagal memuat daftar video';
+      }
+
+      updateOnlineStatus();
+
+      videoSelect.addEventListener('change', () => {
+        updateVideoSource(videoSelect.value);
+      });
+    });
+
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+
+    function retryIframe() {
+      iframe.src = iframe.src;
+    }
+  </script>
 </body>
 
 </html>
