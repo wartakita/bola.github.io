@@ -1,9 +1,3 @@
-window.onload = function() {
-    alert("Dilarang mengakses JavaScript!");
-    // Pengalihan halaman sebagai bentuk pencegahan
-    window.location.href = "https://example.com/dilarang";
-};
-
 let allMatchesData = null;
 
 function getStatusCategory(matchStatus, isLive) {
