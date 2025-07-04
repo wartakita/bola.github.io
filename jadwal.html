@@ -1,335 +1,331 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Football Match Schedule Thumbnail Generator</title>
+  <title>Jadwal Pertandingan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #121212;
-      color: #ffffff;
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-      align-items: center;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #eef2f3, #dce1e5);
+      color: #333;
       padding: 20px;
-      gap: 40px;
+      min-height: 100vh;
     }
     h1 {
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #f39c12;
       text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      animation: fadeInDown 0.8s ease-out;
     }
-    form {
-      width: 100%;
-      max-width: 400px;
-      background-color: #1e1e1e;
-      padding: 20px;
-      border-radius: 10px;
+    .filters {
+      max-width: 960px;
+      margin: 0 auto 30px auto;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 0.8s ease-in-out;
     }
-    label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    input[type="text"], input[type="date"], input[type="time"], input[type="url"], input[type="file"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      border: none;
-      outline: none;
+    select, input[type="date"] {
+      padding: 10px 14px;
       font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      min-width: 180px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-    .input-toggle {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-size: 0.9rem;
+    .league-container {
+      max-width: 960px;
+      margin: 0 auto 60px auto;
     }
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #f39c12;
+    .fade-out { opacity: 0; transition: opacity 0.5s ease; }
+    .fade-in { opacity: 1; transition: opacity 0.5s ease; }
+    .skeleton-box {
+      height: 120px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 37%, #f0f0f0 63%);
+      background-size: 400% 100%;
+      animation: shimmer 1.4s ease infinite;
+      margin: 10px 0;
+    }
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-30px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    #text-summary {
+      max-width: 960px;
+      margin: 40px auto 20px auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+      font-family: 'Courier New', Courier, monospace;
+      white-space: pre-line;
+      user-select: all;
+      line-height: 1.5;
+      animation: fadeIn 0.6s ease-in;
+    }
+    #copy-button {
+      display: block;
+      margin: 0 auto 40px auto;
+      padding: 12px 24px;
+      background: #3498db;
+      color: white;
       border: none;
-      border-radius: 6px;
-      color: #121212;
-      font-weight: 700;
-      font-size: 1.1rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
-    button:hover { background-color: #d87b0a; }
-    .thumbnail {
-      width: 100%;
-      max-width: 600px;
-      aspect-ratio: 16 / 9;
-      background: linear-gradient(135deg, #f39c12, #d35400);
-      border-radius: 15px;
-      padding: 20px;
-      color: #fff;
+    #copy-button:hover {
+      background: #2980b9;
+      transform: scale(1.03);
+    }
+    .league-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    .league-header {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-      font-weight: 700;
-      position: relative;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      user-select: none;
+      align-items: center;
+      margin-bottom: 10px;
     }
-    .thumbnail header.league {
-      font-size: 1.2rem;
-      text-align: center;
-      letter-spacing: 2px;
-      font-weight: 900;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      border-bottom: 2px solid rgba(255,255,255,0.4);
-      padding-bottom: 6px;
+    .league-logo {
+      width: 48px;
+      height: 48px;
+      margin-right: 15px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+    }
+    .league-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2d3e50;
+    }
+    .subleague-name {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 10px;
+      margin-left: 63px;
+    }
+    .match-list {
+      list-style: none;
+    }
+    .match-item {
+      border-top: 1px solid #eee;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .match-item:first-child {
+      border-top: none;
+    }
+    .match-time-status {
+      font-weight: 600;
+      color: #2c3e50;
+      flex-basis: 110px;
     }
     .match-info {
-      flex-grow: 1;
       display: flex;
-      justify-content: space-around;
       align-items: center;
-      font-size: 1.9rem;
-      margin-top: 15px;
+      flex-grow: 1;
+      justify-content: space-between;
+      max-width: 750px;
+      flex-wrap: wrap;
     }
     .team {
-      flex: 1;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 8px;
+      width: 45%;
+      min-width: 200px;
     }
-    .team img {
-      max-width: 80px;
-      max-height: 80px;
+    .team-logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
       object-fit: contain;
-      border-radius: 10px;
-      background: #fff;
-      padding: 5px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 4px;
     }
-    .vs {
-      font-size: 2rem;
-      font-weight: 900;
-      margin: 0 20px;
-      color: #fafafa;
+    .team-name {
+      font-weight: 600;
+      margin-right: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .datetime {
-      font-size: 1.2rem;
-      text-align: center;
-      padding: 12px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      margin-top: 15px;
-      letter-spacing: 1.1px;
+    .team-score {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #27ae60;
     }
-    @media (max-width: 480px) {
-      .thumbnail { font-size: 0.85rem; aspect-ratio: 4 / 3; }
-      .match-info { font-size: 1.3rem; flex-direction: column; }
-      .vs { margin: 10px 0; }
-      .team img { max-width: 60px; max-height: 60px; }
+    .match-status {
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 8px;
+      background: #ddd;
+      color: #555;
+      white-space: nowrap;
+      margin-left: 10px;
+    }
+    .match-status.FT {
+      background: #2ecc71;
+      color: white;
+    }
+    .match-status.LIVE {
+      background: #e74c3c;
+      color: white;
+      font-weight: 700;
+      animation: blink 1s infinite alternate;
+    }
+    @keyframes blink {
+      0% {opacity:1;}
+      100% {opacity:0.4;}
     }
   </style>
 </head>
 <body>
-  <h1>Football Match Schedule Thumbnail Generator</h1>
-  <form id="matchForm">
-    <label for="leagueName">Nama Liga</label>
-    <input type="text" id="leagueName" placeholder="Masukkan nama liga" required />
+<h1>Jadwal Pertandingan</h1>
+<div class="filters">
+  <input type="date" id="filterDate" />
+  <select id="filterLeague">
+    <option value="">-- Pilih Liga --</option>
+  </select>
+</div>
+<div id="app" class="league-container fade-in"></div>
+<div id="text-summary"></div>
+<button id="copy-button">📋 Salin Ringkasan</button>
+<script>
+const baseImgUrl = 'https://asset.asiasport.com/';
+const apiToken = 'AfyWw17488374000980ZzU5';
+const dateInput = document.getElementById('filterDate');
+const leagueSelect = document.getElementById('filterLeague');
+const container = document.getElementById('app');
+const textSummaryDiv = document.getElementById('text-summary');
+const copyButton = document.getElementById('copy-button');
 
-    <label for="teamA">Tim A</label>
-    <input type="text" id="teamA" placeholder="Masukkan nama Tim A" required />
-
-    <div class="input-toggle">
-      <label><input type="radio" name="logoAType" value="url" checked /> URL</label>
-      <label><input type="radio" name="logoAType" value="upload" /> Upload</label>
-    </div>
-    <input type="url" id="logoAUrl" placeholder="Masukkan URL logo Tim A" />
-    <input type="file" id="logoAFile" accept="image/*" style="display:none;" />
-
-    <label for="teamB">Tim B</label>
-    <input type="text" id="teamB" placeholder="Masukkan nama Tim B" required />
-
-    <div class="input-toggle">
-      <label><input type="radio" name="logoBType" value="url" checked /> URL</label>
-      <label><input type="radio" name="logoBType" value="upload" /> Upload</label>
-    </div>
-    <input type="url" id="logoBUrl" placeholder="Masukkan URL logo Tim B" />
-    <input type="file" id="logoBFile" accept="image/*" style="display:none;" />
-
-    <label for="matchDate">Tanggal Pertandingan</label>
-    <input type="date" id="matchDate" required />
-
-    <label for="matchTime">Waktu Pertandingan</label>
-    <input type="time" id="matchTime" required />
-
-    <button type="submit">Generate Thumbnail</button>
-  <label for="bgColor">Warna Latar Thumbnail</label>
-<select id="bgColor" style="background: #1e1e1e; color: #fff; padding: 8px; border-radius: 6px; font-size: 1rem;">
-  <option value="#f39c12,#d35400" style="background: linear-gradient(to right, #f39c12, #d35400); color: #000">Oranye Cerah</option>
-  <option value="#3498db,#2980b9" style="background: linear-gradient(to right, #3498db, #2980b9); color: #fff">Biru Modern</option>
-  <option value="#2ecc71,#27ae60" style="background: linear-gradient(to right, #2ecc71, #27ae60); color: #000">Hijau Segar</option>
-  <option value="#9b59b6,#8e44ad" style="background: linear-gradient(to right, #9b59b6, #8e44ad); color: #fff">Ungu Elegan</option>
-  <option value="#e74c3c,#c0392b" style="background: linear-gradient(to right, #e74c3c, #c0392b); color: #fff">Merah Enerjik</option>
-  <option value="#34495e,#2c3e50" style="background: linear-gradient(to right, #34495e, #2c3e50); color: #fff">Biru Gelap</option>
-  <option value="#00c6ff,#0072ff" style="background: linear-gradient(to right, #00c6ff, #0072ff); color: #fff">Biru Laut</option>
-  <option value="#f7971e,#ffd200" style="background: linear-gradient(to right, #f7971e, #ffd200); color: #000">Kuning Hangat</option>
-  <option value="#ff6a00,#ee0979" style="background: linear-gradient(to right, #ff6a00, #ee0979); color: #fff">Pink Sunset</option>
-  <option value="#43cea2,#185a9d" style="background: linear-gradient(to right, #43cea2, #185a9d); color: #fff">Hijau-Biru Sejuk</option>
-  <option value="#bdc3c7,#2c3e50" style="background: linear-gradient(to right, #bdc3c7, #2c3e50); color: #000">Abu Elegan</option>
-</select>
-<label for="watermark">Teks Watermark</label>
-<input type="text" id="watermark" placeholder="Misal: @jadwalbola.id" />
-</form>
-
-  <div class="thumbnail" id="thumbnailPreview">
-    <header class="league" id="previewLeague">-</header>
-    <div class="match-info">
-      <div class="team" id="previewTeamA">
-        <img src="" alt="Logo Tim A" id="previewLogoA" />
-        <div>-</div>
-      </div>
-      <div class="vs">VS</div>
-      <div class="team" id="previewTeamB">
-        <img src="" alt="Logo Tim B" id="previewLogoB" />
-        <div>-</div>
-      </div>
-    </div>
-    <div class="datetime" id="previewDateTime">-</div>
-  </div>
-
-  <button id="downloadBtn" disabled>Download Thumbnail</button>
-
-  <!-- Skrip JavaScript (telah lengkap dengan logic export PNG) -->
-  <script>
-    const matchForm = document.getElementById('matchForm');
-    const previewLeague = document.getElementById('previewLeague');
-    const previewTeamA = document.querySelector('#previewTeamA div');
-    const previewLogoA = document.getElementById('previewLogoA');
-    const previewTeamB = document.querySelector('#previewTeamB div');
-    const previewLogoB = document.getElementById('previewLogoB');
-    const previewDateTime = document.getElementById('previewDateTime');
-    const downloadBtn = document.getElementById('downloadBtn');
-    const thumbnailPreview = document.getElementById('thumbnailPreview');
-    const logoAUrl = document.getElementById('logoAUrl');
-    const logoAFile = document.getElementById('logoAFile');
-    const logoBUrl = document.getElementById('logoBUrl');
-    const logoBFile = document.getElementById('logoBFile');
-
-    document.querySelectorAll('input[name="logoAType"]').forEach(r => r.addEventListener('change', e => {
-      logoAUrl.style.display = e.target.value === 'url' ? 'block' : 'none';
-      logoAFile.style.display = e.target.value === 'upload' ? 'block' : 'none';
-    }));
-    document.querySelectorAll('input[name="logoBType"]').forEach(r => r.addEventListener('change', e => {
-      logoBUrl.style.display = e.target.value === 'url' ? 'block' : 'none';
-      logoBFile.style.display = e.target.value === 'upload' ? 'block' : 'none';
-    }));
-
-    function readFileAsDataURL(file) {
-      return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result);
-        reader.onerror = reject;
-        reader.readAsDataURL(file);
-      });
+function formatDate(d) {
+  return d.toISOString().slice(0,10);
+}
+function formatDateLong(d) {
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+function showLoadingShimmer() {
+  container.classList.remove('fade-in');
+  container.classList.add('fade-out');
+  setTimeout(() => {
+    container.innerHTML = '';
+    for (let i = 0; i < 3; i++) {
+      const box = document.createElement('div');
+      box.className = 'skeleton-box';
+      container.appendChild(box);
     }
-
-    matchForm.addEventListener('submit', async (event) => {
-      const bgSelect = document.getElementById('bgColor');
-      const [startColor, endColor] = bgSelect.value.split(',');
-      thumbnailPreview.style.background = `linear-gradient(135deg, ${startColor}, ${endColor})`;
-      event.preventDefault();
-      const league = document.getElementById('leagueName').value.trim();
-      const teamA = document.getElementById('teamA').value.trim();
-      const teamB = document.getElementById('teamB').value.trim();
-      const matchDate = document.getElementById('matchDate').value;
-      const matchTime = document.getElementById('matchTime').value;
-      let logoA = logoAUrl.style.display !== 'none' ? logoAUrl.value.trim() : (logoAFile.files[0] ? await readFileAsDataURL(logoAFile.files[0]) : '');
-      let logoB = logoBUrl.style.display !== 'none' ? logoBUrl.value.trim() : (logoBFile.files[0] ? await readFileAsDataURL(logoBFile.files[0]) : '');
-      if (league && teamA && logoA && teamB && logoB && matchDate && matchTime) {
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        const formattedDate = new Date(matchDate + 'T' + matchTime).toLocaleDateString('id-ID', options);
-        const formattedTime = new Date(matchDate + 'T' + matchTime).toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
-        previewLeague.textContent = league.toUpperCase();
-        previewTeamA.textContent = teamA.toUpperCase();
-        previewLogoA.src = logoA;
-        previewTeamB.textContent = teamB.toUpperCase();
-        previewLogoB.src = logoB;
-        previewDateTime.textContent = `${formattedDate} pukul ${formattedTime}`;
-        downloadBtn.disabled = false;
-      }
+    container.classList.remove('fade-out');
+    container.classList.add('fade-in');
+  }, 300);
+}
+function renderLeagues(leagues) {
+  container.innerHTML = '';
+  leagues.forEach(league => {
+    const section = document.createElement('section');
+    section.className = 'league-card';
+    const head = `<div class='league-header'>
+      <img src='${baseImgUrl + league.logo}' class='league-logo' alt='${league.leagueName} logo'/>
+      <h2 class='league-name'>${league.leagueName}</h2>
+    </div>`;
+    const sub = league.subLeagueName ? `<div class='subleague-name'>${league.subLeagueName}</div>` : '';
+    const list = document.createElement('ul');
+    list.className = 'match-list';
+    league.matchList.forEach(match => {
+      const li = document.createElement('li');
+      li.className = 'match-item';
+      const status = `<div class='match-time-status'>${match.matchTime} | <span class='match-status ${match.matchStatus}'>${match.matchStatus}</span></div>`;
+      const teams = match.opponents.map(t => `
+        <div class='team'>
+          <img class='team-logo' src='${baseImgUrl + t.logo}' alt='${t.name}' />
+          <span class='team-name'>${t.name}</span>
+          <span class='team-score'>${t.score ?? '-'}</span>
+        </div>`).join('');
+      const info = `<div class='match-info'>${teams}</div>`;
+      li.innerHTML = status + info;
+      list.appendChild(li);
     });
-
-    downloadBtn.addEventListener('click', () => {
-      if (!previewLogoA.src || !previewLogoB.src) return;
-      const width = thumbnailPreview.offsetWidth;
-      const height = thumbnailPreview.offsetHeight;
-      const canvas = document.createElement('canvas');
-      canvas.width = width * 2;
-      canvas.height = height * 2;
-      const ctx = canvas.getContext('2d');
-      ctx.scale(2, 2);
-      const selectedColors = document.getElementById('bgColor').value.split(',');
-      const gradient = ctx.createLinearGradient(0, 0, width, height);
-      gradient.addColorStop(0, selectedColors[0]);
-      gradient.addColorStop(1, selectedColors[1]);
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, width, height);
-      const drawText = (text, x, y, font = '700 20px Segoe UI', color = '#fff', align = 'center') => {
-        ctx.font = font;
-        ctx.fillStyle = color;
-        ctx.textAlign = align;
-        ctx.fillText(text, x, y);
-      };
-      drawText(previewLeague.textContent, width / 2, 40, '900 18px Segoe UI', '#fff');
-      const drawImageFromUrl = (url, x, y, w, h, cb) => {
-        const img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.onload = () => { ctx.drawImage(img, x, y, w, h); cb(); };
-        img.onerror = () => cb();
-        img.src = url;
-      };
-      const textYOffset = 110;
-      const teamALeftX = width / 4 - 40;
-      const teamBLeftX = 3 * width / 4 - 40;
-      const logoSize = 80;
-      drawText('VS', width / 2, textYOffset + 40, '900 30px Segoe UI', '#fafafa');
-      drawText(previewTeamA.textContent, teamALeftX + logoSize / 2, textYOffset + 120);
-      drawText(previewTeamB.textContent, teamBLeftX + logoSize / 2, textYOffset + 120);
-      drawText(previewDateTime.textContent, width / 2, height - 40, '700 16px Segoe UI', 'rgba(255,255,255,0.85)');
-      const watermarkText = document.getElementById('watermark').value.trim();
-      if (watermarkText) {
-        ctx.save();
-        ctx.globalAlpha = 0.2;
-        ctx.font = 'bold 18px Segoe UI';
-        ctx.fillStyle = '#ffffff';
-        ctx.textAlign = 'right';
-        ctx.fillText(watermarkText, width - 20, height - 20);
-        ctx.restore();
-      }
-      let imagesDrawn = 0;
-      const checkDone = () => {
-        imagesDrawn++;
-        if (imagesDrawn === 2) {
-          const a = document.createElement('a');
-          a.href = canvas.toDataURL('image/png');
-          a.download = 'football-match-thumbnail.png';
-          a.click();
-        }
-      };
-      drawImageFromUrl(previewLogoA.src, teamALeftX, textYOffset, logoSize, logoSize, checkDone);
-      drawImageFromUrl(previewLogoB.src, teamBLeftX, textYOffset, logoSize, logoSize, checkDone);
+    section.innerHTML = head + sub;
+    section.appendChild(list);
+    container.appendChild(section);
+  });
+}
+function fillLeagueFilter(leagues) {
+  const exists = new Set([...leagueSelect.options].map(o => o.value));
+  leagues.forEach(l => {
+    if (!exists.has(l.leagueName)) {
+      const opt = document.createElement('option');
+      opt.value = l.leagueName;
+      opt.textContent = l.leagueName;
+      leagueSelect.appendChild(opt);
+    }
+  });
+}
+function generateTextSummary(leagues, dateObj) {
+  if (!leagues.length) return;
+  let text = `🗓️${formatDateLong(dateObj)}\n`;
+  leagues.forEach(l => {
+    l.matchList.forEach(m => {
+      text += `⚽️${l.leagueName} (${m.matchTime} WIB)\n`;
+      const names = m.opponents.map(t => t.name).join(' vs ');
+      text += `${names}\n🔗Link: https://bolabongtvid.blogspot.com\n\n`;
     });
-  </script>
+  });
+  textSummaryDiv.textContent = text.trim();
+}
+async function loadSchedule() {
+  showLoadingShimmer();
+  textSummaryDiv.textContent = '';
+  const selectedDate = dateInput.value || formatDate(new Date());
+  const url = `https://api2.asiasport.com/match/getMatchListv4?leagueIdList=&matchDate=${selectedDate}&liveOnly=false&lang=en&timeZone=Asia%2FJakarta&token=${apiToken}`;
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    const all = data.result.leagueMatchList || [];
+    fillLeagueFilter(all);
+    const filtered = leagueSelect.value ? all.filter(l => l.leagueName === leagueSelect.value) : all;
+    renderLeagues(filtered);
+    generateTextSummary(filtered, new Date(selectedDate));
+  } catch (e) {
+    container.innerHTML = '<p>Gagal memuat data.</p>';
+  }
+}
+dateInput.addEventListener('change', loadSchedule);
+leagueSelect.addEventListener('change', loadSchedule);
+dateInput.value = formatDate(new Date());
+loadSchedule();
+copyButton.addEventListener('click', () => {
+  const text = textSummaryDiv.textContent;
+  if (!text) {
+    alert('⚠️ Tidak ada ringkasan yang bisa disalin. Pastikan data pertandingan tersedia.');
+    return;
+  }
+  navigator.clipboard.writeText(text).then(() => {
+    copyButton.textContent = '✅ Disalin!';
+    setTimeout(() => copyButton.textContent = '📋 Salin Ringkasan', 2000);
+  }).catch(() => {
+    alert('❌ Gagal menyalin teks. Silakan salin manual.');
+  });
+});
+</script>
 </body>
 </html>
