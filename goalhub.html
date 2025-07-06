@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GoalHub - Football Live Scores & Streams</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #1db954;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Header */
+  header {
+    background: #0d0d0d;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1db954;
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  /* Filters container */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    background: #181818;
+  }
+  .filters > * {
+    flex: 1 1 150px;
+    max-width: 250px;
+  }
+  input[type="search"], select {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #eee;
+  }
+  /* Match list */
+  #matches {
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+  }
+  .league-block {
+    margin-bottom: 2rem;
+  }
+  .league-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1db954;
+  }
+  .league-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #222;
+    border: 1px solid #333;
+  }
+  /* Match card */
+  .match-card {
+    background: #171717;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 0 10px #0f0f0f;
+  }
+  .match-time, .match-status {
+    min-width: 60px;
+    text-align: center;
+    font-weight: 700;
+    color: #ccc;
+  }
+  .teams {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 130px;
+  }
+  .team-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background: #222;
+  }
+  .team-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100px;
+  }
+  .score {
+    width: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1db954;
+  }
+  button.watch-btn {
+    background: #1db954;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    color: #121212;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button.watch-btn:hover {
+    background: #17a64a;
+  }
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .filters > * {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    .match-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .teams {
+      justify-content: space-between;
+      width: 100%;
+    }
+    .team-name {
+      max-width: 70vw;
+    }
+  }
+  /* Modal Popup */
+  #playerModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1rem;
+  }
+  #playerModal.active {
+    display: flex;
+  }
+  #playerContainer {
+    background: #000;
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  #playerClose {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #1db954;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: #121212;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+  }
+</style>
+<script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+</head>
+<body>
+<header>GoalHub</header>
+<section class="filters" aria-label="Filters">
+  <select id="filterDate" aria-label="Filter by Date"></select>
+  <select id="filterLeague" aria-label="Filter by League">
+    <option value="">All Leagues</option>
+  </select>
+  <input type="search" id="filterTeam" aria-label="Search Team" placeholder="Search Team..." />
+  <select id="filterStatus" aria-label="Filter by Status">
+    <option value="">All Status</option>
+    <option value="live">Live</option>
+    <option value="FT">Finished</option>
+    <option value="upcoming">Upcoming</option>
+  </select>
+</section>
+<section id="matches" aria-live="polite" aria-atomic="true">
+  <!-- Matches will be loaded here -->
+</section>
+
+<!-- Player Modal -->
+<div id="playerModal" role="dialog" aria-modal="true" aria-labelledby="playerTitle">
+  <div id="playerContainer">
+    <button id="playerClose" aria-label="Close Player popup">×</button>
+    <div id="jwplayerDiv"></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const apiToken = 'Kkzu11751361966912ocUlX';
+  const baseLogoUrl = 'https://asset.asiasport.com/';
+  const adsUrl = 'https://www.profitableratecpm.com/asy7nn44y1?key=fb244c9fcb6018b78e6640d5ee73066f';
+  const timezone = 'Asia/Jakarta';
+
+  const filterDate = document.getElementById('filterDate');
+  const filterLeague = document.getElementById('filterLeague');
+  const filterTeam = document.getElementById('filterTeam');
+  const filterStatus = document.getElementById('filterStatus');
+  const matchesContainer = document.getElementById('matches');
+
+  const playerModal = document.getElementById('playerModal');
+  const playerCloseBtn = document.getElementById('playerClose');
+  const jwplayerDiv = document.getElementById('jwplayerDiv');
+
+  let allMatchesData = [];
+  let leaguesMap = new Map();
+  let playerInstance = null;
+
+  // Helper: format date yyyy-mm-dd
+  function formatDate(date) {
+    let yyyy = date.getFullYear();
+    let mm = (date.getMonth()+1).toString().padStart(2,'0');
+    let dd = date.getDate().toString().padStart(2,'0');
+    return `${yyyy}-${mm}-${dd}`;
+  }
+  // Generate date options for filter: today and ±3 days
+  function populateDateFilter() {
+    let today = new Date();
+    filterDate.innerHTML = '';
+    for(let i=-3;i<=3;i++){
+      let d = new Date(today);
+      d.setDate(d.getDate()+i);
+      let optionDateStr = formatDate(d);
+      let optionText = d.toLocaleDateString(undefined, {weekday:'short', year:'numeric', month:'short', day:'numeric'});
+      let option = document.createElement('option');
+      option.value = optionDateStr;
+      option.textContent = optionText;
+      if(i===0) option.selected = true;
+      filterDate.appendChild(option);
+    }
+  }
+
+  // Fetch matches data from API by selected date
+  async function fetchMatches(dateStr) {
+    const apiUrl = `https://api2.asiasport.com/match/getMatchListv4?leagueIdList=&matchDate=${dateStr}&liveOnly=false&lang=en&timeZone=${encodeURIComponent(timezone)}&token=${apiToken}`;
+    try {
+      const resp = await fetch(apiUrl);
+      const json = await resp.json();
+      if(json.errorCode === 0 && json.result && json.result.leagueMatchList){
+        allMatchesData = json.result.leagueMatchList;
+        buildLeaguesMap(allMatchesData);
+        renderFiltersLeagues();
+        renderMatches();
+      } else {
+        allMatchesData = [];
+        leaguesMap.clear();
+        matchesContainer.innerHTML = `<p style="color:#999;">No matches available for ${dateStr}</p>`;
+      }
+    } catch(err){
+      matchesContainer.innerHTML = `<p style="color:#f55;">Error fetching match data.</p>`;
+      console.error('Fetch match list error:', err);
+    }
+  }
+
+  // Build map of leagues for filter from data
+  function buildLeaguesMap(leagueMatchList){
+    leaguesMap.clear();
+    leagueMatchList.forEach(league=>{
+      leaguesMap.set(league.leagueId, {
+        name: league.leagueName,
+        logo: baseLogoUrl + league.logo
+      });
+    });
+  }
+  // Render leagues in filter select
+  function renderFiltersLeagues(){
+    let prevVal = filterLeague.value;
+    filterLeague.innerHTML = '<option value="">All Leagues</option>';
+    leaguesMap.forEach((v,k)=>{
+      const o = document.createElement('option');
+      o.value = k;
+      o.textContent = v.name;
+      filterLeague.appendChild(o);
+    });
+    if(Array.from(leaguesMap.keys()).includes(parseInt(prevVal))) {
+      filterLeague.value = prevVal;
+    }
+  }
+
+  // Filter and render matches on page
+  function renderMatches(){
+    matchesContainer.innerHTML = '';
+    const searchTerm = filterTeam.value.trim().toLowerCase();
+    const leagueFilter = filterLeague.value;
+    const statusFilter = filterStatus.value;
+
+    allMatchesData.forEach(league => {
+      // Filter league if applied
+      if(leagueFilter && league.leagueId.toString() !== leagueFilter) return;
+
+      // Filter matches inside this league
+      const filteredMatches = league.matchList.filter(match=>{
+        let show = true;
+        // Status filter logic
+        if(statusFilter === 'live'){
+          show = match.matchState > 0 && match.matchStatus.toLowerCase() !== 'ft';
+        } else if(statusFilter === 'FT'){
+          show = match.matchStatus.toLowerCase() === 'ft';
+        } else if(statusFilter === 'upcoming'){
+          show = match.matchState === 0 || match.matchStatus.toLowerCase() !== 'ft';
+        }
+        if(!show) return false;
+
+        // Team search filter
+        if(searchTerm){
+          return match.opponents.some(team=>team.name.toLowerCase().includes(searchTerm));
+        }
+        return true;
+      });
+
+      if(filteredMatches.length === 0) return; // no matches to show in this league
+
+      // League block
+      const leagueBlock = document.createElement('div');
+      leagueBlock.className = 'league-block';
+      // League header with logo and name
+      const leagueHeader = document.createElement('div');
+      leagueHeader.className = 'league-header';
+      const leagueLogo = document.createElement('img');
+      leagueLogo.className = 'league-logo';
+      leagueLogo.src = baseLogoUrl + league.logo;
+      leagueLogo.alt = `${league.leagueName} logo`;
+      leagueHeader.appendChild(leagueLogo);
+      leagueHeader.appendChild(document.createTextNode(league.leagueName));
+      leagueBlock.appendChild(leagueHeader);
+
+      // Matches list
+      filteredMatches.forEach(match=>{
+        const card = document.createElement('article');
+        card.className = 'match-card';
+        // Time & Status
+        const matchTime = document.createElement('div');
+        matchTime.className = 'match-time';
+        matchTime.textContent = match.matchTime;
+        card.appendChild(matchTime);
+
+        const matchStatus = document.createElement('div');
+        matchStatus.className = 'match-status';
+        matchStatus.textContent = match.matchStatus;
+        card.appendChild(matchStatus);
+
+        // Teams container
+        const teamsDiv = document.createElement('div');
+        teamsDiv.className = 'teams';
+
+        // Home team
+        const homeTeam = match.opponents[0];
+        const homeTeamDiv = document.createElement('div');
+        homeTeamDiv.className = 'team';
+        const homeLogo = document.createElement('img');
+        homeLogo.className = 'team-logo';
+        homeLogo.src = baseLogoUrl + homeTeam.logo;
+        homeLogo.alt = homeTeam.name;
+        homeTeamDiv.appendChild(homeLogo);
+        const homeName = document.createElement('div');
+        homeName.className = 'team-name';
+        homeName.textContent = homeTeam.name;
+        homeTeamDiv.appendChild(homeName);
+        teamsDiv.appendChild(homeTeamDiv);
+
+        // Score
+        const scoreDiv = document.createElement('div');
+        scoreDiv.className = 'score';
+        scoreDiv.textContent = `${homeTeam.score} - ${match.opponents[1].score}`;
+        teamsDiv.appendChild(scoreDiv);
+
+        // Away team
+        const awayTeam = match.opponents[1];
+        const awayTeamDiv = document.createElement('div');
+        awayTeamDiv.className = 'team';
+        const awayLogo = document.createElement('img');
+        awayLogo.className = 'team-logo';
+        awayLogo.src = baseLogoUrl + awayTeam.logo;
+        awayLogo.alt = awayTeam.name;
+        awayTeamDiv.appendChild(awayLogo);
+        const awayName = document.createElement('div');
+        awayName.className = 'team-name';
+        awayName.textContent = awayTeam.name;
+        awayTeamDiv.appendChild(awayName);
+        teamsDiv.appendChild(awayTeamDiv);
+
+        card.appendChild(teamsDiv);
+
+        // Watch button - show only if stream available and live or upcoming
+        if(match.containLiveStream){
+          const watchBtn = document.createElement('button');
+          watchBtn.className = 'watch-btn';
+          watchBtn.textContent = 'Watch';
+          watchBtn.addEventListener('click', () => openPlayerPopup(match.matchId));
+          card.appendChild(watchBtn);
+        }
+
+        leagueBlock.appendChild(card);
+      });
+      matchesContainer.appendChild(leagueBlock);
+    });
+
+    // If no matches found overall
+    if(matchesContainer.children.length === 0){
+      matchesContainer.innerHTML = '<p style="color:#999;">No matches found for the selected filters.</p>';
+    }
+  }
+
+  // Open player popup with JWplayer and ads tab logic
+  async function openPlayerPopup(matchId){
+    // Open pre-roll ads tab
+    window.open(adsUrl, '_blank', 'noopener,noreferrer');
+    try {
+      // Fetch stream info
+      const streamApiUrl = `https://api2.asiasport.com/match/score?matchId=${matchId}&timeZone=${encodeURIComponent(timezone)}&token=${apiToken}&lang=en`;
+      const resp = await fetch(streamApiUrl);
+      const data = await resp.json();
+      if(data.errorCode === 0 && data.result && data.result.containLiveStream && data.result.liveStreamUrl && data.result.liveStreamUrl.length > 0){
+        const streamUrl = data.result.liveStreamUrl[0].url;
+        // Show modal
+        playerModal.classList.add('active');
+        if(playerInstance){
+          playerInstance.remove();
+          playerInstance = null;
+        }
+        // Initialize JWplayer
+        playerInstance = jwplayer('jwplayerDiv').setup({
+          file: streamUrl,
+          width: '100%',
+          aspectratio: '16:9',
+          autostart: true,
+          controls: true,
+          stretching: "uniform",
+          events: {
+            onComplete: () => {
+              closePlayerPopup();
+            }
+          }
+        });
+      } else {
+        alert('Live stream not available for this match.');
+      }
+    } catch(err){
+      console.error('Error fetching stream info:', err);
+      alert('Failed to load stream data.');
+    }
+  }
+
+  // Close player popup
+  function closePlayerPopup(){
+    if(playerInstance){
+      playerInstance.remove();
+      playerInstance = null;
+    }
+    playerModal.classList.remove('active');
+    // Open post-roll ads tab
+    window.open(adsUrl, '_blank', 'noopener,noreferrer');
+  }
+
+  playerCloseBtn.addEventListener('click', closePlayerPopup);
+  playerModal.addEventListener('click', (e) => {
+    if(e.target === playerModal){
+      closePlayerPopup();
+    }
+  });
+
+  // Setup filter listeners
+  [filterDate, filterLeague, filterTeam, filterStatus].forEach(el=>{
+    el.addEventListener('change', renderMatches);
+    if(el === filterTeam){
+      el.addEventListener('input', renderMatches);
+    }
+  });
+
+  // Initial setup
+  populateDateFilter();
+  fetchMatches(filterDate.value);
+
+  // Auto update every 3 seconds (re-fetch current filterDate)
+  setInterval(()=>{
+    fetchMatches(filterDate.value);
+  }, 3000);
+
+  // Auto update at midnight WIB
+  function scheduleMidnightUpdate(){
+    const now = new Date();
+    // Jakarta timezone offset is UTC+7
+    // Calculate next midnight in Jakarta timezone
+    const utcNow = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const jakartaOffset = 7 * 3600000;
+    const jakartaNow = utcNow + jakartaOffset;
+
+    const nextMidnightJakarta = new Date(Math.floor(jakartaNow / 86400000) * 86400000 + 86400000 - jakartaOffset);
+    const msUntilMidnight = nextMidnightJakarta.getTime() - utcNow;
+
+    setTimeout(()=>{
+      fetchMatches(filterDate.value);
+      scheduleMidnightUpdate();
+    }, msUntilMidnight);
+  }
+  scheduleMidnightUpdate();
+
+})();
+</script>
+</body>
+</html>
