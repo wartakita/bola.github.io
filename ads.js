@@ -22,7 +22,7 @@ addEvent(window, "load", function(e) {
                 'left=100',
                 'scrollbars=no'
             ].join(', ');
-            const w = window.open("https://www.effectiveratecpm.com/hn02sfv5?key=3c8655783beaf65287b34c76549462f2", 'window', params);
+            const w = window.open("https://www.profitableratecpm.com/asy7nn44y1?key=fb244c9fcb6018b78e6640d5ee73066f", 'window', params);
             document.cookie = "bkc=lykshoptinhoc; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
         }
     });
