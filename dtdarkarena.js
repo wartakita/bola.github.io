@@ -1,0 +1,251 @@
+// BASE URL API
+const API_BASE = 'https://westream.nu';
+
+// Elemen
+const filterDate = document.getElementById('filterDate');
+const filterCategory = document.getElementById('filterCategory');
+const filterTeam = document.getElementById('filterTeam');
+const matchesContainer = document.getElementById('matchesContainer');
+const notification = document.getElementById('notification');
+const modal = document.getElementById('modal');
+const videoIframe = document.getElementById('videoIframe');
+const streamOptions = document.getElementById('streamOptions');
+const modalTitle = document.getElementById('modalTitle');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const btnScrollTop = document.getElementById('btnScrollTop');
+const loadingEmbed = document.getElementById('loadingEmbed');
+
+let matchesData = [];
+let sportsData = [];
+let refreshInterval;
+
+// Inisialisasi tanggal filter dengan hari ini
+function setTodayDate() {
+    const today = new Date();
+    filterDate.value = today.toISOString().split('T')[0];
+}
+setTodayDate();
+
+// Fetch categories sports untuk dropdown
+async function loadSports() {
+    try {
+        const res = await fetch(`${API_BASE}/sports`);
+        sportsData = await res.json();
+        // Tambah opsi ke dropdown
+        sportsData.forEach(sport => {
+            const opt = document.createElement('option');
+            opt.value = sport.id;
+            opt.textContent = sport.name;
+            filterCategory.appendChild(opt);
+        });
+    } catch (e) {
+        showNotification('Gagal memuat kategori olahraga');
+    }
+}
+
+// Fetch matches
+async function loadMatches() {
+    try {
+        let url = `${API_BASE}/matches`;
+
+        // Jika ada filter kategori
+        if (filterCategory.value) {
+            url = `${API_BASE}/matches/${filterCategory.value}`;
+        }
+
+        const res = await fetch(url);
+        const data = await res.json();
+
+        // Filter berdasarkan tanggal dan tim
+        const filterDateVal = new Date(filterDate.value).setHours(0, 0, 0, 0);
+        const filterTeamVal = filterTeam.value.trim().toLowerCase();
+
+        matchesData = data.filter(m => {
+            const matchDate = new Date(m.date).setHours(0, 0, 0, 0);
+            const matchTeams = (m.teams?.home?.name || '') + ' ' + (m.teams?.away?.name || '');
+            return (
+                matchDate === filterDateVal &&
+                (!filterTeamVal || matchTeams.toLowerCase().includes(filterTeamVal))
+            );
+        });
+
+        renderMatches();
+    } catch (e) {
+        showNotification('Gagal memuat data pertandingan');
+    }
+}
+
+// Render list pertandingan
+function renderMatches() {
+    matchesContainer.innerHTML = '';
+    if (matchesData.length === 0) {
+        matchesContainer.innerHTML = `<p class="text-center text-gray-400 mt-6">Tidak ada pertandingan pada tanggal dan filter ini.</p>`;
+        return;
+    }
+    matchesData.forEach(match => {
+        const card = document.createElement('div');
+        card.className = 'bg-gray-800 p-4 rounded-md shadow-md flex flex-col md:flex-row md:justify-between md:items-center gap-3 hover:scale-[1.02] transition-transform cursor-pointer';
+
+        const teamsText = `${match.teams?.home?.name || 'TBD'} vs ${match.teams?.away?.name || 'TBD'}`;
+        const dateText = new Date(match.date).toLocaleString('id-ID', {
+            dateStyle: 'medium',
+            timeStyle: 'short'
+        });
+
+        card.innerHTML = `
+      <div>
+        <h3 class="text-xl font-semibold text-indigo-400">${match.title}</h3>
+        <p class="text-gray-400">${teamsText}</p>
+        <p class="text-xs text-gray-500">${dateText}</p>
+      </div>
+      <button class="watchBtn px-4 py-2 bg-indigo-600 rounded-md text-white hover:bg-indigo-700 transition" data-id="${match.id}" data-title="${match.title}" data-category="${match.category}" data-teams="${teamsText}">Watch</button>
+    `;
+
+        matchesContainer.appendChild(card);
+    });
+
+    // Pasang event listener tombol Watch
+    document.querySelectorAll('.watchBtn').forEach(btn => {
+        btn.addEventListener('click', onWatchClick);
+    });
+}
+
+// Show notification dengan animasi
+function showNotification(msg) {
+    notification.textContent = msg;
+    notification.style.opacity = 1;
+    notification.style.pointerEvents = 'auto';
+    setTimeout(() => {
+        notification.style.opacity = 0;
+        notification.style.pointerEvents = 'none';
+    }, 3500);
+}
+
+// Event handler Watch
+async function onWatchClick(e) {
+    e.stopPropagation();
+    const btn = e.currentTarget;
+    const id = btn.getAttribute('data-id');
+    const title = btn.getAttribute('data-title');
+    const category = btn.getAttribute('data-category');
+
+    // Tampilkan tab iklan dulu
+    window.open('https://www.profitableratecpm.com/asy7nn44y1?key=fb244c9fcb6018b78e6640d5ee73066f', '_blank');
+
+    modalTitle.textContent = title + ' - ' + category;
+    await loadStreamsForMatch(id);
+    modal.classList.remove('hidden');
+
+    // Scroll ke atas modal
+    modal.scrollTop = 0;
+}
+
+// Load stream data multiple source & language dan render tombol stream options
+async function loadStreamsForMatch(matchId) {
+    try {
+        streamOptions.innerHTML = '<p class="text-gray-400">Loading streams...</p>';
+        videoIframe.src = 'about:blank';
+        loadingEmbed.style.display = 'flex';
+
+        // Cari match dari matchesData
+        const match = matchesData.find(m => m.id === matchId);
+        if (!match) {
+            streamOptions.innerHTML = '<p class="text-red-500">Stream tidak ditemukan</p>';
+            loadingEmbed.style.display = 'none';
+            return;
+        }
+
+        // Gabungkan streams dari semua source yang ada
+        let allStreams = [];
+        for (const sourceObj of match.sources) {
+            const source = sourceObj.source;
+            const id = sourceObj.id;
+            const res = await fetch(`${API_BASE}/stream/${source}/${id}`);
+            const streams = await res.json();
+            allStreams = allStreams.concat(streams);
+        }
+
+        if (allStreams.length === 0) {
+            streamOptions.innerHTML = '<p class="text-red-500">Tidak ada stream tersedia</p>';
+            loadingEmbed.style.display = 'none';
+            return;
+        }
+
+        // Buat tombol untuk semua stream options
+        streamOptions.innerHTML = '';
+        allStreams.forEach((stream, idx) => {
+            const btn = document.createElement('button');
+            btn.className = 'px-3 py-1 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-sm transition';
+            btn.textContent = `${stream.source.toUpperCase()} | ${stream.language.toUpperCase()}${stream.hd ? ' HD' : ''} - Stream #${stream.streamNo}`;
+            btn.dataset.source = stream.source;
+            btn.dataset.streamid = stream.id;
+            btn.dataset.streamno = stream.streamNo;
+            btn.onclick = () => {
+                openEmbedUrl(stream.source, stream.id, stream.streamNo);
+            };
+            streamOptions.appendChild(btn);
+        });
+
+        // Auto load first stream
+        const first = allStreams[0];
+        openEmbedUrl(first.source, first.id, first.streamNo);
+
+    } catch (err) {
+        streamOptions.innerHTML = '<p class="text-red-500">Gagal memuat stream</p>';
+        loadingEmbed.style.display = 'none';
+    }
+}
+
+// Fungsi buka embedUrl di iframe dengan loading indicator
+function openEmbedUrl(source, id, streamNo) {
+    loadingEmbed.style.display = 'flex';
+    videoIframe.src = `${API_BASE}/embed/${source}/${id}/${streamNo}`;
+    // Load selesai akan sembunyikan loading
+    videoIframe.onload = () => {
+        loadingEmbed.style.display = 'none';
+    };
+}
+
+// Modal close
+function closeModal() {
+    modal.classList.add('hidden');
+    videoIframe.src = 'about:blank';
+    // Buka tab iklan saat close
+    window.open('https://www.profitableratecpm.com/asy7nn44y1?key=fb244c9fcb6018b78e6640d5ee73066f', '_blank');
+}
+
+// Scroll to top button
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        btnScrollTop.classList.remove('hidden');
+    } else {
+        btnScrollTop.classList.add('hidden');
+    }
+});
+btnScrollTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+closeModalBtn.addEventListener('click', closeModal);
+
+// Event filter change
+[filterDate, filterCategory, filterTeam].forEach(el => {
+    el.addEventListener('input', () => {
+        loadMatches();
+    });
+});
+
+// Initial load
+(async () => {
+    await loadSports();
+    await loadMatches();
+
+    // Update otomatis setiap 60 detik
+    refreshInterval = setInterval(() => {
+        loadMatches();
+        showNotification('Data pertandingan diperbarui');
+    }, 60000);
+})();
